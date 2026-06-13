@@ -36,7 +36,7 @@ const { generateAndSendCsv } = require("../services/csvEmailService");
 /* ===========================
    NEW: import adminBasicAuth, for restricting access to admin/messages
    =========================== */
-const { adminBasicAuth } = require("../middleware/authMiddleware");
+const { adminBasicAuth } = require("../middleware/adminAuth");
 
 /**
  * 1. Admin page - show all messages
@@ -72,7 +72,7 @@ router.get("/admin/messages/email", async (req, res) => {
       }));
 
       // Send CSV email
-      await generateAndSendCsv(process.env.SMTP_USER, rows, "contact_messages.csv");
+      await generateAndSendCsv(process.env.OWNER_EMAIL || process.env.SMTP_USER, rows, "contact_messages.csv");
 
       res.send("CSV sent to email successfully.");
     });
