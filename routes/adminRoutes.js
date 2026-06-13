@@ -36,7 +36,8 @@ const { generateAndSendCsv } = require("../services/csvEmailService");
 /* ===========================
    NEW: import adminBasicAuth, for restricting access to admin/messages
    =========================== */
-const { adminBasicAuth } = require("../middleware/adminAuth");
+//const { adminBasicAuth } = require("../middleware/adminAuth");
+const adminBasicAuth = require("../middleware/adminAuth");
 
 /**
  * 1. Admin page - show all messages
