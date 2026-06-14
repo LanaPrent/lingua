@@ -111,6 +111,20 @@ app.get(
         );
     }
 );
+//protected html pages
+app.get(
+    "/members/chocolate-eating-advice",
+    isAuthenticated,
+    (req,res) =>{
+        res.sendFile(
+            path.join(
+                __dirname,
+                "protected", 
+                "Chocolate_Eating_Advice.html"
+            )
+        );
+    }
+);
 
 // =======================
 // MAIN PAGE code
