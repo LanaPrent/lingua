@@ -125,7 +125,19 @@ app.get(
         );
     }
 );
-
+app.get(
+    "/members/harmful-metals-in-chocolate",
+    isAuthenticated,
+    (req,res) =>{
+        res.sendFile(
+            path.join(
+                __dirname,
+                "protected", 
+                "Why_Is_Cocoa_Dangerous.html"
+            )
+        );
+    }
+);
 // =======================
 // MAIN PAGE code
 // =======================
