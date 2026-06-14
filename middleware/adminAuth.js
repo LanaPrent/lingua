@@ -22,5 +22,4 @@ function adminBasicAuth(req, res, next) {
   return res.status(401).send("Wrong credentials");
 }
 
-//module.exports={ isAuthenticated,adminBasicAuth };
 module.exports= adminBasicAuth;

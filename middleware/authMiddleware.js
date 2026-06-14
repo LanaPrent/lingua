@@ -11,5 +11,5 @@ function isAuthenticated(req, res, next) {
 
 module.exports = isAuthenticated;
 
-  
+  console.log("AUTH HEADER:", req.headers.authorization);
 
