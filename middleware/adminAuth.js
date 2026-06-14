@@ -1,8 +1,8 @@
 function adminBasicAuth(req, res, next) {
   const authHeader = req.headers.authorization;
 
-  if (!authHeader) {
-    res.setHeader("WWW-Authenticate", "Basic");
+  if (!authHeader || !authHeader.startsWith("Basic")) {
+    res.setHeader("WWW-Authenticate", "Basic realm=Admin Area");
     return res.status(401).send("Admin login required");
   }
 
@@ -18,7 +18,7 @@ function adminBasicAuth(req, res, next) {
     return next();
   }
 
-  res.setHeader("WWW-Authenticate", "Basic");
+  res.setHeader("WWW-Authenticate", "Basic realm=Admin Area");
   return res.status(401).send("Wrong credentials");
 }
 

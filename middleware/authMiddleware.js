@@ -7,9 +7,10 @@ function isAuthenticated(req, res, next) {
     return res.status(401).json({
         message: "Unauthorized"
     });
+     console.log("AUTH HEADER:", req.headers.authorization);
 }
 
 module.exports = isAuthenticated;
 
-  console.log("AUTH HEADER:", req.headers.authorization);
+ 
 
