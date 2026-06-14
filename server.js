@@ -15,7 +15,7 @@ const csrfProtection = require("./middleware/csrf");
 const authRoutes = require("./routes/authRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const adminRoutes = require("./routes/adminRoutes");
-
+const protectedRoutes = require("./routes/protectedRoutes");
 
 const isAuthenticated = require("./middleware/authMiddleware");
 
@@ -39,6 +39,7 @@ app.use(express.static(
         }
     }
 ));
+app.use("/members", isAuthenticated);
 
 // =======================
 // SECURITY
@@ -81,6 +82,8 @@ app.use("/", contactRoutes);
 app.use("/api", authRoutes);
 
 app.use("/", adminRoutes);
+
+app.use("/", protectedRoutes);
 // =======================
 // CSRF TOKEN ROUTE
 // =======================
@@ -111,33 +114,7 @@ app.get(
         );
     }
 );
-//protected html pages
-app.get(
-    "/members/chocolate-eating-advice",
-    isAuthenticated,
-    (req,res) =>{
-        res.sendFile(
-            path.join(
-                __dirname,
-                "protected", 
-                "Chocolate_Eating_Advice.html"
-            )
-        );
-    }
-);
-app.get(
-    "/members/harmful-metals-in-chocolate",
-    isAuthenticated,
-    (req,res) =>{
-        res.sendFile(
-            path.join(
-                __dirname,
-                "protected", 
-                "Why_Is_Cocoa_Dangerous.html"
-            )
-        );
-    }
-);
+
 // =======================
 // MAIN PAGE code
 // =======================
