@@ -138,10 +138,11 @@ app.listen(PORT, "0.0.0.0", () => {
 
 console.log("DB_HOST =", process.env.DB_HOST);
 console.log("DB_USER =", process.env.DB_USER);
-
+/*
 console.log("MYSQLHOST =", process.env.MYSQLHOST);
 console.log("MYSQLUSER =", process.env.MYSQLUSER);
 console.log("MYSQLDATABASE =", process.env.MYSQLDATABASE);
 
 console.log("ADMIN_USER=", process.env.ADMIN_USER);
 console.log("ADMIN_PASSWORD=", process.env.ADMIN_PASSWORD);
+*/
