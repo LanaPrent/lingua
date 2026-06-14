@@ -20,6 +20,12 @@ function adminBasicAuth(req, res, next) {
 
   res.setHeader("WWW-Authenticate", "Basic realm=Admin Area");
   return res.status(401).send("Wrong credentials");
+
+  console.log("ENV USER:", process.env.ADMIN_USER);
+  console.log("ENV PASS:", process.env.ADMIN_PASSWORD);
+  console.log("AUTH HEADER:",req.headers.authorization);
+  console.log("ENV:", process.env.ADMIN_USER, process.env.ADMIN_PASSWORD);
+
 }
 
 module.exports= adminBasicAuth;
