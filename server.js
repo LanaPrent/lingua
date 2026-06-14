@@ -39,7 +39,7 @@ app.use(express.static(
         }
     }
 ));
-app.use("/members", isAuthenticated);
+
 
 // =======================
 // SECURITY
@@ -72,6 +72,7 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 
 app.use(sessionMiddleware);
+app.use("/members", isAuthenticated);
 
 // =======================
 // ROUTES
