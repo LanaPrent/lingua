@@ -116,7 +116,7 @@ async function updateAuthButtons() {
 
             logoutBtn.style.display = "none";
 
-            userInfo.textContent="";
+            userInfo.textContent=""; 
         }
 
     } catch (err) {
