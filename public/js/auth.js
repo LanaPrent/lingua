@@ -1,7 +1,7 @@
 console.log("auth.js loaded");
 
 // ===== Elements =====
-const userInfo = document.getElementsById("userInfo");
+const userInfo = document.getElementById("userInfo");
 
 const loginModal = document.getElementById("loginModal");
 
@@ -116,7 +116,7 @@ async function updateAuthButtons() {
 
             logoutBtn.style.display = "none";
 
-            userInfo.texContent="";
+            userInfo.textContent="";
         }
 
     } catch (err) {
