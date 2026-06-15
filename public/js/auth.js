@@ -1,6 +1,7 @@
 console.log("auth.js loaded");
 
 // ===== Elements =====
+const userInfo = document.getElementsById("userInfo");
 
 const loginModal = document.getElementById("loginModal");
 
@@ -105,6 +106,8 @@ async function updateAuthButtons() {
 
             logoutBtn.style.display = "inline-block";
 
+            userInfo.textContent = `Welcome, ${data.username}`
+
         } else {
 
             loginBtn.style.display = "inline-block";
@@ -112,6 +115,8 @@ async function updateAuthButtons() {
             registerBtn.style.display = "inline-block";
 
             logoutBtn.style.display = "none";
+
+            userInfo.texContent="";
         }
 
     } catch (err) {
