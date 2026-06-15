@@ -279,3 +279,7 @@ setTimeout(() => {
     }, 2500);
 }
 });
+
+window.openLoginModal = function () {
+    document.getElementById("loginModal").style.display = "block";
+};
