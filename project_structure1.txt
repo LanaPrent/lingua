@@ -1,5 +1,5 @@
 Folder PATH listing for volume EXTERNAL_USB
-Volume serial number is 000000D6 0644:BCB8
+Volume serial number is 00000060 0644:BCB8
 E:.
 |   .env
 |   .gitignore
@@ -7,7 +7,6 @@ E:.
 |   package.json
 |   project_structure.txt
 |   project_structure1.txt
-|   project_structure2.txt
 |   project_structure3.txt
 |   server.js
 |   
@@ -2565,6 +2564,7 @@ E:.
 |           README.md
 |           wrappy.js
 |           
++---protected
 +---public
 |   |   About.html
 |   |   cacao_pods.jpeg
@@ -2579,6 +2579,7 @@ E:.
 |   |   Dark_Chocolate_script_fin_2p.js
 |   |   index.html
 |   |   login_logout.js
+|   |   protected_page_advice_link.js
 |   |   script.js
 |   |   script_Carousel.js
 |   |   slideshow_responsiveCarousel.css
@@ -2597,6 +2598,7 @@ E:.
 |       adminRoutes.js
 |       authRoutes.js
 |       contactRoutes.js
+|       protectedRoutes.js
 |       
 \---services
         csvEmailService.js
