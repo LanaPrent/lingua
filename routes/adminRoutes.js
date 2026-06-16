@@ -57,7 +57,7 @@ router.get("/admin/messages/email", async (req, res) => {
   try {
     // Fetch all messages from DB
     const conn = require("../config/db");
-    conn.query("SELECT * FROM users ORDER BY created DESC", async (err, results) => {
+    conn.query("SELECT * FROM users ORDER BY created_at DESC", async (err, results) => {
       if (err) {
         console.error("DB ERROR:", err);
         return res.status(500).send("Database error");
@@ -69,7 +69,7 @@ router.get("/admin/messages/email", async (req, res) => {
         Name: row.name,
         Email: row.email,
         Comments: row.comments,
-        Created: row.created,
+        Created: row.created_at,
       }));
 
       // Send CSV email
