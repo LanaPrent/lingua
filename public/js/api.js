@@ -32,6 +32,15 @@ async function apiFetch(url, options = {}) {
         };
     }
 
+        // ✅ NEW: handle unauthorized globally
+    if (response.status === 401) {
+        if (window.openLoginModal) {
+            window.openLoginModal();
+        }
+        throw new Error("Unauthorized");
+    }
+
+
     if (!response.ok) {
         throw new Error(data.message || "Request failed");
     }

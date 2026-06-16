@@ -288,3 +288,21 @@ setTimeout(() => {
 window.openLoginModal = function () {
     document.getElementById("loginModal").style.display = "block";
 };
+
+async function handleProtected(url) {
+    const res = await apiFetch("/api/status");
+
+    if (res.loggedIn) {
+        window.location.href = url;
+    } else {
+        window.openLoginModal();
+    }
+}
+
+document.addEventListener("click", (e) => {
+    const el = e.target.closest("[data-protected]");
+    if (!el) return;
+
+    e.preventDefault();
+    handleProtected(el.dataset.protected);
+});

@@ -12,10 +12,10 @@ function protectedLink(elementId, url) {
         }
     });
 }
-
+/* moved to auth.js
 protectedLink("loginChocolateEatingAdvice", "/members/chocolate-eating-advice");
 protectedLink("loginWhyIsCocoaDangerous", "/members/harmful-metals-in-chocolate");
-
+*/
 
 
 
