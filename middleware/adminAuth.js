@@ -9,9 +9,10 @@ function adminBasicAuth(req, res, next) {
 
   const base64 = authHeader.split(" ")[1];
   const decoded = Buffer.from(base64, "base64").toString("utf-8");
-  /*
-//5 lines added:
+
   const [username, password] = decoded.split(":");
+ /*    
+//5 lines added:
   console.log("Received username:", username);
 console.log("Received password:", password);
 console.log("Expected username:", process.env.ADMIN_USER);
