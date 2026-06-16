@@ -2,7 +2,7 @@
 const conn = require("../config/db");
 
 exports.getAllMessages = (req, res) => {
-  conn.query("SELECT * FROM users ORDER BY created DESC", (err, results) => {
+  conn.query("SELECT * FROM users ORDER BY created_at DESC", (err, results) => {
     if (err) {
       console.error(err);
       return res.status(500).send("Database sending data to HTML table error");
@@ -19,7 +19,7 @@ exports.getAllMessages = (req, res) => {
                 <td>${row.name}</td>
                 <td>${row.email}</td>
                 <td>${row.comments}</td>
-                <td>${row.created}</td>
+                <td>${row.created_at}</td>
               </tr>`;
     });
 
@@ -40,7 +40,7 @@ const { generateAndSendCsv } = require("../services/csvEmailService");
 // ===============================
 exports.getAllMessages = (req, res) => {
   conn.query(
-    "SELECT * FROM users ORDER BY created DESC",
+    "SELECT * FROM users ORDER BY created_at DESC",
     async (err, results) => {
       if (err) {
         console.error("DB ERROR:", err);
@@ -77,7 +77,7 @@ exports.getAllMessages = (req, res) => {
                   <td>${row.name}</td>
                   <td>${row.email}</td>
                   <td>${row.comments}</td>
-                  <td>${row.created}</td>
+                  <td>${row.created_at}</td>
                 </tr>`;
       });
       html += "</table>";
@@ -91,7 +91,7 @@ exports.getAllMessages = (req, res) => {
 // ===============================
 exports.exportMessagesCSV = (req, res) => {
   conn.query(
-    "SELECT * FROM users ORDER BY created DESC",
+    "SELECT * FROM users ORDER BY created_at DESC",
     (err, results) => {
       if (err) {
         console.error("DB ERROR:", err);
@@ -103,7 +103,7 @@ exports.exportMessagesCSV = (req, res) => {
         const name = `"${(row.name || "").replace(/"/g, '""')}"`;
         const email = `"${(row.email || "").replace(/"/g, '""')}"`;
         const comments = `"${(row.comments || "").replace(/"/g, '""')}"`;
-        const created = row.created || "";
+        const created = row.created_at || "";
 
         csv += `${row.id},${name},${email},${comments},${created}\n`;
       });
