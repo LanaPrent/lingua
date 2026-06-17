@@ -1,13 +1,11 @@
 Folder PATH listing for volume EXTERNAL_USB
-Volume serial number is 00000060 0644:BCB8
+Volume serial number is 00000023 0644:BCB8
 E:.
 |   .env
 |   .gitignore
 |   package-lock.json
 |   package.json
-|   project_structure.txt
 |   project_structure1.txt
-|   project_structure3.txt
 |   server.js
 |   
 +---config
@@ -2567,28 +2565,34 @@ E:.
 +---protected
 +---public
 |   |   About.html
-|   |   cacao_pods.jpeg
-|   |   cacao_pod_with_beans.jpeg
 |   |   Chocolate_Brands.html
 |   |   Chocolate_Eating_Advice.html
 |   |   Contact.html
-|   |   dark_chocolate.jpeg
-|   |   dark_chocolate2.jpeg
-|   |   dark_chocolate3.jpeg
-|   |   dark_chocolate4.jpeg
-|   |   Dark_Chocolate_script_fin_2p.js
 |   |   index.html
-|   |   login_logout.js
-|   |   protected_page_advice_link.js
-|   |   script.js
-|   |   script_Carousel.js
-|   |   slideshow_responsiveCarousel.css
-|   |   slideshow_responsiveCarousel.js
-|   |   styles_Dark_Chocolate_0f_login.css
-|   |   styles_Form_0b.css
-|   |   styles_modern_reset_0c.css
 |   |   Why_Is_Cocoa_Dangerous.html
 |   |   
+|   +---assets
+|   |   +---css
+|   |   |       slideshow_responsiveCarousel.css
+|   |   |       styles_Dark_Chocolate_0f_login.css
+|   |   |       styles_Form_0b.css
+|   |   |       styles_modern_reset_0c.css
+|   |   |       
+|   |   +---images
+|   |   |       cacao_pods.jpeg
+|   |   |       cacao_pod_with_beans.jpeg
+|   |   |       dark_chocolate.jpeg
+|   |   |       dark_chocolate2.jpeg
+|   |   |       dark_chocolate3.jpeg
+|   |   |       dark_chocolate4.jpeg
+|   |   |       
+|   |   \---js
+|   |           login_logout.js
+|   |           protected_page_advice_link.js
+|   |           script.js
+|   |           script_Carousel.js
+|   |           slideshow_responsiveCarousel.js
+|   |           
 |   \---js
 |           api.js
 |           auth.js
