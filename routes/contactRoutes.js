@@ -3,6 +3,8 @@ const router = express.Router();
 
 const csrfProtection = require("../middleware/csrf");
 
+const badWordFilter = require("../middleware/badWordFilter");
+
 const {
     submitContactForm
 } = require("../controllers/contactController");
@@ -10,6 +12,7 @@ const {
 router.post(
     "/submit",
     csrfProtection,
+    badWordFilter,
     submitContactForm
 );
 

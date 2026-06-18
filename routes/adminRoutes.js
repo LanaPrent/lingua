@@ -1,35 +1,7 @@
-/*1st version separate
-const express = require("express");
-const router = express.Router();
-const { getAllMessages } = require("../controllers/adminController");
-const { exportMessagesCSV } = require("../controllers/adminController");
-
-
-// Admin page - show all messages plus export messages CSV
-router.get("/admin/messages", getAllMessages);
-router.get("/admin/messages/export", exportMessagesCSV);
-
-module.exports = router;
-*/
-/*
-//2nd version together - the same thing
-const express = require("express");
-const router = express.Router();
-
-const {
-  getAllMessages,
-  exportMessagesCSV,
-} = require("../controllers/adminController");
-
-router.get("/admin/messages", getAllMessages);
-router.get("/admin/messages/export", exportMessagesCSV);
-
-module.exports = router;
-*/
-
 // routes/adminRoutes.js in order to enable sending csv by email
 const express = require("express");
 const router = express.Router();
+
 
 const { getAllMessages, exportMessagesCSV } = require("../controllers/adminController");
 const { generateAndSendCsv } = require("../services/csvEmailService");
@@ -39,11 +11,14 @@ const { generateAndSendCsv } = require("../services/csvEmailService");
 //const { adminBasicAuth } = require("../middleware/adminAuth");
 const adminBasicAuth = require("../middleware/adminAuth");
 
+//import adminBlockIP from middleware/userIPBlock.js to block IP
+const adminBlockIP = require("../middleware/adminBlockIP");
+
 /**
- * 1. Admin page - show all messages
- * For restriction of access to admin/messages added adminBasicAuth in line below
+ * 1. Admin page - show all messages,
+ * For restriction of access to admin/messages added adminBasicAuth,  block IP addressin line below
  */
-router.get("/admin/messages", adminBasicAuth,getAllMessages);
+router.get("/admin/messages", adminBlockIP, adminBasicAuth,getAllMessages);
 
 /**
  * 2. Download CSV via browser
@@ -82,6 +57,7 @@ router.get("/admin/messages/email", async (req, res) => {
     res.status(500).send("Error sending CSV by email");
   }
 });
+
 
 module.exports = router;
 
