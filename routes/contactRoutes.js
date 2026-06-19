@@ -9,12 +9,17 @@ const {
     submitContactForm
 } = require("../controllers/contactController");
 
+const honeypotGuard = require("../middleware/honeypotGuard");
+
+
 router.post(
     "/submit",
     csrfProtection,
+    honeypotGuard,
     badWordFilter,
     submitContactForm
 );
+
 
 module.exports = router;
 

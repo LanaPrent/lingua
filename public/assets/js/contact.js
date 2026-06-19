@@ -1,5 +1,6 @@
 console.log("contact.js loaded");
 
+
 // ===== Elements =====
 
 const contactForm = document.getElementById("contactForm");
@@ -59,6 +60,15 @@ async function loadUserInfo() {
 
 loadUserInfo();
 
+document.addEventListener("DOMContentLoaded", () => {
+    const startField = document.getElementById("formStartTime");
+
+    if (startField) {
+        startField.value = Date.now();
+    }
+});
+
+
 // ===== Submit Contact Form =====
 
 contactForm.addEventListener("submit", async (e) => {
@@ -74,6 +84,7 @@ contactForm.addEventListener("submit", async (e) => {
         email: document.getElementById("email").value,
 
         comments: document.getElementById("comments").value,
+        formStartTime: document.getElementById("formStartTime").value,
 
         _csrf: csrfInput.value
     };

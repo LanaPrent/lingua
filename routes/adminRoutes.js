@@ -12,13 +12,13 @@ const { generateAndSendCsv } = require("../services/csvEmailService");
 const adminBasicAuth = require("../middleware/adminAuth");
 
 //import adminBlockIP from middleware/userIPBlock.js to block IP
-const adminBlockIP = require("../middleware/adminBlockIP");
+const blackListIP = require("../middleware/blackListIP");
 
 /**
  * 1. Admin page - show all messages,
  * For restriction of access to admin/messages added adminBasicAuth,  block IP addressin line below
  */
-router.get("/admin/messages", adminBlockIP, adminBasicAuth,getAllMessages);
+router.get("/admin/messages", blackListIP, adminBasicAuth,getAllMessages);
 
 /**
  * 2. Download CSV via browser

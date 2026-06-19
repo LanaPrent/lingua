@@ -119,6 +119,9 @@
   <!-- Login/Register hidden CSRF inputs -->
   <input type="text" id="name" placeholder="Name" required>
   <input type="email" id="email" placeholder="Email" required>
+  <input type="text" name="website" autocomplete="off" tabindex="-1"
+       style="display:none">
+  <input type="hidden" name="formStartTime" id="formStartTime">
   <textarea id="comments" placeholder="Comments" required></textarea>
   <button id="submitBtn" type="submit">Send</button>
   <div id="loadingSpinner" style="display:none;">Submitting...</div>
