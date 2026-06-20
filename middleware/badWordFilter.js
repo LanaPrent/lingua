@@ -7,29 +7,29 @@ const badWords = [
   "casino"
 ];
 
-const badWords = [
-  "spam",
-  "scam",
-  "hack",
-  "bitcoin",
-  "viagra",
-  "casino"
-];
-
 function badWordFilter(req, res, next) {
-  const text = JSON.stringify(req.body || {}).toLowerCase();
+  try {
+    const raw = req.body || {};
 
-  const found = badWords.some(word => text.includes(word));
+    // Convert everything to safe string
+    const text = JSON.stringify(raw).toLowerCase();
 
-  if (found) {
-    return res.status(400).json({
-      success: false,
-      message: "Inappropriate content detected"
-    });
+    const found = badWords.some(word => text.includes(word));
+
+    if (found) {
+      return res.status(400).json({
+        success: false,
+        message: "Inappropriate content detected"
+      });
+    }
+
+    next();
+  } catch (err) {
+    console.error("badWordFilter error:", err);
+    next(); // never break request flow
   }
-
-  next();
 }
 
 module.exports = badWordFilter;
+
 
