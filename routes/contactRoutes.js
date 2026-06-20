@@ -17,7 +17,7 @@ router.post(
     csrfProtection,
     honeypotGuard,
     badWordFilter,
-    submitContactForm
+   // submitContactForm
 );
 
 
