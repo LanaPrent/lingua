@@ -15,9 +15,9 @@ const honeypotGuard = require("../middleware/honeypotGuard");
 router.post(
     "/submit",
     csrfProtection,
-    honeypotGuard,
-    badWordFilter,
-   // submitContactForm
+    //honeypotGuard,
+   // badWordFilter,
+    submitContactForm
 );
 
 
