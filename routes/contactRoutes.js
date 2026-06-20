@@ -13,12 +13,14 @@ const honeypotGuard = require("../middleware/honeypotGuard");
 
 
 router.post(
-    "/submit",
-    //csrfProtection,
-    //honeypotGuard,
-   // badWordFilter,
-    submitContactForm
+  "/submit",
+  adminBlockIP,
+  csrfProtection,
+  honeypotGuard,
+  badWordFilter,
+  submitContactForm
 );
+
 
 
 module.exports = router;
