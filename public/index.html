@@ -84,29 +84,28 @@
 <section id="s1">Benefits and Harms of Dark Chocolate</section>
    </header>
 <nav class="navbar"> 
-   <a href="About.html" style="float:right">About</a>
-  <!-- <a href="Contact.html" style="float:right !important">Contact</a>-->
+    <!-- <a href="About.html" style="float:right">About</a> //float and !important don't work with flex
+ <a href="Contact.html" style="float:right !important">Contact</a>-->
 
-<a href="/" data-i18n="home">Home</a>
+<a href="/" style="margin-left:auto;" data-i18n="home">Home</a>
 <a href="/About.html" data-i18n="about">About</a>
 <a href="/Contact.html" data-i18n="contact">Contact</a>
-<button onclick="setLanguage('en')">EN</button>
-<button onclick="setLanguage('sr')">SR</button>
-<button data-i18n="login">Login</button>
-<button data-i18n="register">Register</button>
+
 
    <div id="authButtons" style="float:right;">
     <!----><span id="userInfo" style="margin-right:10px;"></span>
-      <a href="#" id="loginBtn">Login</a>
-      <a href="#" id="registerBtn">Register</a>
+      <a href="#" id="loginBtn" data-i18n="login">Login</a>
+      <a href="#" id="registerBtn" data-i18n="register">Register</a>
       <a href="#" id="logoutBtn" style="display:none;">Logout</a>
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('sr')">SR</button>
    </div>
 </nav>
 <div class="container">
    <aside>
 <h2>Useful Information about Dark Chocolate</h2>
 <img src="/assets/images/dark_chocolate2.jpeg" alt="A dark chocolate bar and cacao beans" width="320" height="200"><br><br>
-<a href="#" data-protected="Why_Is_Cocoa_Dangerous.html">Heavy Metals in Dark Chocolate</a><br>
+<a href="#" "Why_Is_Cocoa_Dangerous.html" data-i18n="Heavy Metals in Dark Chocolate">Heavy Metals in Dark Chocolate</a><br>
 <!--<a href="Why_Is_Cocoa_Dangerous.html">Heavy Metals in Dark Chocolate</a><br>-->
 <!--<a href="/members/harmful-metals-in-chocolate">Heavy Metals in Dark Chocolate</a><br>-->
 <!--<a href="#" id="loginWhyIsCocoaDangerous">Heavy Metals in Dark Chocolate</a><br>-->
