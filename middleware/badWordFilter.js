@@ -19,7 +19,7 @@ function badWordFilter(req, res, next) {
     if (found) {
       return res.status(400).json({
         success: false,
-        message: "Inappropriate content detected"
+        message: "Inappropriate content has been detected, your message is not acceptable."
       });
     }
 

@@ -1,15 +1,15 @@
-/* 
-const translations = {
+/*
+export const translations = {
   en: {
-    home: "Home",      
+    home: "Home",
     about: "About",
-    contact: "Contact",    
+    contact: "Contact",
     login: "Login",
     register: "Register",
     submit: "Submit",
     logout: "Logout"
   },
-  
+
   sr: {
     home: "Početna",
     about: "O nama",
@@ -20,28 +20,8 @@ const translations = {
     logout: "Odjava"
   },
 };
-
-function setLanguage(lang) {
-  const elements = document.querySelectorAll("[data-i18n]");
-
-  elements.forEach(el => {
-    const key = el.getAttribute("data-i18n");
-
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-
-  localStorage.setItem("language", lang);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("language") || "en";
-  setLanguage(savedLang);
-});
 */
-
-const translations = {
+export const translations = {
   en: {
 //add home title and contact title 
   home: {
@@ -67,7 +47,7 @@ const translations = {
   }, 
    headline:{
     title: "Welcome to the Dark Chocolate Benefits and Harms App"
-  }, 
+  }
 },
  
   sr: {
@@ -99,25 +79,3 @@ logout:{
   }
 }
 };
-
-function setLanguage(lang) {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-
-    const parts = key.split(".");
-    const value =
-      translations[lang]?.[parts[0]]?.[parts[1]];
-
-    if (value) {
-      el.textContent = value;
-    }
-  });
-
-  localStorage.setItem("language", lang);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("language") || "en";
-  setLanguage(savedLang);
-});
- /* */

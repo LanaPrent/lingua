@@ -1,0 +1,35 @@
+
+
+/*
+import { translations } from "./translations.js";
+function setLanguage(lang) {
+  const elements = document.querySelectorAll("[data-i18n]");
+
+  elements.forEach(el => {
+    const key = el.getAttribute("data-i18n");
+
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  localStorage.setItem("language", lang);
+}
+  */
+import { translations } from "./translations.js";
+export function setLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n; //instead of const key = el.getAttribute("data-i18n");
+
+    const parts = key.split(".");
+    const value =
+      translations[lang]?.[parts[0]]?.[parts[1]];
+
+    if (value) {
+     el.textContent=value; // instead of: el.textContent = value;
+    }
+  });
+
+  localStorage.setItem("language", lang);
+};
+/**/
