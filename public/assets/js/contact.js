@@ -121,8 +121,14 @@ contactForm.addEventListener("submit", async (e) => {
 
         loadingSpinner.style.display = "none";
 
-        responseMsg.innerText = err.message;
+        //responseMsg.innerText = err.message; //instead of this, write the code until responseMsg.Style.color
+        if(err.message ==="Failed to fetch"){
+            responseMsg.innerText = localStorage.getItem("language")==="sr"?
+            "Povezivanje trenutno nije uspelo": "Unable to connect right now";
 
-        responseMsg.style.color = "red";
+}else{
+    responseMsg.innerText = err.message;
+}
+        responseMsg.style.color = "green";
     }
 });

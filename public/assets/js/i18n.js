@@ -1,4 +1,4 @@
-/* 
+/* flat version
 const translations = {
   en: {
     home: "Home",      
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setLanguage(savedLang);
 });
 */
-
+//embedded version
 const translations = {
   en: {
 //add home title and contact title 
@@ -68,6 +68,15 @@ const translations = {
    headline:{
     title: "Welcome to the Dark Chocolate Benefits and Harms App"
   }, 
+  name:{
+    placeholder: "Name"
+  },
+  comments:{
+    placeholder: "Comments"
+  },
+  send:{
+    text: "Send"
+  }
 },
  
   sr: {
@@ -96,6 +105,15 @@ logout:{
 },
   headline:{
     title: "Dobro došli na vebsajt o prednostima i manama crne čokolade"
+  },
+  name:{
+    placeholder:"Ime"
+  },
+  comments:{
+    placeholder:"Komentari"
+  },
+  send:{
+    text:"Pošalji"
   }
 }
 };

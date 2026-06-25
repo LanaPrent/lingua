@@ -120,7 +120,7 @@
    <aside>
 <h2>Useful Information about Dark Chocolate</h2>
 <img src="/assets/images/dark_chocolate2.jpeg" alt="A dark chocolate bar and cacao beans" width="320" height="200"><br><br>
-<a href="#" "Why_Is_Cocoa_Dangerous.html" data-i18n="Heavy Metals in Dark Chocolate">Heavy Metals in Dark Chocolate</a><br>
+<a href="#" data-protected="Why_Is_Cocoa_Dangerous.html" data-i18n="Heavy Metals in Dark Chocolate">Heavy Metals in Dark Chocolate</a><br>
 <!--<a href="Why_Is_Cocoa_Dangerous.html">Heavy Metals in Dark Chocolate</a><br>-->
 <!--<a href="/members/harmful-metals-in-chocolate">Heavy Metals in Dark Chocolate</a><br>-->
 <!--<a href="#" id="loginWhyIsCocoaDangerous">Heavy Metals in Dark Chocolate</a><br>-->
@@ -136,18 +136,18 @@
 
 <div class="contactForm-container">
 <!--<h2>JSON Contact Form H5</h2>-->
-<form id="contactForm">
+<form id="contactForm" novalidate>
   <input type="hidden" id="csrfToken">
   <!-- Login/Register hidden CSRF inputs -->
-  <input type="text" id="name" placeholder="Name" required>
+  <input type="text" id="name"  placeholder="Name" data-i18n-placeholder="name.placeholder"required>
   <input type="email" id="email" placeholder="Email" required>
   <input type="text" name="website" autocomplete="off" tabindex="-1"
        style="display:none">
   <input type="hidden" name="formStartTime" id="formStartTime">
-  <textarea id="comments" placeholder="Comments" required></textarea>
-  <button id="submitBtn" type="submit">Send</button>
+  <textarea id="comments"  placeholder="Comments" data-i18n-placeholder="comments.placeholder" required></textarea>
+  <button id="submitBtn"  type="submit" data-i18n="send.text">Send</button>
   <div id="loadingSpinner" style="display:none;">Submitting...</div>
-</form>
+</form>  
 <div id="responseMsg" style="color: transparent">response message</div>
 </div>
    </aside>

@@ -1,11 +1,17 @@
 console.log("api.js loaded");
-
+/*
+function getLang(){
+    return localStorage.getItem("language") || "en";
+}
+*/
 async function apiFetch(url, options = {}) {
 
     const defaultOptions = {
         credentials:"include",//previously: "same-origin"
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Accept-Language": localStorage.getItem("language") || "en"
+            //"Accept-Language":getLang()
         }
     };
 
@@ -20,6 +26,8 @@ async function apiFetch(url, options = {}) {
     };
 
     const response = await fetch(url, finalOptions);
+
+
 
     let data;
 
@@ -39,7 +47,6 @@ async function apiFetch(url, options = {}) {
         }
         throw new Error("Unauthorized");
     }
-
 
     if (!response.ok) {
         throw new Error(data.message || "Request failed");

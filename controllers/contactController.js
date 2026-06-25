@@ -79,16 +79,21 @@ exports.submitContactForm = async (req, res) => {
 const logger = require("../config/logger");
 const conn = require("../config/db");
 const { sendContactEmail } = require("../services/emailService");
+const {t} = require("../services/i18nMessages");
 
 exports.submitContactForm = async (req, res) => {
   console.log("REQUEST BODY:", req.body);
+
+//const lang = (req.headers["accept-language"]?.split(",")[0]  || "en")
+ // .slice(0, 2);
+const lang = req.headers["accept-language"]?.split(",")[0] 
 
   let { name, email, comments, website } = req.body;
 
   if (website) {
     return res.status(400).json({
       success: false,
-      message: "Bot detected",
+      message: t("BOT_DETECTED", lang),
     });
   }
 
@@ -99,21 +104,21 @@ exports.submitContactForm = async (req, res) => {
   if (!name || !email || !comments) {
     return res.status(400).json({
       success: false,
-      message: "All fields required",
+      message: t("REQUIRED_FIELDS", lang),
     });
   }
 
   if (name.length > 100 || email.length > 100 || comments.length > 1000) {
     return res.status(400).json({
       success: false,
-      message: "Too long",
+      message: t("TOO_LONG", lang),
     });
   }
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({
       success: false,
-      message: "Invalid email",
+      message: t("INVALID_EMAIL", lang),
     });
   }
 
@@ -125,7 +130,7 @@ exports.submitContactForm = async (req, res) => {
         logger.error(err.message);
         return res.status(500).json({
           success: false,
-          message: "DB error",
+          message: t("DB_ERROR", lang),
         });
       }
 
@@ -134,14 +139,14 @@ exports.submitContactForm = async (req, res) => {
 
         res.json({
           success: true,
-          message: "Your message has been sent",
+          message: t("EMAIL_SENT", lang),   // "Your message has been sent"
         });
       } catch (err) {
         console.error("EMAIL ERROR:", err);
 
         res.json({
           success: true,
-          message: "Your message has been saved",
+          message: t("EMAIL_SAVED", lang)   //"Your message has been saved",
         });
       }
     }
