@@ -13,7 +13,7 @@
         <!-- GEO / AI discoverability -->
          <meta name="robots" content="index, follow, max-image-preview:large">
          <!-- Canonical URL -->
-          <link rel="canonical" href="https: //mydomain.com/ ">
+          <link rel="canonical" href="https://mydomain.com/ ">
           <!-- Open Graph (social + AI systems) -->
            <meta property="og:title" content="Dark Chocolate Benefits and Risks">
            <meta property="og:description" content="Explore the health effect, antioxidants, 
@@ -27,21 +27,22 @@
              <meta name="theme-color" content="#3b2413">
              <!-- Structured Data for AI + Search Engines -->
               <script type="application/ld+json">
+                {
                 "@context": "https://schema.org",
                 "@type": "Article",
                 "headline":"Benefits and Harms of Dark Chocolate",
-                "description": "A guide explaining the health benefits, risks, heavy metals,
-                and safe consumption of dark chocolate.",
+                "description": "A guide explaining the health benefits, risks, heavy metals, and safe consumption of dark chocolate.",
                 "author": {
                   "@type": "Person",
                   "name": "LanaP"
                 },
-                "datePublished": "",
-                "dateModified": "",
+                "datePublished": "2026-06-25",
+                "dateModified": "2026-06-25",
                 "mainEntityOfPage": {
                   "@type": "WebPage",
                   "@id": "https://yourdomain.com"
                 }
+              }
               </script>
               <!-- FAQ Structured Data -->
                <script type="application/ld+json">
@@ -54,8 +55,7 @@
                 "name":"Is dark chocolate healthy?", 
                 "acceptedAnswer":{
                   "@type":"Answer", 
-                  "text":"Dark chocolate contains antioxidants and flavonoids that
-                  may support hearth health when consumed in moderation. "
+                  "text":"Dark chocolate contains antioxidants and flavonoids that may support heart health when consumed in moderation. "
                 }
                },
                {
@@ -63,7 +63,7 @@
                 "name":"How much dark chocolate is safe to eat daily?",
                 "acceptedAnswer":{
                   "@type":"Answer",
-                  "text":"Most studies recomment about 30 to 60 grams of dark chocolate per day."
+                  "text":"Most studies recommend about 30 to 60 grams of dark chocolate per day."
                 }
                }
                ]
@@ -159,7 +159,9 @@
 <h1 id="main-heading">
 Benefits and Risks of Dark Chocolate
 </h1>
-
+<p class="faq-question">What are benefits and where do risks come from?</p>
+<p class="faq-answer">Very briefly, dark chocolate benefits range from its delicious taste 
+  instantly improving our mood to real health benefits. On the other hand, risks come from the outside.</p>
 <p>
 Dark chocolate is widely consumed for its rich flavor and potential health benefits.
 Research suggests that moderate consumption of dark chocolate may support heart health,
@@ -331,5 +333,8 @@ fetch("/api/status")
 <!--<script type="module" src="/assets/js/i18n/translations.js" defer></script>
 <!--<script type="module" src="/assets/js/i18n/translator.js" defer></script>-->
 <script type="module" src="assets/js/i18n/initI18n.js" defer></script>
+<!--<script id="ld-json"></script>-->
+<div id="ld-json-container"></div>
+<script src="assets/js/seo.js" defer></script>
 </body>
 </html>
