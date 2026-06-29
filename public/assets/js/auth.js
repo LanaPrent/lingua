@@ -1,4 +1,8 @@
+//import {translations} from "../js/i18n/translations.js";
+import {translations} from "./i18n/translations.js";
+import {translate} from "./i18n/translator.js";
 console.log("auth.js loaded");
+
 
 // ===== Elements =====
 const userInfo = document.getElementById("userInfo");
@@ -95,6 +99,7 @@ window.addEventListener("click", (e) => {
 async function updateAuthButtons() {
 
     try {
+        //import {translations} from "./translations.js";
 
         const data = await apiFetch("/api/status");
 
@@ -106,7 +111,16 @@ async function updateAuthButtons() {
 
             logoutBtn.style.display = "inline-block";
 
-            userInfo.textContent = `Welcome, ${data.username}`
+            //userInfo.textContent = `Welcome, ${data.username}`
+            /*
+            const lng = localStorage.getItem("language") || "en";
+            const welcome = translations[lng].welcome.text;
+            userInfo.textContent = `${welcome} ${data.username}`;
+            */
+            const lng = localStorage.getItem("language") || "en";
+            const welcomeText = translations?.[lng]?.welcome?.text ||"Welcome,";
+            const username=data.username||"";
+            userInfo.textContent = `${welcomeText} ${username}`;
 
         } else {
 
@@ -145,6 +159,22 @@ loginForm.addEventListener("submit", async (e) => {
 
         _csrf: loginCsrfInput.value
     };
+    /**/
+    //for separate error messages
+    if (!data.email) {
+    loginMsg.innerText =
+        translate("login.emailRequired");
+    loginMsg.style.color = "red";
+    return;
+}
+
+if (!data.password) {
+    loginMsg.innerText =
+        translate("login.passwordRequired");
+    loginMsg.style.color = "red";
+    return;
+}
+    
 
     try {
 
@@ -155,7 +185,16 @@ loginForm.addEventListener("submit", async (e) => {
             body: JSON.stringify(data)
         });
 
-        loginMsg.innerText = result.message;
+        //loginMsg.innerText = result.message;
+   /* 
+   //this function block is not necessary after adding import { translate } from "./i18n/translator.js";
+        function translate(key) {
+            const lang=localStorage.getItem("language") || "en";
+            const parts = key.split(".");
+            return translations[lang]?.[parts[0]]?.[parts[1]] || key;
+        }
+    */
+        loginMsg.innerText=translate(result.message);
 
         loginMsg.style.color =
             result.success ? "green" : "red";
@@ -179,7 +218,7 @@ loginForm.addEventListener("submit", async (e) => {
 
         console.error(err);
 
-        loginMsg.innerText = err.message;
+        loginMsg.innerText = translate(err.message);
 
         loginMsg.style.color = "red";
     }
@@ -206,6 +245,30 @@ registerForm.addEventListener("submit", async (e) => {
 
         _csrf: registerCsrfInput.value
     };
+    /**/
+//check added before calling API
+    if (!data.username) {
+    registerMsg.innerText =
+        translate("register.usernameRequired");
+    registerMsg.style.color = "red";
+    return;
+}
+
+if (!data.email) {
+    registerMsg.innerText =
+        translate("register.emailRequired");
+    registerMsg.style.color = "red";
+    return;
+}
+
+if (!data.password) {
+    registerMsg.innerText =
+        translate("register.passwordRequired");
+    registerMsg.style.color = "red";
+    return;
+}
+
+
 
     try {
 
@@ -215,8 +278,9 @@ registerForm.addEventListener("submit", async (e) => {
 
             body: JSON.stringify(data)
         });
+        console.log(result);
 
-        registerMsg.innerText = result.message;
+        registerMsg.innerText = translate(result.message);
 
         registerMsg.style.color =
             result.success ? "green" : "red";
@@ -238,7 +302,7 @@ registerForm.addEventListener("submit", async (e) => {
 
         console.error(err);
 
-        registerMsg.innerText = err.message;
+        registerMsg.innerText = translate(err.message);
 
         registerMsg.style.color = "red";
     }
@@ -263,7 +327,10 @@ logoutBtn.addEventListener("click", async (e) => {
 
         const msg = document.getElementById("authMsg");
 
-msg.textContent = "Logged out successfully";
+//msg.textContent = "Logged out successfully";
+const lng=localStorage.getItem("language") || "en";
+//msg.textContent = translations[lng].logout.success;
+msg.textContent = translate("logout.success");
 msg.classList.add("show");
 
 setTimeout(() => {
@@ -275,7 +342,11 @@ setTimeout(() => {
 
     const msg = document.getElementById("authMsg");
 
-    msg.textContent = "Logout failed";
+    //msg.textContent = "Logout failed";
+    const lng=localStorage.getItem("language") || "en";
+    //msg.textContent=translations[lng].logout.failed;
+    msg.textContent = translate("logout.failed");
+
     msg.classList.add("show", "error"); // optional "error" class for red color
 
     setTimeout(() => {

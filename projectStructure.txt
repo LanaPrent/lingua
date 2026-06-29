@@ -1,12 +1,15 @@
 Folder PATH listing for volume EXTERNAL_USB
-Volume serial number is 000000C7 0644:BCB8
+Volume serial number is 0000003D 0644:BCB8
 E:.
 |   .env
+|   .env2
 |   .gitignore
 |   package-lock.json
 |   package.json
+|   projectStructure.txt
 |   project_structure1.txt
 |   project_structure2.txt
+|   README.md
 |   server.js
 |   
 +---config
@@ -23,7 +26,10 @@ E:.
 +---middleware
 |       adminAuth.js
 |       authMiddleware.js
+|       badWordFilter.js
+|       blackListIP.js
 |       csrf.js
+|       honeypotGuard.js
 |       
 +---node_modules
 |   |   .package-lock.json
@@ -2588,15 +2594,28 @@ E:.
 |       |       dark_chocolate4.jpeg
 |       |       
 |       \---js
-|               api.js
-|               auth.js
-|               contact.js
-|               login_logout.js
-|               protected_page_advice_link.js
-|               script.js
-|               script_Carousel.js
-|               slideshow_responsiveCarousel.js
-|               
+|           |   api.js
+|           |   auth.js
+|           |   contact.js
+|           |   i18n.js
+|           |   login_logout.js
+|           |   protected_page_advice_link.js
+|           |   script.js
+|           |   script_Carousel.js
+|           |   seo.js
+|           |   slideshow_responsiveCarousel.js
+|           |   
+|           +---i18n
+|           |       initI18n.js
+|           |       lang.js
+|           |       messages.js
+|           |       translations.js
+|           |       translator.js
+|           |       
+|           \---versions of i18n.js
+|                   i18n_1v_navbar.js
+|                   i18n_2v_navbar.js
+|                   
 +---routes
 |       adminRoutes.js
 |       authRoutes.js
@@ -2607,4 +2626,5 @@ E:.
         csvEmailService.js
         csvService.js
         emailService.js
+        i18nMessages.js
         

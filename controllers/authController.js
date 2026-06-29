@@ -9,7 +9,8 @@ exports.register = async (req, res) => {
     if (!username || !email || !password) {
         return res.status(400).json({
             success: false,
-            message: "All fields required"
+            //message: "All fields required" //no hard-coded messages
+            message: "common.requiredFields"
         });
     }
 
@@ -28,19 +29,22 @@ exports.register = async (req, res) => {
                     if (err.code === "ER_DUP_ENTRY") {
                         return res.status(400).json({
                             success: false,
-                            message: "User already exists"
+                           //message: "User already exists"
+                           message: "register.userExists"
                         });
                     }
 
                     return res.status(500).json({
                         success: false,
-                        message: "Database error"
+                        //message: "Database error"
+                        message:"common.databaseError"
                     });
                 }
 
                 res.json({
                     success: true,
-                    message: "Registration successful"
+                    //message: "Registration successful"
+                    message: "register.success"
                 });
             }
         );
@@ -53,7 +57,8 @@ exports.register = async (req, res) => {
 
         res.status(500).json({
             success: false,
-            message: "Server error"
+            //message: "Server error"
+            message: "common.serverError"
         });
     }
 };
@@ -65,7 +70,8 @@ exports.login = async (req, res) => {
     if (!email || !password) {
         return res.status(400).json({
             success: false,
-            message: "All fields required"
+            //message: "All fields required"
+            message:"common.requiredFields"
         });
     }
 
@@ -78,14 +84,15 @@ exports.login = async (req, res) => {
             if (err) {
                 return res.status(500).json({
                     success: false,
-                    message: "Database error"
+                    //message: "Database error"
+                    message: "common.databaseError"
                 });
             }
 
             if (results.length === 0) {
                 return res.status(400).json({
                     success: false,
-                    message: "Invalid credentials"
+                    message: "login.invalidCredentials"
                 });
             }
 
@@ -99,7 +106,8 @@ exports.login = async (req, res) => {
             if (!match) {
                 return res.status(400).json({
                     success: false,
-                    message: "Invalid credentials"
+                    //message: "Invalid credentials"
+                    message: "login.invalidCredentials"
                 });
             }
 
@@ -109,7 +117,8 @@ exports.login = async (req, res) => {
 
             res.json({
                 success: true,
-                message: "Login successful"
+                //message: "Login successful"
+                message: "login.success"
             });
         }
     );
@@ -122,7 +131,8 @@ exports.logout = (req, res) => {
         if (err) {
             return res.status(500).json({
                 success: false,
-                message: "Logout failed"
+                //message: "Logout failed"
+                message:"logout.failed"
             });
         }
 
@@ -130,7 +140,8 @@ exports.logout = (req, res) => {
 
         res.json({
             success: true,
-            message: "Logged out"
+            //message: "Logged out"
+            message: "logout.success"
         });
     });
 };

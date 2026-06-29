@@ -23,6 +23,10 @@ const password = parts[1];
 
   res.setHeader("WWW-Authenticate", "Basic realm=Admin Area");
   return res.status(401).send("Wrong credentials");
+
+  console.log("ADMIN_USER:", process.env.ADMIN_USER);
+console.log("ADMIN_PASSWORD:", process.env.ADMIN_PASSWORD);
+console.log("AUTH HEADER:", authHeader);
 }
 
 module.exports= adminBasicAuth;

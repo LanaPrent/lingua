@@ -34,17 +34,46 @@ export const translations = {
     title: "Contact Info"
   },
   login:{
-    message: "Log in"
+    message: "Log in",
+    title:"Login",
+    button: "Log in",
+    email: "Email",
+    password: "Password",
+    emailRequired:"Email is required",
+    passwordRequired:"Password is required",
+
+    success: "Login successful",
+    invalidCredentials: "Invalid email or password"
   }, 
   register:{
-    message: "Register"
+    message: "Register",
+    title:"Register",
+    button: "Register",
+    username: "Username",
+    email: "Email",
+    password: "Password",
+    emailRequired:"Email is required",
+    usernameRequired:"Username is required",
+    passwordRequired:"Password is required",
+
+    success: "You registered successfully",
+    userExists: "A user with this email already exists"
   },
   submit:{
     message: "Submit"
   },
   logout:{
-    message: "Log out"
+    message: "Log out",
+    success: "Logged out successfully",
+    failed: "Logout failed"
   }, 
+  common:{
+    submit:"Submit",
+    submitting:"Submitting...",
+    databaseError: "Database error",
+    serverError: "Server error",
+    requiredFields: "All fields are required"
+  },
    headline:{
     title: "Welcome to the Dark Chocolate Benefits and Harms App"
   },
@@ -56,6 +85,15 @@ comments: {
 },
 send: {
   text: "Send"
+},
+welcome: {
+  text: "Welcome,"
+},
+profile: {
+  title: "..."
+},
+settings: {
+  title: "..."
 }
 },
  
@@ -72,16 +110,46 @@ send: {
     title: "Kontakt info"
   },
   login:{
-    message: "Uloguj se"
+    message: "Prijavi se",
+    title:"Prijava",
+    button: "Uloguj se",
+    email: "Email",
+    password: "Lozinka",
+    emailRequired:"Unesite email adresu",
+    passwordRequired:"Unesite lozinku",
+
+
+    success: "Uspešno ste se prijavili",
+    invalidCredentials: "Pogrešan email ili lozinka"
   },
   register:{
-    message: "Registruj se"
+    message: "Registruj se",
+    title:"Registracija",
+    button:"Registruj se",
+    username:"Korisničko ime",
+    email:"Email",
+    password:"Lozinka",
+    emailRequired:"Unesite email adresu",
+    usernameRequired:"Unesite korisničko ime",
+    passwordRequired:"Unesite lozinku",
+
+    success: "Uspešno ste se registrovali",
+    userExists: "Korisnik već postoji"
   },
  submit:{
   message: "Pošalji"
  },
 logout:{
-  message:"Odjavi se"
+  message:"Odjavi se",
+  success:"Uspešno ste se odjavili", 
+  failed: "Odjava nije uspela"
+},
+common:{
+  submit:"Pošalji",
+  submitting: "Slanje...",
+  databaseError: "Greška u bazi podataka",
+    serverError: "Greška na serveru",
+    requiredFields: "Sva polja su obavezna"
 },
   headline:{
     title: "Dobro došli na vebsajt o prednostima i manama crne čokolade"
@@ -94,6 +162,15 @@ comments: {
 },
 send: { 
   text: "Pošalji" 
+}, 
+welcome: {
+  text: "Dobrodošli,"
+},
+profile: {
+  title: "..."
+},
+settings: {
+  title: "..."
 }
 }
 };

@@ -106,7 +106,7 @@
 <a href="/Contact.html" data-i18n="contact.title">Contact</a>
 
 <div id="authButtons" style="float:right;">
-      <span id="userInfo" style="margin-right:10px;"></span>
+      <span id="userInfo"  style="margin-right:10px;"></span>
       <a href="#" id="loginBtn" data-i18n="login.message">Login</a>
       <a href="#" id="registerBtn" data-i18n="register.message"  >Register</a> <!-- data-i18n="register"  version1-->
       <a href="#" id="logoutBtn" style="display:none;" data-i18n="logout.message" >Logout</a>
@@ -274,14 +274,16 @@ Possible side effects include:
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <span class="close" id="closeLogin">&times;</span>
-    <h2>Login</h2>
-    <form id="loginForm">
+    <h2 data-i18n="login.title">Login</h2>
+    <form id="loginForm" novalidate>
       <input type="hidden" id="csrfLogin" name="_csrf">
-      <input type="email" id="loginEmail" placeholder="Email" required>
-      <input type="password" id="loginPassword" placeholder="Password" required>
-      <button type="submit">Login</button>
+      <input type="email" id="loginEmail" placeholder="Email" data-i18n-placeholder="login.email" required>
+      <input type="password" id="loginPassword" placeholder="Password" data-i18n-placeholder="login.password" required>
+      <button type="submit"data-i18n="login.button">Login</button>
     </form>
-    <div id="loginSpinner" style="display:none;">Submitting...</div>
+    <div id="loginSpinner" style="display:none;">
+      <span data-i18n="common.submitting">Submitting...</span>
+    </div>
     <div id="loginMsg"></div>
   </div>
 </div>
@@ -290,13 +292,13 @@ Possible side effects include:
 <div id="registerModal" class="modal">
   <div class="modal-content">
     <span class="close" id="closeRegister">&times;</span>
-    <h2>Register</h2>
-    <form id="registerForm">
+    <h2 data-i18n="register.title">Register</h2>
+    <form id="registerForm" novalidate>
       <input type="hidden" id="csrfRegister" name="_csrf">
-      <input type="text" id="regUsername" placeholder="Username" required>
-      <input type="email" id="regEmail" placeholder="Email" required>
-      <input type="password" id="regPassword" placeholder="Password" required>
-      <button type="submit">Register</button>
+      <input type="text" id="regUsername" data-i18n-placeholder="register.username" placeholder="Username" required>
+      <input type="email" id="regEmail" data-i18n-placeholder="register.email" placeholder="Email" required>
+      <input type="password" id="regPassword" data-i18n-placeholder="register.password" placeholder="Password" required>
+      <button type="submit" data-i18n="register.button">Register</button>
     </form>
     <div id="registerSpinner" style="display:none;">Submitting...</div>
     <div id="registerMsg"></div>
@@ -326,7 +328,7 @@ fetch("/api/status")
  </script>
  <script src="assets/js/api.js" defer></script>
 <script src="assets/js/contact.js" defer></script>
-<script src="assets/js/auth.js" defer></script>
+<script type = "module" src="assets/js/auth.js" defer></script>
 <!--<script src="assets/js/protected_page_advice_link.js" defer></script>-->
 <script src="assets/js/slideshow_responsiveCarousel.js" defer></script>
 <!--<script src="/assets/js/i18n.js" defer></script>-->

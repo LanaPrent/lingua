@@ -36,8 +36,16 @@ document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
     el.placeholder = value;
   }
 });
-
   localStorage.setItem("language", lang);
 };
+  export function translate(key) {
+  const lang = localStorage.getItem("language") || "en";
+
+  const parts = key.split(".");
+
+  return translations[lang]?.[parts[0]]?.[parts[1]] || key;
+}
+
+
 
 /**/

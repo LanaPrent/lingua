@@ -113,13 +113,25 @@ app.listen(PORT, "0.0.0.0", () => {
 // LOG ENV VARIABLES (DEBUG)
 // =======================
 
-console.log("MYSQLHOST =", process.env.MYSQLHOST);
-console.log("MYSQLUSER =", process.env.MYSQLUSER);
-console.log("MYSQLDATABASE =", process.env.MYSQLDATABASE);
-console.log("MYSQLPORT =", process.env.MYSQLPORT);
-
+console.log("=== ENV DEBUG START ===")
+console.log("DB CONFIG:");
 console.log("DB_HOST =", process.env.DB_HOST);
 console.log("DB_USER =", process.env.DB_USER);
+console.log("DB_NAME =", process.env.DB_NAME);
+console.log("DB_PORT =", process.env.DB_PORT);
 
+console.log("AUTH / ADMIN:")
 console.log("ADMIN_USER=", process.env.ADMIN_USER);
 console.log("ADMIN_PASSWORD=", process.env.ADMIN_PASSWORD);
+
+console.log("EMAIL:");
+console.log("SMTP_USER =", process.env.SMTP_USER ? "***SET***" : "NOT SET");
+console.log("SMTP_PASS =", process.env.SMTP_PASS ? "***SET***" : "NOT SET");
+
+console.log("RESEND_API_KEY =", process.env.RESEND_API_KEY ? "***SET***" : "NOT SET");
+
+console.log("NODE_ENV =", process.env.NODE_ENV);
+
+console.log("=== ENV DEBUG END ===");
+
+
