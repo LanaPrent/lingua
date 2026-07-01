@@ -5,10 +5,6 @@ if (!process.env.DB_HOST || !process.env.DB_USER || !process.env.DB_PASS) {
 
 const mysql = require("mysql2");
 
-//const isProd = process.env.NODE_ENV === "production";
-// Create connection pool using ONLY DB_* variables
-
-
 const conn = mysql.createPool({
    // host: isProd ? process.env.MYSQLHOST : "localhost",
     host:process.env.DB_HOST,
