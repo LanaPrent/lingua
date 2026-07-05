@@ -74,9 +74,6 @@ export const translations = {
     serverError: "Server error",
     requiredFields: "All fields are required"
   },
-   headline:{
-    title: "Welcome to the Dark Chocolate Benefits and Harms App"
-  },
   name: {
   placeholder: "Name"
 },
@@ -94,7 +91,10 @@ profile: {
 },
 settings: {
   title: "..."
-}
+},
+  headline:{
+    title: "A colorful world of idioms as a signature feature of a language"
+  },
 },
  
   sr: {
@@ -152,7 +152,7 @@ common:{
     requiredFields: "Sva polja su obavezna"
 },
   headline:{
-    title: "Dobro došli na vebsajt o prednostima i manama crne čokolade"
+    title: "Živopisni svet idioma kao zaštitni znak svakog jezika"
   },
   name: { 
     placeholder: "Ime" 
