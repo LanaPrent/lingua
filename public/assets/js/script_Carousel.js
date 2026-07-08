@@ -1,3 +1,4 @@
+//NOT THIS FILE FOR CAROUSEL, IT'S slideshow_responsiveCarousel.js
 /* code for 1 slideshow
 const slides = document.querySelectorAll(".mySlides");
 
@@ -18,7 +19,7 @@ setInterval(moveCarousel, 3000);
 */
 
 // code for multiple slideshows
-
+//NOT THIS FILE FOR CAROUSEL, IT'S slideshow_responsiveCarousel.js
 console.log("carousel loaded");
 document.addEventListener("DOMContentLoaded", ()=>{
 

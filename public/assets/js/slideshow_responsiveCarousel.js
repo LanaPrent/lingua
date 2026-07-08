@@ -47,7 +47,7 @@ document.querySelectorAll(".slideshow-container").forEach(container => {
   let slideIndex = 0;
   const slideWidth = 100;
   const transitionTime = 1500;
-  const intervalTime = 3000;
+  const intervalTime = 6000;
 
   function moveSlides() {
     slideIndex++;
