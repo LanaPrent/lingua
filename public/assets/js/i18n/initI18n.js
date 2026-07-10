@@ -1,3 +1,5 @@
+//login, register buttons  and sr, eng buttons
+
 /*
 document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("language") || "en";

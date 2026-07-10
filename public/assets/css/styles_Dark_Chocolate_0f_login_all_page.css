@@ -25,10 +25,13 @@ header h1 {
   display: flex;
   justify-content: space-between;
   background-color: goldenrod;
+  position:sticky;
+  top:0;
+  z-index:1000; /*z-axis, to make sure the navigation always stays above the page content*/
 }
 
 /* Style the navigation bar links */
-.navbar a {
+.navbar  a {    /* > added because of drop-down menu, meaning: applies only to direct children */
   color: white;
   /*text-align: center;*/
   padding: 14px 20px;
@@ -37,7 +40,7 @@ header h1 {
 }
 
 /* Change color on hover */
-.navbar a:hover {
+.navbar  a:hover {
   background-color: #d77907;
   color: black;
 }
@@ -156,6 +159,11 @@ footer .b1{
    /*align-self: stretch;*/
    /*align-items: stretch; only for flex containers*/
   }
+
+  
+
+
+
 
   footer{
     display:flex;

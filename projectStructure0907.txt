@@ -1,14 +1,17 @@
 Folder PATH listing for volume EXTERNAL_USB
-Volume serial number is 0000003D 0644:BCB8
+Volume serial number is 00000053 0644:BCB8
 E:.
 |   .env
-|   .env2
 |   .gitignore
+|   database.sql
+|   index_0.html
+|   index_Idioms.html
 |   package-lock.json
 |   package.json
 |   projectStructure.txt
-|   project_structure1.txt
-|   project_structure2.txt
+|   projectStructure0907.txt
+|   projectStructure1.txt
+|   projectStructure3.txt
 |   README.md
 |   server.js
 |   
@@ -23,6 +26,7 @@ E:.
 |   |   contactController.js
 |   |   
 |   \---logs
++---logs
 +---middleware
 |       adminAuth.js
 |       authMiddleware.js
@@ -2569,53 +2573,77 @@ E:.
 |           README.md
 |           wrappy.js
 |           
-+---protected
 +---public
 |   |   About.html
-|   |   Chocolate_Brands.html
 |   |   Chocolate_Eating_Advice.html
 |   |   Contact.html
+|   |   Exercises.html
 |   |   index.html
 |   |   Why_Is_Cocoa_Dangerous.html
 |   |   
-|   \---assets
-|       +---css
-|       |       slideshow_responsiveCarousel.css
-|       |       styles_Dark_Chocolate_0f_login.css
-|       |       styles_Form_0b.css
-|       |       styles_modern_reset_0c.css
-|       |       
-|       +---images
-|       |       cacao_pods.jpeg
-|       |       cacao_pod_with_beans.jpeg
-|       |       dark_chocolate.jpeg
-|       |       dark_chocolate2.jpeg
-|       |       dark_chocolate3.jpeg
-|       |       dark_chocolate4.jpeg
-|       |       
-|       \---js
-|           |   api.js
-|           |   auth.js
-|           |   contact.js
-|           |   i18n.js
-|           |   login_logout.js
-|           |   protected_page_advice_link.js
-|           |   script.js
-|           |   script_Carousel.js
-|           |   seo.js
-|           |   slideshow_responsiveCarousel.js
-|           |   
-|           +---i18n
-|           |       initI18n.js
-|           |       lang.js
-|           |       messages.js
-|           |       translations.js
-|           |       translator.js
-|           |       
-|           \---versions of i18n.js
-|                   i18n_1v_navbar.js
-|                   i18n_2v_navbar.js
-|                   
+|   +---assets
+|   |   +---css
+|   |   |       slideshow_responsiveCarousel.css
+|   |   |       styles_Dark_Chocolate_0f_login_all_page.css
+|   |   |       styles_Form_0b.css
+|   |   |       styles_modern_reset_0c.css
+|   |   |       
+|   |   +---images
+|   |   |       10 idiomatic expressions - meaning.png
+|   |   |       10 true idioms - meaning.png
+|   |   |       2 id. exp. - My pleasure Fingers crossed 3.png
+|   |   |       4 id. exp. - BTW in fact for the time being at the end of the day 2.png
+|   |   |       4 id. exp. - You know I mean On the other hand To be honest 1.png
+|   |   |       6 phrasal verbs - meaning.png
+|   |   |       cacao_pods.jpeg
+|   |   |       cacao_pod_with_beans.jpeg
+|   |   |       dark_chocolate.jpeg
+|   |   |       dark_chocolate2.jpeg
+|   |   |       dark_chocolate3.jpeg
+|   |   |       dark_chocolate4.jpeg
+|   |   |       pairs phrasal verbs-idioms  set up 6.png
+|   |   |       pairs phrasal verbs-idioms look down 2.png
+|   |   |       pairs phrasal verbs-idioms look up 1.png
+|   |   |       pairs phrasal verbs-idioms run out 3.png
+|   |   |       pairs phrasal verbs-idioms turn down 5.png
+|   |   |       pairs phrasal verbs-idioms turn up 4.png
+|   |   |       True idioms - better late than never 9.png
+|   |   |       true idioms - break a leg 2.png
+|   |   |       true idioms - break the ice 1.png
+|   |   |       true idioms - no pain no gain 6.png
+|   |   |       true idioms - not rocket science 7.png
+|   |   |       true idioms - piece of cake 3.png
+|   |   |       true idioms - so far so good 10.png
+|   |   |       true idioms - spot on 5.png
+|   |   |       true idioms - the last straw 8.png
+|   |   |       true idioms - time flies 4.png
+|   |   |       
+|   |   \---js
+|   |       |   api.js
+|   |       |   auth.js
+|   |       |   contact.js
+|   |       |   i18n.js
+|   |       |   login_logout.js
+|   |       |   protected_page_advice_link.js
+|   |       |   script.js
+|   |       |   script_Carousel.js
+|   |       |   seo.js
+|   |       |   slideshow_responsiveCarousel.js
+|   |       |   
+|   |       +---i18n
+|   |       |       initI18n.js
+|   |       |       lang.js
+|   |       |       messages.js
+|   |       |       translations.js
+|   |       |       translator.js
+|   |       |       
+|   |       \---versions of i18n.js
+|   |               i18n_1v_navbar.js
+|   |               i18n_2v_navbar.js
+|   |               
+|   +---content
+|   |   \---images
+|   \---core
 +---routes
 |       adminRoutes.js
 |       authRoutes.js

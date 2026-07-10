@@ -83,3 +83,48 @@ p {
   margin: 0 !important;
 }
   */
+
+  /* ---------- Dropdown menu ---------- */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 14px 16px;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background:  #d77907;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #d77907;
+    min-width: 240px;
+    color:#222 !important; /*I added this now*/
+    box-shadow: 0 6px 12px rgba(0,0,0,.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

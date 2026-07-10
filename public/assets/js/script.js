@@ -1,3 +1,4 @@
+//contact form
 console.log("Contact form JS loaded");
 
 // ===== Elements =====

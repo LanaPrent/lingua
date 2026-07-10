@@ -17,12 +17,17 @@ function setLanguage(lang) {
 }
   */
 import { translations } from "./translations.js";
+import {translations_general} from "./translations_general.js";
 export function setLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n; //instead of const key = el.getAttribute("data-i18n");
     const parts = key.split(".");
     const value = translations[lang]?.[parts[0]]?.[parts[1]];
     if (value) {
+     el.textContent=value; 
+    }
+    const value1=translations_general[lang]?.[parts[0]]?.[parts[1]];
+    if (value1) {
      el.textContent=value; 
     }
   });
@@ -35,10 +40,14 @@ document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
   if (value) {
     el.placeholder = value;
   }
+   const value1 = translations_general[lang]?.[parts[0]]?.[parts[1]];
+
+  if (value1) {
+    el.placeholder = value;
+  }
 });
   localStorage.setItem("language", lang);
 };
-
   export function translate(key) {
   const lang = localStorage.getItem("language") || "en";
 
@@ -46,18 +55,6 @@ document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
 
   return translations[lang]?.[parts[0]]?.[parts[1]] || key;
 }
-
-document.querySelectorAll("[data-i18n-content]").forEach(el => {
-    const key = el.dataset.i18nContent;
-    const parts = key.split(".");
-
-    const value =
-        homeTranslations[lang]?.[parts[0]]?.[parts[1]];
-
-    if(value){
-        el.innerHTML = value;
-    }
-});
 
 
 
