@@ -22,13 +22,9 @@ export function setLanguage(lang) {
     const key = el.dataset.i18n; //instead of const key = el.getAttribute("data-i18n");
     const parts = key.split(".");
     const value = translations[lang]?.[parts[0]]?.[parts[1]];
-    if (value == null) return;
-           if(typeof value === "string" && value.includes("<")) {
-el.innerHTML = value;
-}
-else{
-el.textContent = value;
-}
+    if (value) {
+     el.textContent=value; 
+    }
   });
 // placeholders
 document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
@@ -50,21 +46,28 @@ document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
 
   return translations[lang]?.[parts[0]]?.[parts[1]] || key;
 }
-/*
+
 document.querySelectorAll("[data-i18n-content]").forEach(el => {
     const key = el.dataset.i18nContent;
     const parts = key.split(".");
 
     const value =
         homeTranslations[lang]?.[parts[0]]?.[parts[1]];
-
+/*
     if(value){
         el.innerHTML = value;
     }
- 
+ */
 //changed to enable backticks in translations_home.js
+       if(typeof value === "string" && value.includes("<")) {
+el.innerHTML = value;
+}
+else{
+el.textContent = value;
+}
+
 });
 
-*/
+
 
 /**/
