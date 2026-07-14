@@ -1,6 +1,8 @@
 export const homeTranslations = {
     en: {
 home: {
+   headline: "A colorful world of idioms as a signature feature of a language",
+   siteTitle: "Idiomatic expressions in Serbian and English | Lingua",
    sidebarHeading: "Idioms call the tune",
    sbOrganism:"We could freely view a language as a kind of living organism that is born together with the community that uses it, grows and develops, changes over time, sometimes becomes part of another language by losing its independence in the political world, or sometimes disappears completely, leaving no trace of its existence. In this sense, grammar would be the backbone—or more precisely, the entire skeleton—of this organism, while the words and vocabulary of a language would be the body surrounding the skeleton. Collocations, groups of words that naturally go together and fit well together, would then represent the nervous system of this organism, connecting the grammatical structure and vocabulary of the language—that is, its collection of words—into an active system of rules and vivid expressions. It is a system that continuously pulses, changes, and lives together with the social community that uses it every day.",
    sbLearning: "How can we learn idioms?",
@@ -37,11 +39,11 @@ home: {
    noContext:"If we learn them outside of any context, when we use individual words and expressions, they will most likely sound unnatural. The person we are speaking with may understand what we want to say, but at the same time we will be sending clear signals that we do not know the language well. They may not even understand us very well. Individual words that we do not use as part of correct collocations can contribute greatly to confusion and misunderstanding. Fortunately, in direct conversation, when the context is known to all the participants, even incorrectly used words can still be understood correctly—not because of our knowledge of the language, but because of the familiar specific situation, our facial expressions, body language, and similar cues.",
    noContextList: "If we do not learn words as part of collocations and idiomatic expressions:",
    unclear:"We risk being misunderstood or not understood at all by the person we are talking to.",
-   noKnowledge:"We send a clear message that we do not have a command of that language.",
+   noKnowledge:"We send a clear message that we do not have a full command of that language.",
    missedMeaning:"In the vast majority of cases, we will not be able to understand the person we are speaking with, a film, or a song.",
    phrasalToIdiomHeading:"From phrasal verbs to true idioms",
    prefixVsAdverb:"In the Serbian language, verbs are given prefixes that change the basic meaning of the verb, whereas in English, an adverb or a preposition can be added after the verb. It is written separately, but together they form a single unit. When a preposition is added to a verb, these are called prepositional verbs, and prepositional verbs can have a literal meaning, meaning that is clear from the meanings of their individual parts, or a figurative, idiomatic meaning that cannot be guessed from their separate parts. When an adverb is added to a verb, it is called a phrasal verb. Phrasal verbs can also have either a literal or an idiomatic meaning. Similarly, a verb can have both an adverb and a preposition added to it at the same time. Such verbs are called phrasal-prepositional verbs, and they can also have either a literal or an idiomatic meaning. Strictly speaking, they are not idioms, but they are closely related to them and are often called idiomatic expressions.",
-   idiomStructureHheading: "What is the structure of an idiom?",
+   idiomStructureHeading: "What is the structure of an idiom?",
    idiomStructureDescription: "Idioms can be verb phrases or syntagms, noun phrases, or prepositional phrases, with a generally fixed and unchangeable structure that can sometimes be grammatically adapted to the context. Likewise, adjectives can sometimes be added to nouns or adverbs to verbs. In order to modify the structure of idioms, it is best to first memorize the idiom in its original form and learn the context in which it is used. Later, the context itself will suggest where we can make certain changes in order to achieve some additional effect.",
    idiomByStructureList: "Idioms can be classified by structure as:",
    verbPhrase:"verb phrase idioms",
@@ -67,6 +69,7 @@ home: {
 
     sr: {
         home: {
+   headline: "Živopisni svet idioma kao zaštitni znak svakog jezika",
    sidebarHeading: "Idiomi vedre i oblače",
    sbOrganism:"Jezik bismo slobodno mogli da posmatramo kao neki živi organizam koji se rađa sa zajednicom koja ga koristi, raste i razvija, menja tokom vremena, ponekad postane deo nekog drugog jezika izgubivši svoju samostalnost u političkom svetu, ili, ponekad potpuno nestaje, ne ostavivši nikakav trag o sebi. Pa bi tako gramatika bila kičma, tačnije, celokupan skelet organizma, a reči, vokabular nekog jezika, bi tako bile telo oko skeleta takvog organizma, dok bi kolokacije, grupe reči koje dobro idu zajedno i koje se dobro zajedno uklapaju, onda predstavljale nervni sistem tog organizma, koji povezuje gramatičku konstrukciju i vokabular jezika, odnosno, fond reči u aktivan sistem pravila i živopisnih izraza, sistem koji neprekidno pulsira, menja se, živi zajedno sa svojom društvenom zajednicom koja ga svakodnevno koristi.",
    sbLearning: "Kako učiti idiome?",
@@ -104,10 +107,11 @@ home: {
    noContext:"Ako ih učimo izvan bilo kakvog konteksta, kada ih upotrebimo pojedinačne reči i izrazi će najverovatnije zvučati neprirodno. Sagovornik će možda razumeti šta želimo da kažemo, ali ćemo mu istovremeno slati i jasne signale da taj jezik ne znamo dobro. A možda nas neće ni razumeti baš najbolje. Pojedinačne reči koje ne upotrebimo u okviru pravilnih kolokacija mogu mnogo da doprinesu zabuni i nerazumevanju. Na sreću, u direktnoj konverzaciji, kada je kontekst poznat svim sagovornicima, čak i nepravilno upotrebljene reči budu pravilno shvaćene, ali ne zahvaljući našem poznavanju jezika, nego poznatoj konkretnoj situaciji, našoj mimici, govoru tela, i slično.", 
    noContextList: " Ako ne učimo reči u okviru kolokacija/idioma:",
    unclear:"Rizikujemo da nas sagovornik ili ne razume uopšte ili pogrešno razume.",
-   noKnowledge:"Šaljemo jasnu poruku da ne vladamo tim jezikom.",
+   noKnowledge:"Šaljemo jasnu poruku da ne vladamo tim jezikom u potpunosti.",
    missedMeaning:"Sasvim izvesno u velikoj većini slučajeva nećemo biti u stanju da razumemo sagovornika, film, ili pesmu.",
    phrasalToIdiomHeading:"Od frazalnih glagola ka pravim idiomima",
-   prefixVsAdverb:"U srpskom jeziku se glagolima dodaju prefiksi koji menjaju osnovno značenje glagola, a u engleskom jeziku posle glagola može da se doda prilog ili predlog koji se piše odvojeno ali zajedno predstavljaju celinu. Kada se glagolima dodaje predlog onda su to `<strong>predloški glagoli (prepositional verbi)</strong>` i predloški glagoli mogu imati bukvalno značenje, odnosno, značenje koje je jasno na osnovu značenja njihovih delova, ili prenosno, idiomatsko značenje koje se ne može pogoditi na osnovu njihovih delova. Kada se glagolu doda prilog, on se zove <strong>frazalni glagoli (phrasal verbs)</strong>. Frazalni glagoli takođe mogu imati bukvalno ili idiomatsko značenje. Isto tako, glagolima može istovremeno da se doda i prilog i predlog i takvi glagoli se zovu `<strong>priloško-predloški glagoli (phrasal-prepositional verbs)</strong>`, koji takođe mogu imati bukvalno ili idiomatsko značenje. Strogo govoreći, oni nisu idiomi, ali su im bliski i često se zovu idiomatski izrazi (idiomatic expressions)", idiomStructureHheading: "What is the structure of an idiom?", 
+   prefixVsAdverb:"U srpskom jeziku se glagolima dodaju prefiksi koji menjaju osnovno značenje glagola, a u engleskom jeziku posle glagola može da se doda prilog ili predlog koji se piše odvojeno ali zajedno predstavljaju celinu. Kada se glagolima dodaje predlog onda su to `<strong>predloški glagoli (prepositional verbi)</strong>` i predloški glagoli mogu imati bukvalno značenje, odnosno, značenje koje je jasno na osnovu značenja njihovih delova, ili prenosno, idiomatsko značenje koje se ne može pogoditi na osnovu njihovih delova. Kada se glagolu doda prilog, on se zove <strong>frazalni glagoli (phrasal verbs)</strong>. Frazalni glagoli takođe mogu imati bukvalno ili idiomatsko značenje. Isto tako, glagolima može istovremeno da se doda i prilog i predlog i takvi glagoli se zovu `<strong>priloško-predloški glagoli (phrasal-prepositional verbs)</strong>`, koji takođe mogu imati bukvalno ili idiomatsko značenje. Strogo govoreći, oni nisu idiomi, ali su im bliski i često se zovu idiomatski izrazi (idiomatic expressions)", 
+   idiomStructureHeading: "Kako izgleda struktura idioma?", 
    idiomStructureDescription: "Idiomi mogu da budu glagolske fraze ili sintagme, imeničke fraze, predloške fraze, ili dve ili tri reči iste vrste često povezane veznicima. Idiomi uglavnom imaju čvrstu i nepromenljivu strukturu, koja se ponekad može gramatički prilagođavati kontekstu.Isto tako, ponekad se mogu dodavati pridevi uz imenice ili prilozi uz glagole. Da bismo menjali strukturu idioma, najbolje je da idiom prvo zapamtimo u svom izvornom obliku i naučimo u kom kontekstu se upotrebljava, a kasnije će nam sam kontekst sugerisati gde ponešto možemo da izmenimo kako bismo postigli neki dodatni efekat.", 
    idiomByStructureList: "Idiomi po strukturi mogu biti:",
    verbPhrase:"glagolske sintagme",
@@ -127,7 +131,7 @@ home: {
 submitQuestions: "Svoja pitanja, predloge ili urađene zadatke možete da pošaljete koristeći formu:",
     contactForm: "Kontakt forma",
 
-   exercises:"Zadaci za vežbanje",
+   exercisesIdioms:"Zadaci za vežbanje",
    back:"Idi na početak strane"
         }
     }

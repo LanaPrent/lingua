@@ -5,7 +5,7 @@ const isAuthenticated = require("../middleware/authMiddleware");
 const router=express.Router();
 
 router.get(
-    "/members/chocolate-eating-advice",
+    "/members/chocolate_eating_advice",
     isAuthenticated,
     (req,res) => {
         res.sendFile(
@@ -13,13 +13,13 @@ router.get(
                 __dirname,
                 "..",
                 "protected",
-                "Chocolate_Eating_Advice.html"
+                "chocolate_eating_advice.html"
             )
         );
     }
 );
 router.get(
-    "/members/harmful-metals-in-chocolate",
+    "/members/why_cocoa_is_dangerous",
     isAuthenticated,
     (req,res) => {
         res.sendFile(
@@ -27,7 +27,21 @@ router.get(
                 __dirname,
                 "..",
                 "protected",
-                "Why_Is_Cocoa_Dangerous.html"
+                "why_cocoa_is_dangerous.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/exercises",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "exercises.html"
             )
         );
     }

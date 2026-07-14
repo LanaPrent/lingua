@@ -53,7 +53,7 @@ Pages (HTML content)
 •	public/Contact.html 
 •	public/Chocolate_Brands.html 
 •	public/Chocolate_Eating_Advice.html 
-•	public/Why_Is_Cocoa_Dangerous.html 
+•	public/why_cocoa_is_dangerous.html 
 •	public/index.html (depends: CORE or CONTENT depending on usage) 
 ________________________________________
 Images (visual content)

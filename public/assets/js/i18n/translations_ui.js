@@ -89,9 +89,6 @@ settings: {
   title: "..."
 },
 
-  headline:{
-    title: "A colorful world of idioms as a signature feature of a language"
-  },
   //Contact form
   submit:{
     message: "Submit"
@@ -197,9 +194,6 @@ common:{
     serverError: "Greška na serveru",
     requiredFields: "Sva polja su obavezna"
 },
-  headline:{
-    title: "Živopisni svet idioma kao zaštitni znak svakog jezika"
-  },
   name: { 
     placeholder: "Ime" 
   },

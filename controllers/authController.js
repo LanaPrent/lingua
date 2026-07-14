@@ -40,6 +40,7 @@ exports.register = async (req, res) => {
                         message:"common.databaseError"
                     });
                 }
+                
 
                 res.json({
                     success: true,
@@ -62,8 +63,9 @@ exports.register = async (req, res) => {
         });
     }
 };
-
 exports.login = async (req, res) => {
+    console.log("LOGIN REQUEST");
+    console.log(req.body);
 
     const { email, password } = req.body;
 
@@ -78,9 +80,10 @@ exports.login = async (req, res) => {
     conn.execute(
         "SELECT * FROM auth_users WHERE email = ?",
         [email],
+       
 
         async (err, results) => {
-
+ console.log("DB results:", results);
             if (err) {
                 return res.status(500).json({
                     success: false,
@@ -88,6 +91,7 @@ exports.login = async (req, res) => {
                     message: "common.databaseError"
                 });
             }
+            console.log("Number of users found:", results.length);
 
             if (results.length === 0) {
                 return res.status(400).json({
@@ -97,11 +101,13 @@ exports.login = async (req, res) => {
             }
 
             const user = results[0];
+            console.log("Found user:", user)
 
             const match = await bcrypt.compare(
                 password,
                 user.password_hash
             );
+            console.log("Password match:", match);
 
             if (!match) {
                 return res.status(400).json({
@@ -110,6 +116,7 @@ exports.login = async (req, res) => {
                     message: "login.invalidCredentials"
                 });
             }
+            console.log(user);
 
             req.session.userId = user.id;
             req.session.username = user.username;
