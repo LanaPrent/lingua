@@ -9,7 +9,6 @@ exports.register = async (req, res) => {
     if (!username || !email || !password) {
         return res.status(400).json({
             success: false,
-            //message: "All fields required" //no hard-coded messages
             message: "common.requiredFields"
         });
     }
@@ -29,14 +28,12 @@ exports.register = async (req, res) => {
                     if (err.code === "ER_DUP_ENTRY") {
                         return res.status(400).json({
                             success: false,
-                           //message: "User already exists"
                            message: "register.userExists"
                         });
                     }
 
                     return res.status(500).json({
                         success: false,
-                        //message: "Database error"
                         message:"common.databaseError"
                     });
                 }
@@ -44,7 +41,6 @@ exports.register = async (req, res) => {
 
                 res.json({
                     success: true,
-                    //message: "Registration successful"
                     message: "register.success"
                 });
             }
@@ -52,27 +48,24 @@ exports.register = async (req, res) => {
 
     } catch (err) {
 
-        //console.error(err);
         logger.error(err.message);
 
 
         res.status(500).json({
             success: false,
-            //message: "Server error"
             message: "common.serverError"
         });
     }
 };
 exports.login = async (req, res) => {
-    console.log("LOGIN REQUEST");
-    console.log(req.body);
+    //console.log("LOGIN REQUEST");
+    //console.log(req.body);
 
     const { email, password } = req.body;
 
     if (!email || !password) {
         return res.status(400).json({
             success: false,
-            //message: "All fields required"
             message:"common.requiredFields"
         });
     }
@@ -83,15 +76,14 @@ exports.login = async (req, res) => {
        
 
         async (err, results) => {
- console.log("DB results:", results);
+            //console.log("DB results:", results);
             if (err) {
                 return res.status(500).json({
                     success: false,
-                    //message: "Database error"
                     message: "common.databaseError"
                 });
             }
-            console.log("Number of users found:", results.length);
+            //console.log("Number of users found:", results.length);
 
             if (results.length === 0) {
                 return res.status(400).json({
@@ -101,22 +93,21 @@ exports.login = async (req, res) => {
             }
 
             const user = results[0];
-            console.log("Found user:", user)
+            //console.log("Found user:", user)
 
             const match = await bcrypt.compare(
                 password,
                 user.password_hash
             );
-            console.log("Password match:", match);
+            //console.log("Password match:", match);
 
             if (!match) {
                 return res.status(400).json({
                     success: false,
-                    //message: "Invalid credentials"
                     message: "login.invalidCredentials"
                 });
             }
-            console.log(user);
+            //console.log(user);
 
             req.session.userId = user.id;
             req.session.username = user.username;
@@ -138,7 +129,6 @@ exports.logout = (req, res) => {
         if (err) {
             return res.status(500).json({
                 success: false,
-                //message: "Logout failed"
                 message:"logout.failed"
             });
         }
@@ -147,7 +137,6 @@ exports.logout = (req, res) => {
 
         res.json({
             success: true,
-            //message: "Logged out"
             message: "logout.success"
         });
     });

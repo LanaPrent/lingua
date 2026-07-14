@@ -1,9 +1,4 @@
-console.log("api.js loaded");
-/*
-function getLang(){
-    return localStorage.getItem("language") || "en";
-}
-*/
+//console.log("api.js loaded");
 async function apiFetch(url, options = {}) {
 
     const defaultOptions = {

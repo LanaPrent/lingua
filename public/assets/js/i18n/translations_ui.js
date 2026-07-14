@@ -1,46 +1,6 @@
-/*
-export const translations = {
-  en: {
-    home: "Home",
-    about: "About",
-    contact: "Contact",
-    login: "Login",
-    register: "Register",
-    submit: "Submit",
-    logout: "Logout"
-  },
 
-  sr: {
-    home: "Početna",
-    about: "O nama",
-    contact: "Kontakt",
-    login: "Prijava",
-    register: "Registracija",
-    submit: "Pošalji",
-    logout: "Odjava"
-  },
-};
-*/
 export const uiTranslations = {
   en: {
-//add home title and contact title 
-/*
-  home: {
-    title: "Home"
-  },
-  about: {
-    title: "About"
-  },
-  contact: {
-    title: "Contact Info"
-  },
-  content: {
-  text: "Content"
-}, 
-go:{
-  text:"Go to bottom"
-},
-*/
 nav: {
     home: "Home",
     content: "Content",
@@ -109,15 +69,6 @@ comments: {
 send: {
   text: "Send"
 },
-/*
-  exercises:{
-    text: "Exercises"
-  },
-
-  back:{
-    text: "Back to top"
-  }
-    */
     footer:{
   exercises: "Exercises",
   back:"Back to top"
@@ -126,23 +77,6 @@ send: {
  
   sr: {
     //add home title and contact title 
-  /*
-  home: {
-    title: "Početna"
-  },
-  about: {
-    title: "O nama"
-  },
-  contact: {
-    title: "Kontakt info"
-  },
-  content: {
-  text: "Sadržaj"
-},
-go:{
-  text:"Idi na kraj"
-},
-  */
 nav: {
     home: "Početna",
     content: "Sadržaj",
@@ -212,15 +146,6 @@ profile: {
 settings: {
   title: "..."
 },
-/*
-exercises: {
-  text:"Zadaci za vežbanje"
-}, 
-
-back:{
-    text: "Idi na početak"
-  }
-    */
    footer:{
   exercises: "Zadaci za vežbanje",
   back:"Idi na početak strane"

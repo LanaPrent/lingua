@@ -77,7 +77,7 @@ p {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/*test at the end of all three css files to prove something
+/*test at the end of all three css files
 .container {
   max-width: none !important;
   margin: 0 !important;

@@ -1,7 +1,7 @@
 //import {translations} from "../js/i18n/translations.js";
 import {translations} from "./i18n/translations.js";
 import {translate} from "./i18n/translator.js";
-console.log("auth.js loaded");
+//console.log("auth.js loaded");
 
 
 // ===== Elements =====
@@ -186,14 +186,6 @@ if (!data.password) {
         });
 
         //loginMsg.innerText = result.message;
-   /* 
-   //this function block is not necessary after adding import { translate } from "./i18n/translator.js";
-        function translate(key) {
-            const lang=localStorage.getItem("language") || "en";
-            const parts = key.split(".");
-            return translations[lang]?.[parts[0]]?.[parts[1]] || key;
-        }
-    */
         loginMsg.innerText=translate(result.message);
 
         loginMsg.style.color =
@@ -245,7 +237,6 @@ registerForm.addEventListener("submit", async (e) => {
 
         _csrf: registerCsrfInput.value
     };
-    /**/
 //check added before calling API
     if (!data.username) {
     registerMsg.innerText =
@@ -278,7 +269,7 @@ if (!data.password) {
 
             body: JSON.stringify(data)
         });
-        console.log(result);
+        //console.log(result);
 
         registerMsg.innerText = translate(result.message);
 

@@ -1,37 +1,3 @@
-/* 1st version with two separate codes for table and CSV
-const conn = require("../config/db");
-
-exports.getAllMessages = (req, res) => {
-  conn.query("SELECT * FROM users ORDER BY created_at DESC", (err, results) => {
-    if (err) {
-      console.error(err);
-      return res.status(500).send("Database sending data to HTML table error");
-    }
-
-    // Render simple HTML table
-    let html = `<h1>Contact Messages</h1>
-                <table border="1" cellpadding="5">
-                <tr><th>ID</th><th>Name</th><th>Email</th><th>Comments</th><th>Created</th></tr>`;
-
-    results.forEach(row => {
-      html += `<tr>
-                <td>${row.id}</td>
-                <td>${row.name}</td>
-                <td>${row.email}</td>
-                <td>${row.comments}</td>
-                <td>${row.created_at}</td>
-              </tr>`;
-    });
-
-    html += "</table>";
-
-    res.send(html);
-  });
-};
-*/
-//2nd version with both together
-// controllers/adminController.js
-
 const conn = require("../config/db");
 const { generateAndSendCsv } = require("../services/csvEmailService");
 
@@ -55,7 +21,7 @@ exports.getAllMessages = (req, res) => {
         for (const email of recipients) {
           await generateAndSendCsv(email, results, "contact_messages.csv");
         }
-        console.log("CSV emailed successfully");
+        //console.log("CSV emailed successfully");
       } catch (emailError) {
         console.error("CSV email error:", emailError);
         // Page still works even if email fails

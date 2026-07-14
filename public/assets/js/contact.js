@@ -1,4 +1,4 @@
-console.log("contact.js loaded");
+//console.log("contact.js loaded");
 
 
 // ===== Elements =====

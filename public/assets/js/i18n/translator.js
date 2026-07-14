@@ -1,21 +1,3 @@
-
-
-/*
-import { translations } from "./translations.js";
-function setLanguage(lang) {
-  const elements = document.querySelectorAll("[data-i18n]");
-
-  elements.forEach(el => {
-    const key = el.getAttribute("data-i18n");
-
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-
-  localStorage.setItem("language", lang);
-}
-  */
 import { translations } from "./translations.js";
 export function setLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -50,21 +32,3 @@ document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
 
   return translations[lang]?.[parts[0]]?.[parts[1]] || key;
 }
-/*
-document.querySelectorAll("[data-i18n-content]").forEach(el => {
-    const key = el.dataset.i18nContent;
-    const parts = key.split(".");
-
-    const value =
-        homeTranslations[lang]?.[parts[0]]?.[parts[1]];
-
-    if(value){
-        el.innerHTML = value;
-    }
- 
-//changed to enable backticks in translations_home.js
-});
-
-*/
-
-/**/
