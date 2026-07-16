@@ -102,7 +102,7 @@ async function sendCsvEmail(recipientEmail, csvContent, filename = "report.csv")
   const text = "Please find the CSV report attached.";
 
   try{
-   console.log("➡️ Sending email to:", recipientEmail); 
+   //console.log("➡️ Sending email to:", recipientEmail); 
 
   const result = await sendEmail({
     recipients: [recipientEmail],
@@ -115,7 +115,7 @@ async function sendCsvEmail(recipientEmail, csvContent, filename = "report.csv")
       }
     ]
   });
-  console.log("✅ Email function completed for", recipientEmail, "Result:", result);
+  //console.log("✅ Email function completed for", recipientEmail, "Result:", result);
 }catch (err){
   console.error("❌ Failed sending to:", recipientEmail);
   console.error(err);

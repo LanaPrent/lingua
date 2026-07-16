@@ -132,7 +132,8 @@ submitQuestions: "Svoja pitanja, predloge ili urađene zadatke možete da pošal
     contactForm: "Kontakt forma",
 
    exercisesIdioms:"Zadaci za vežbanje",
-   back:"Idi na početak strane"
+   back:"Idi na početak strane",
+   mblBreakIce:"",
         }
     }
 };

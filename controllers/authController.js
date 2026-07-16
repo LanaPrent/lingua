@@ -58,7 +58,7 @@ exports.register = async (req, res) => {
     }
 };
 exports.login = async (req, res) => {
-    //console.log("LOGIN REQUEST");
+      console.log("LOGIN REQUEST");
     //console.log(req.body);
 
     const { email, password } = req.body;

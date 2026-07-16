@@ -245,3 +245,79 @@ footer .b1{
   transform: translateY(0);
 }
 
+/* ==========================
+   Mobile idiom accordion
+========================== */
+
+.mobile-idiom-list {
+    display: none;
+    margin-top: 20px;
+}
+
+
+.mobile-idiom-list h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+
+.idiom-question {
+    width: 100%;
+    text-align: left;
+    padding: 12px 15px;
+
+    /*background: #3b6ea8;*/
+    background:chocolate ;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 1rem;
+    cursor: pointer;
+
+    margin-bottom: 3px;
+}
+
+
+.idiom-question::before {
+    content: "▶ ";
+}
+
+
+.idiom-question.active::before {
+    content: "▼ ";
+}
+
+
+.idiom-answer {
+
+    max-height: 0;
+    overflow: hidden;
+
+    /*background: #f5f5f5;*/
+    background-color: lightgoldenrodyellow;
+
+    padding: 0 15px;
+
+    border-radius: 0 0 8px 8px;
+
+    transition: max-height 0.3s ease,
+                padding 0.3s ease;
+}
+
+
+.idiom-answer p {
+    margin: 10px 0;
+}
+
+
+/* Mobile only */
+
+@media (max-width: 768px) {
+
+    .mobile-idiom-list {
+        display: block;
+    }
+
+}
