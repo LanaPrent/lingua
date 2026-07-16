@@ -1,16 +1,18 @@
 export const homeTranslations = {
     en: {
 home: {
-   headline: "A colorful world of idioms as a signature feature of a language",
+   headline: "A colorful world of idioms as a culture and history guide",
    siteTitle: "Idiomatic expressions in Serbian and English | Lingua",
    sidebarHeading: "Idioms call the tune",
    sbOrganism:"We could freely view a language as a kind of living organism that is born together with the community that uses it, grows and develops, changes over time, sometimes becomes part of another language by losing its independence in the political world, or sometimes disappears completely, leaving no trace of its existence. In this sense, grammar would be the backbone—or more precisely, the entire skeleton—of this organism, while the words and vocabulary of a language would be the body surrounding the skeleton. Collocations, groups of words that naturally go together and fit well together, would then represent the nervous system of this organism, connecting the grammatical structure and vocabulary of the language—that is, its collection of words—into an active system of rules and vivid expressions. It is a system that continuously pulses, changes, and lives together with the social community that uses it every day.",
    sbLearning: "How can we learn idioms?",
    sbContext: "Idioms, like all words in general, are best learned in context. We will remember them best if we connect them with the situation in which they are used. We do not learn idioms and words as dictionary entries, on their own, simply as pairs of meanings in our native language and in a foreign language. It is possible to learn them that way, but most often that is where it ends — such words and expressions do not become easy or natural for us to use correctly when we need them. A practical rule: We learn new expressions and words by understanding and remembering the situations in which they are used, as well as the sentences in which we heard or read them.",
-   sbWhenHowMany:"When do we use idioms and how often?",
-   sbIntuition:"Since their main role is to make everyday conversation more vivid and expressive, they are used much more often in spoken language than in writing. In our native language, we usually use them unconsciously and spontaneously, intuitively sensing when they are appropriate and when they are not. It is clear that if too much is expressed figuratively, the main message will be lost. The same applies to the use of idioms in the English language.",
+   sbIdiomWhenHowMany:"When do we use idioms and how often?",
+   sbIdiomFrequency:"Since the main role of idioms is to make everyday conversation more vivid and expressive, they are used much more often in spoken language than in writing. In our native language, we usually use them unconsciously and spontaneously, intuitively sensing when they are appropriate and when they are not. It is clear that if too much is expressed figuratively, the main message will be lost. The same applies to the use of idioms in the English language.",
+   sbIdExpressionWhenHowMany:"And when and how often do we use other idiomatic expressions?",
+   sbIdExpressionFrequency:"Idiomatic expressions are a broader category that includes idioms as well as other types of fixed expressions, such as phrasal verbs, collocations, sayings, proverbs, metaphors and similar established expressions. When it comes to sayings or proverbs, a rule similar to that for true idioms could apply: they should not be overused, just as a dish should not be over-seasoned. In contrast, phrasal verbs and collocations are an essential part of the language—they are the seasoning without which a dish would not be very tasty, or perhaps not tasty at all. If we simply string together individual words from the dictionary that may each have the meaning we need on their own, but when used together, they either sound unnatural, fail to convey the intended meaning or even end up meaning nothing at all, we can easily run into communication problems. If we do not know these expressions, we certainly will not be able to understand our conversation partner well, let alone follow films, novels, or songs.", 
    sbComments:"Here you can send your suggestions or comments. If you wish, here you can also send your example sentences, completed exercises, or any questions related to them.",
-   mainHeading:"Understanding Idioms: What They Are and Why They Matter",
+   mainHeading:"Understanding Idioms and idiomatic expressions: What They Are and Why They Matter",
    dilemma: "What matters more: grammar or vocabulary?",
    approach: "We decide to learn foreign languages for many different reasons. Very often, it's a way to find a better job, but the motivation can also be a hobby, a love of movies or music, meeting someone, or something similar. Depending on the reason, we also take a different approach to the foreign language we've decided to learn.Regardless of the reason, however, it's clear that learning a language cannot happen without learning grammar. Grammar is that rather abstract structure that many people don't find particularly interesting—the framework onto which we attach the words and expressions we've learned. But it's the expressions themselves that are interesting. They evoke images, smells, tastes, and associations with particular situations, events, objects, or other things they represent. We learn expressions by watching movies and observing the situations in which they are repeatedly used, by listening to songs, and by reading books. These are what enable us to actually say something in a foreign language and be understood by a native speaker.",
    listener: "Even if we don't know the grammar, if we use the right word, the person we're talking to will use their logical reasoning and, based on the context, fill in the rest of the sentence that we didn't say. In this way, we will still be able to communicate with them. Words that carry meaning make communication possible.",
@@ -43,8 +45,8 @@ home: {
    missedMeaning:"In the vast majority of cases, we will not be able to understand the person we are speaking with, a film, or a song.",
    phrasalToIdiomHeading:"From phrasal verbs to true idioms",
    prefixVsAdverb:"In the Serbian language, verbs are given prefixes that change the basic meaning of the verb, whereas in English, an adverb or a preposition can be added after the verb. It is written separately, but together they form a single unit. When a preposition is added to a verb, these are called prepositional verbs, and prepositional verbs can have a literal meaning, meaning that is clear from the meanings of their individual parts, or a figurative, idiomatic meaning that cannot be guessed from their separate parts. When an adverb is added to a verb, it is called a phrasal verb. Phrasal verbs can also have either a literal or an idiomatic meaning. Similarly, a verb can have both an adverb and a preposition added to it at the same time. Such verbs are called phrasal-prepositional verbs, and they can also have either a literal or an idiomatic meaning. Strictly speaking, they are not idioms, but they are closely related to them and are often called idiomatic expressions.",
-   idiomStructureHeading: "What is the structure of an idiom?",
-   idiomStructureDescription: "Idioms can be verb phrases or syntagms, noun phrases, or prepositional phrases, with a generally fixed and unchangeable structure that can sometimes be grammatically adapted to the context. Likewise, adjectives can sometimes be added to nouns or adverbs to verbs. In order to modify the structure of idioms, it is best to first memorize the idiom in its original form and learn the context in which it is used. Later, the context itself will suggest where we can make certain changes in order to achieve some additional effect.",
+   idiomStructureHeading:"What is the structure of an idiom?",
+   idiomStructureDescription:"Idioms can be verb phrases, noun phrases, or prepositional phrases, with a generally fixed and unchangeable structure that can sometimes be grammatically adapted to the context. Likewise, adjectives can sometimes be added to nouns or adverbs to verbs. In order to modify the structure of idioms, it is best to first memorize the idiom in its original form and learn the context in which it is used. Later, the context itself will suggest where we can make certain changes in order to achieve some additional effect.",
    idiomByStructureList: "Idioms can be classified by structure as:",
    verbPhrase:"verb phrase idioms",
    nounPhrase:"noun phrase idioms",
@@ -53,31 +55,37 @@ home: {
    otherIdiomaticExpressions:"Other types of idiomatic expressions apart from true idioms",
    idiomaticExpressions:"Besides idioms, there are many other idiomatic expressions that greatly contribute to the overall impression our English leaves on the person we are speaking to. These are fixed expressions that also exist in other languages and are indispensable in everyday speech. These expressions generally do not change.",
    exercisesIdioms:"Exercises with idioms",
-   exercisePurpose:"This text has been composed as an exercise to include most of the idioms that were mentioned earlier.",
+   exercisePurpose:"This text has been composed as an exercise to include most of the idioms and idiomatic expressions that were mentioned earlier.",
    exerciseInstruction:"Enter the missing words",
    exerciseTask2: "Exercise",
    exerciseInstruction2:`Try to put together your own 5–10 sentences using idioms and idiomatic expressions that you find interesting. You can send them through <a data-i18n="home.contactForm" href="#contact-form">Contact form</a> if you would like feedback.`,
    contactForm:"Contact form",
-   websiteAim:"The website was created with the aim of introducing learners to English idioms, idiomatic expressions, collocations, phrases, and phrasal verbs through clear explanations and practical examples.",
+   aboutWebsiteAimHeading:"About the website and its author",
+
+   websiteAimAndAuthor:`The website was created with the aim of introducing learners to English idioms, idiomatic expressions, collocations, phrases, and phrasal verbs through clear explanations and practical examples. <br><br>
+   The author of this website is an English teacher who enjoys web programming in her free time. More specifically, she is still learning web development herself. She believes that being a learner herself helps bridge the gap that sometimes exists between teachers and students. Some rules or entire topics are easy to grasp right away, while others aren't. For those, it is important to find the right approach. An openness to new ideas and a willingness to explore are the best path to successfully mastering any subject.`,
    contact:"Contact",
-   submitQuestions:"You can send your questions, suggestions, or completed exercises using the form:",
+   submitQuestions:"You can send your questions about idioms or idiomatic expressions, suggestions, or completed exercises using the form:",
    exercises:"Exercises",
-   back:"Go to the top of the page"
+   back:"Go to the top of the page",
+   tapIdiom:"Tap an idiom to reveal the meaning"
     },
 },
     
 
     sr: {
         home: {
-   headline: "Živopisni svet idioma kao zaštitni znak svakog jezika",
+   headline: "Živopisni svet idioma kao vodič kroz kulturu i istoriju",
    sidebarHeading: "Idiomi vedre i oblače",
    sbOrganism:"Jezik bismo slobodno mogli da posmatramo kao neki živi organizam koji se rađa sa zajednicom koja ga koristi, raste i razvija, menja tokom vremena, ponekad postane deo nekog drugog jezika izgubivši svoju samostalnost u političkom svetu, ili, ponekad potpuno nestaje, ne ostavivši nikakav trag o sebi. Pa bi tako gramatika bila kičma, tačnije, celokupan skelet organizma, a reči, vokabular nekog jezika, bi tako bile telo oko skeleta takvog organizma, dok bi kolokacije, grupe reči koje dobro idu zajedno i koje se dobro zajedno uklapaju, onda predstavljale nervni sistem tog organizma, koji povezuje gramatičku konstrukciju i vokabular jezika, odnosno, fond reči u aktivan sistem pravila i živopisnih izraza, sistem koji neprekidno pulsira, menja se, živi zajedno sa svojom društvenom zajednicom koja ga svakodnevno koristi.",
    sbLearning: "Kako učiti idiome?",
    sbContext: "Idiomi, kao uostalom i sve reči, najbolje se uče u kontekstu. </strong>Najbolje ćemo ih zapamtiti ako ih povežemo sa situacijom u kojoj su upotrebljeni. Idiome i reči ne učimo kao zapise u rečniku, same za sebe, kao parove značenja u maternjem i u stranom jeziku. Može i tako da se uči, ali onda najčešće na tome i ostane, takve reči i izrazi nam ne budu baš i lako i pravilno upotrebljivi kad nam zatrebaju.",
-   sbWhenHowMany:"Kada koristimo idiome i koliko često",
-   sbIntuition:"Budući da im je glavna uloga da doprinesu živopisnosti svakodnevne konverzacije, mnogo češće se koriste u govoru nego u pisanom jeziku. U svom maternjem jeziku u govoru to najčešće činimo nesvesno, spontano, intuitivno osećamo kad su potrebni a kad ne. Jasno je da ako je previše toga rečeno u prenosnom smislu, izgubiće se osnovna poruka. To isto važi i za upotrebu idioma u engleskom jeziku.",   
+   sbIdiomWhenHowMany:"Kada koristimo idiome i koliko često?",
+   sbIdiomFrequency:"Budući da je glavna uloga idioma da doprinesu živopisnosti svakodnevne konverzacije, mnogo češće se koriste u govoru nego u pisanom jeziku. U svom maternjem jeziku u govoru to najčešće činimo nesvesno, spontano, intuitivno osećamo kad su potrebni a kad ne. Jasno je da ako je previše toga rečeno u prenosnom smislu, izgubiće se osnovna poruka. To isto važi i za upotrebu idioma u engleskom jeziku.",   
+   sbIdExpressionWhenHowMany:"A kada i koliko često koristimo druge idiomatske izraze?",
+   sbIdExpressionFrequency:"Idiomatski izrazi su širi pojam koji obuhvata idiome, ali i druge izraze kao što su frazalni glagoli, sintagme, izreke, poslovice, metafore i slično, odnosno ustaljene izraze. Za izreke, poslovice i verovatno metafore bi moglo da važi slično pravilo kao i za prave idiome da ne treba preterivati sa njihovom upotrebom, baš kao što jelo ne treba previše začiniti. Za razliku od njih, frazalni glagoli i kolokacije su upravo neizostavan deo, oni su onaj začin bez koga jelo neće biti baš ukusno, ili neće uopšte biti ukusno. Ako samo poređamo neke odvojene reči iz rečnika koje možda pojedinačno imaju značenje koje nam treba ali upotrebljeni zajedno često zvuče neprirodno, nemaju potrebno značenje, ili čak možda ne znače ništa, možemo da imamo problem u komunikaciji. Ako ih ne znamo, sasvim sigurno nećemo moći dobro da razumemo svog sagovornika, da i ne govorimo o filmovima, romanima ili pesmama. ",
    sbComments:"Ovde možete da pošaljete svoje sugestije ili komentare. Ako želite, možete da pošaljete svoje primere rečenica i urađene zadatke ili pitanja u vezi sa njima.",
-   mainHeading:"Šta su idiomi i zašto su važni",
+   mainHeading:"Šta su idiomi i idiomatski izrazi i zašto su važni",
    dilemma: "Šta ima prednost u učenju stranog jezika, gramatika ili reči?",
    approach: "Strane jezike odlučujemo da učimo iz raznih razloga. Vrlo često je to način da dođemo do boljeg posla, ali isto tako razlog može biti neki hobi ili ljubav prema filmovima i muzici, neko poznanstvo i slično. U zavisnosti od razloga imamo i različit pristup stranom jeziku koji smo odlučili da naučimo. Ipak, koji god da je razlog, jasno nam je da učenje jezika ne može da prođe bez učenja gramatike. To je ona mnogima ne baš zanimljiva apstraktna konstrukcija na koju kačimo izraze koje smo naučili. Ali izrazi su ono što je interesantno, ima iza sebe neku sliku, miris, ukus koji nas asocira na neku pojavu, događaj ili predmet i slično koji označava. Izraze učimo gledajući filmove, i prateći situacije u kojima se neki izraz ponavlja, slušajući pesme, čitajući knjige. Oni su ti koji nam omogućavaju da nešto zaista i kažemo na stranom jeziku da bi nas neki stranac razumeo.",
    listener: "Čak i ako ne znamo gramatiku, kad upotrebimo samo odgovarajuću reč, naš sagovornik će uposliti svoje logičko razmišljanje i na osnovu konteksta, dovršiti za sebe ostatak rečenice koji nismo izgovorili. I imaćemo komunikaciju sa sagovornikom. Reči koje imaju značenje omogućavaju sporazumevanje.",   
@@ -119,21 +127,24 @@ home: {
    prepositionalPhrase:"predloške sintagme",
    cursorToRead:`<em>(postavite kursor na početak izraza da biste pogledali značenje)</em>`,
    otherIdiomaticExpressions:"Idiomatski izrazi osim pravih idioma",
-   idiomaticExpressions:"Osim idioma postoji mnogo drugih idiomatskih izraza koji veoma doprinose opštem utisku koji naš engleski ostavlja na sagovornika. To su ustaljeni izrazi kakve imamo i u srpskom i veoma ih često koristimo, kao na primer: ustvari, uzgred budi rečeno, na kraju krajeva, za sada, hoću da kažem, mislim, sa druge strane, da budem iskrena, i sl. Ovi se izrazi uglavnom ne menjaju.", exercisesIdioms:"Exercises with idioms",
-   exercisePurpose:"Ovaj tekst je radi vežbe sastavljen tako da obuhvati većinu idioma koji su ranije pomenuti.",
+   idiomaticExpressions:"Osim idioma postoji mnogo drugih idiomatskih izraza koji veoma doprinose opštem utisku koji naš engleski ostavlja na sagovornika. To su ustaljeni izrazi kakve imamo i u srpskom i veoma ih često koristimo, kao na primer: ustvari, uzgred budi rečeno, na kraju krajeva, za sada, hoću da kažem, mislim, sa druge strane, da budem iskrena, i sl. Ovi se izrazi uglavnom ne menjaju.", 
+   exercisesIdioms:"Exercises with idioms and idiomatic expressions",
+   exercisePurpose:"Ovaj tekst je radi vežbe sastavljen tako da obuhvati većinu idioma i idiomatskih izraza koji su ranije pomenuti.",
    exerciseInstruction:"Unesite reči koje nedostaju",
    exerciseTask2: "Zadatak",
    exerciseInstruction2:`Pokušajte da sastavite svojih 5-10 rečenica sa idiomima i idiomatskim izrazima koji su vam interesantni. Ako želite povratnu informaciju, možete da ih pošaljete preko forme <a href='#contact-form'>Kontakt forma</a>`,
-   websiteAim:" Vebsajt je napravljen sa ciljem da približi učenicima engleske idiome, idiomatske izraze, kolokacije, odnosno, sintagme i frazalne glagole pomoću jasnih objašnjenja i praktičnih primera.",
+   aboutWebsiteAimHeading:"O vebsajtu i autorki",
+   websiteAimAndAuthor:`Vebsajt je napravljen sa ciljem da približi učenicima engleske idiome, idiomatske izraze, kolokacije, odnosno, sintagme i frazalne glagole pomoću jasnih objašnjenja i praktičnih primera.<br><br>
+   Autorka vebsajta je profesorka engleskog jezika koja se u slobodno vreme bavi veb programiranjem, tačnije, još uvek je neko ko uči veb programiranje. Upravo to što što i sama nešto uči smatra da joj pomaže da se smanji raskorak koji ponekad postoji između predavača i učenika. Neka pravila ili cele oblasti naučimo odmah a neka nam jednostavno ne idu. Za njih moramo da pronađemo pravi pristup. Otvorenost ka novom i istraživanju je najbolji put ka uspešnom savladavanju gradiva u bilo kojoj oblasti.`,
    contact:"Kontakt",
    //submitQuestions:`Svoja pitanja, predloge ili urađene zadatke možete da pošaljete koristeći formu:
 //<a href="#contact-form">Kontakt forma</a>.`,
-submitQuestions: "Svoja pitanja, predloge ili urađene zadatke možete da pošaljete koristeći formu:",
+submitQuestions: "Svoja pitanja u vezi idioma i idiomatskih izraza, predloge ili urađene zadatke možete da pošaljete koristeći formu:",
     contactForm: "Kontakt forma",
-
    exercisesIdioms:"Zadaci za vežbanje",
    back:"Idi na početak strane",
    mblBreakIce:"",
+   tapIdiom: "Dotakni idiom da vidiš značenje"
         }
     }
 };
