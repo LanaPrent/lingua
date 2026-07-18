@@ -6,7 +6,8 @@ nav: {
     content: "Content",
     about: "About",
     contact: "Contact Info",
-    go: "Go to bottom"
+    go: "Go to bottom",
+    back: "Go to top"
 },
   login:{
     message: "Log in",
@@ -82,12 +83,13 @@ nav: {
     content: "Sadržaj",
     about: "O vebsajtu",
     contact: "Kontakt Info",
-    go: "Idi na kraj strane"
+    go: "Idi na kraj",
+    back: "Idi na početak"
 },
 
 
   login:{
-    message: "Prijavi se",
+    message: "Prijava",
     title:"Prijava",
     button: "Uloguj se",
     email: "Email",
@@ -100,7 +102,7 @@ nav: {
     invalidCredentials: "Pogrešan email ili lozinka"
   },
   register:{
-    message: "Registruj se",
+    message: "Registracija",
     title:"Registracija",
     button:"Registruj se",
     username:"Korisničko ime",
@@ -148,7 +150,7 @@ settings: {
 },
    footer:{
   exercises: "Zadaci za vežbanje",
-  back:"Idi na početak strane"
+  back:"Idi na početak"
 }
 }
 };

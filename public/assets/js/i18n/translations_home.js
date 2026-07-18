@@ -1,6 +1,7 @@
 export const homeTranslations = {
     en: {
 home: {
+    sending: "Sending...",
    headline: "A colorful world of idioms as a culture and history guide",
    siteTitle: "Idiomatic expressions in Serbian and English | Lingua",
    sidebarHeading: "Idioms call the tune",
@@ -11,7 +12,7 @@ home: {
    sbIdiomFrequency:"Since the main role of idioms is to make everyday conversation more vivid and expressive, they are used much more often in spoken language than in writing. In our native language, we usually use them unconsciously and spontaneously, intuitively sensing when they are appropriate and when they are not. It is clear that if too much is expressed figuratively, the main message will be lost. The same applies to the use of idioms in the English language.",
    sbIdExpressionWhenHowMany:"And when and how often do we use other idiomatic expressions?",
    sbIdExpressionFrequency:"Idiomatic expressions are a broader category that includes idioms as well as other types of fixed expressions, such as phrasal verbs, collocations, sayings, proverbs, metaphors and similar established expressions. When it comes to sayings or proverbs, a rule similar to that for true idioms could apply: they should not be overused, just as a dish should not be over-seasoned. In contrast, phrasal verbs and collocations are an essential part of the language—they are the seasoning without which a dish would not be very tasty, or perhaps not tasty at all. If we simply string together individual words from the dictionary that may each have the meaning we need on their own, but when used together, they either sound unnatural, fail to convey the intended meaning or even end up meaning nothing at all, we can easily run into communication problems. If we do not know these expressions, we certainly will not be able to understand our conversation partner well, let alone follow films, novels, or songs.", 
-   sbComments:"Here you can send your suggestions or comments. If you wish, here you can also send your example sentences, completed exercises, or any questions related to them.",
+   sbComments:"You can send here your suggestions or comments. If you wish, you can also send here your example sentences, completed exercises, or any questions related to them.",
    mainHeading:"Understanding Idioms and idiomatic expressions: What They Are and Why They Matter",
    dilemma: "What matters more: grammar or vocabulary?",
    approach: "We decide to learn foreign languages for many different reasons. Very often, it's a way to find a better job, but the motivation can also be a hobby, a love of movies or music, meeting someone, or something similar. Depending on the reason, we also take a different approach to the foreign language we've decided to learn.Regardless of the reason, however, it's clear that learning a language cannot happen without learning grammar. Grammar is that rather abstract structure that many people don't find particularly interesting—the framework onto which we attach the words and expressions we've learned. But it's the expressions themselves that are interesting. They evoke images, smells, tastes, and associations with particular situations, events, objects, or other things they represent. We learn expressions by watching movies and observing the situations in which they are repeatedly used, by listening to songs, and by reading books. These are what enable us to actually say something in a foreign language and be understood by a native speaker.",
@@ -51,30 +52,95 @@ home: {
    verbPhrase:"verb phrase idioms",
    nounPhrase:"noun phrase idioms",
    prepositionalPhrase:"prepositional phrase idioms",
-   cursorToRead:`<em>(place the cursor at the beginning of the phrase to see its meaning)<em>`,
+   cursorToRead:`<em>place the cursor at the beginning of the phrase to see its meaning <em>`,
    otherIdiomaticExpressions:"Other types of idiomatic expressions apart from true idioms",
-   idiomaticExpressions:"Besides idioms, there are many other idiomatic expressions that greatly contribute to the overall impression our English leaves on the person we are speaking to. These are fixed expressions that also exist in other languages and are indispensable in everyday speech. These expressions generally do not change.",
+   idiomaticExpressions:"Besides idioms, there are many other idiomatic expressions that greatly contribute to the overall impression our English leaves on the person we are speaking to. These are fixed expressions that also exist in other languages and are indispensable in everyday speech. These expressions generally do not change. These expressions are generally already familiar to you in English, but, considering that they have a specific name in grammar, they are nevertheless presented here, with examples and translations as good, widely known examples of idiomatic expressions whose use makes our conversation in English sound natural and which very often have no suitable equivalent.",
    exercisesIdioms:"Exercises with idioms",
    exercisePurpose:"This text has been composed as an exercise to include most of the idioms and idiomatic expressions that were mentioned earlier.",
    exerciseInstruction:"Enter the missing words",
    exerciseTask2: "Exercise",
-   exerciseInstruction2:`Try to put together your own 5–10 sentences using idioms and idiomatic expressions that you find interesting. You can send them through <a data-i18n="home.contactForm" href="#contact-form">Contact form</a> if you would like feedback.`,
+   exerciseInstruction2:`Try to put together your own 5–10 sentences using idioms and idiomatic expressions that you find interesting. You can send them through <a data-i18n="home.contactForm" class="contact-link" href="#contact-form">Contact form</a> if you would like feedback.`,
    contactForm:"Contact form",
    aboutWebsiteAimHeading:"About the website and its author",
 
    websiteAimAndAuthor:`The website was created with the aim of introducing learners to English idioms, idiomatic expressions, collocations, phrases, and phrasal verbs through clear explanations and practical examples. <br><br>
-   The author of this website is an English teacher who enjoys web programming in her free time. More specifically, she is still learning web development herself. She believes that being a learner herself helps bridge the gap that sometimes exists between teachers and students. Some rules or entire topics are easy to grasp right away, while others aren't. For those, it is important to find the right approach. An openness to new ideas and a willingness to explore are the best path to successfully mastering any subject.`,
+   The author of this website is an English teacher who enjoys web programming in her free time. More specifically, she is still learning web development. She believes that being a learner herself helps bridge the gap that sometimes exists between teachers and students. Some rules or entire topics are easy to grasp right away, while others aren't. For those, it is important to find the right approach. Being open to new ideas and willing to explore are the best path to successfully mastering any subject.`,
    contact:"Contact",
    submitQuestions:"You can send your questions about idioms or idiomatic expressions, suggestions, or completed exercises using the form:",
    exercises:"Exercises",
-   back:"Go to the top of the page",
-   tapIdiom:"Tap an idiom to reveal the meaning"
+   back:"Go to the top",
+   mblTapIdiom:"Tap an idiom to reveal the meaning",
+    //Mobile translations 1
+   mblLookUpE:`move eyes upwards / to search for data in a book,computer,etc.`,
+   mblLookUpS:"",
+   mblLookDownE:`move eyes downwards / treat with contempt, despise`,
+   mblLookDownS:"",
+   mblTurnDownE:`reduce the volume / reject an offer, etc.`,
+   mblTurnDownS:"",
+   mblRunOutE:`leave the room running / finish a supply of something`,
+   mblRunOutS:"",
+   mblTurnUpE:`increase the volume / appear`,
+   mblTurnUpS:"",
+   mblSetUpE:`arrange, establish / trick someone, make it seem they have done something wrong`,
+   mblSetUpS:"",
+
+
+
+   //Mobile translations 2
+   mblBreakTheIceE:`To make people feel more relaxed in a new situation.</p>`,
+   mblBreakTheIceS:"",
+   mblSoFarSoGoodE:`an activity has gone well until now`,
+   mblSoFarSoGoodS:"",
+   mblItsAPieceOfCakeE:`something that is very easy to do`,
+   mblItsAPieceOfCakeS:"",
+   mblSpotOnS:"",
+   mblSpotOnE:"Exactly right.",
+   mblSpotOnS:"",
+   mblBreakALegE:"wishing someone good luck, especially before a performance",
+   mblBreakALegS:"",
+   mblNoPainNoGainE:"There is no success without effort.",
+   mblNoPainNoGainS:"",
+   mblTheLastStrawE:"The last of a sequence of unpleasant events that leads to a loss of patience.",
+   mblTheLastStrawS:"",
+   mblNotRocketScienceE:"Something that is not difficult to do or understand.",
+   mblNotRocketScienceS:"",
+   mblTimeFliesE:"Time passes very quickly.",
+   mblTimeFliesS:"",
+   mblBetterLateThanNeverE:" It's better for someone to arrive or something to happen late than never to arrive or happen at all.",
+   mblBetterLateThanNeverS:"",
+
+
+   //Mobile translations 3
+   mblByTheWayE:"used when adding something not strictly related to the main topic.",
+   mblByTheWayS:"",
+   mblForTheTimeBeingE:"for a short period, until something else happens",
+   mblForTheTimeBeingS:"",
+   mblMyPleasureE:"a polite response to someone saying `Thank you`",
+   mblMyPleasureS:"",
+   mblInFactE:"used when giving more accurate information",
+   mblInFactS:"",
+   mblImeanE:"used when clarifying a thought or continuing a sentence",
+   mblImeanS:"",
+   mblOnTheOtherHandE:"used when giving a contrasting opinion",
+   mblOnTheOtherHandS:"",
+   mblToBeHonestE:"used when expressing true feelings or opinion",
+   mblToBeHonestS:"",
+   mblFingersCrossedE:"used when wishing for luck",
+   mblFingersCrossedS:"",
+   mblYouKnowE:"used when referring to something the other person knows, or hesitating",
+   mblYouKnowS:"",
+   mblAtTheEndOfTheDayE:"after considering everything",
+   mblAtTheEndOfTheDayS:""
+  
+
+
     },
 },
     
 
     sr: {
         home: {
+            sending:"Slanje...",
    headline: "Živopisni svet idioma kao vodič kroz kulturu i istoriju",
    sidebarHeading: "Idiomi vedre i oblače",
    sbOrganism:"Jezik bismo slobodno mogli da posmatramo kao neki živi organizam koji se rađa sa zajednicom koja ga koristi, raste i razvija, menja tokom vremena, ponekad postane deo nekog drugog jezika izgubivši svoju samostalnost u političkom svetu, ili, ponekad potpuno nestaje, ne ostavivši nikakav trag o sebi. Pa bi tako gramatika bila kičma, tačnije, celokupan skelet organizma, a reči, vokabular nekog jezika, bi tako bile telo oko skeleta takvog organizma, dok bi kolokacije, grupe reči koje dobro idu zajedno i koje se dobro zajedno uklapaju, onda predstavljale nervni sistem tog organizma, koji povezuje gramatičku konstrukciju i vokabular jezika, odnosno, fond reči u aktivan sistem pravila i živopisnih izraza, sistem koji neprekidno pulsira, menja se, živi zajedno sa svojom društvenom zajednicom koja ga svakodnevno koristi.",
@@ -118,33 +184,103 @@ home: {
    noKnowledge:"Šaljemo jasnu poruku da ne vladamo tim jezikom u potpunosti.",
    missedMeaning:"Sasvim izvesno u velikoj većini slučajeva nećemo biti u stanju da razumemo sagovornika, film, ili pesmu.",
    phrasalToIdiomHeading:"Od frazalnih glagola ka pravim idiomima",
-   prefixVsAdverb:"U srpskom jeziku se glagolima dodaju prefiksi koji menjaju osnovno značenje glagola, a u engleskom jeziku posle glagola može da se doda prilog ili predlog koji se piše odvojeno ali zajedno predstavljaju celinu. Kada se glagolima dodaje predlog onda su to `<strong>predloški glagoli (prepositional verbi)</strong>` i predloški glagoli mogu imati bukvalno značenje, odnosno, značenje koje je jasno na osnovu značenja njihovih delova, ili prenosno, idiomatsko značenje koje se ne može pogoditi na osnovu njihovih delova. Kada se glagolu doda prilog, on se zove <strong>frazalni glagoli (phrasal verbs)</strong>. Frazalni glagoli takođe mogu imati bukvalno ili idiomatsko značenje. Isto tako, glagolima može istovremeno da se doda i prilog i predlog i takvi glagoli se zovu `<strong>priloško-predloški glagoli (phrasal-prepositional verbs)</strong>`, koji takođe mogu imati bukvalno ili idiomatsko značenje. Strogo govoreći, oni nisu idiomi, ali su im bliski i često se zovu idiomatski izrazi (idiomatic expressions)", 
+   prefixVsAdverb:`U srpskom jeziku se glagolima dodaju prefiksi koji menjaju osnovno značenje glagola, a u engleskom jeziku posle glagola može da se doda prilog ili predlog koji se piše odvojeno ali zajedno predstavljaju celinu. Kada se glagolima dodaje predlog onda su to <strong>predloški glagoli (prepositional verbs)</strong> i predloški glagoli mogu imati bukvalno značenje, odnosno, značenje koje je jasno na osnovu značenja njihovih delova, ili prenosno, idiomatsko značenje koje se ne može pogoditi na osnovu njihovih delova. Kada se glagolu doda prilog, on se zove <strong>frazalni glagoli (phrasal verbs)</strong>. Frazalni glagoli takođe mogu imati bukvalno ili idiomatsko značenje. Isto tako, glagolima može istovremeno da se doda i prilog i predlog i takvi glagoli se zovu <strong>priloško-predloški glagoli (phrasal-prepositional verbs)</strong>, koji takođe mogu imati bukvalno ili idiomatsko značenje. Strogo govoreći, oni nisu idiomi, ali su im bliski i često se zovu idiomatski izrazi (idiomatic expressions)`, 
    idiomStructureHeading: "Kako izgleda struktura idioma?", 
    idiomStructureDescription: "Idiomi mogu da budu glagolske fraze ili sintagme, imeničke fraze, predloške fraze, ili dve ili tri reči iste vrste često povezane veznicima. Idiomi uglavnom imaju čvrstu i nepromenljivu strukturu, koja se ponekad može gramatički prilagođavati kontekstu.Isto tako, ponekad se mogu dodavati pridevi uz imenice ili prilozi uz glagole. Da bismo menjali strukturu idioma, najbolje je da idiom prvo zapamtimo u svom izvornom obliku i naučimo u kom kontekstu se upotrebljava, a kasnije će nam sam kontekst sugerisati gde ponešto možemo da izmenimo kako bismo postigli neki dodatni efekat.", 
    idiomByStructureList: "Idiomi po strukturi mogu biti:",
    verbPhrase:"glagolske sintagme",
    nounPhrase:"imeničke sintagme",
    prepositionalPhrase:"predloške sintagme",
-   cursorToRead:`<em>(postavite kursor na početak izraza da biste pogledali značenje)</em>`,
+   cursorToRead:`<em>postavite kursor na početak izraza da biste pogledali značenje</em>`,
    otherIdiomaticExpressions:"Idiomatski izrazi osim pravih idioma",
-   idiomaticExpressions:"Osim idioma postoji mnogo drugih idiomatskih izraza koji veoma doprinose opštem utisku koji naš engleski ostavlja na sagovornika. To su ustaljeni izrazi kakve imamo i u srpskom i veoma ih često koristimo, kao na primer: ustvari, uzgred budi rečeno, na kraju krajeva, za sada, hoću da kažem, mislim, sa druge strane, da budem iskrena, i sl. Ovi se izrazi uglavnom ne menjaju.", 
+   idiomaticExpressions:"Osim idioma postoji mnogo drugih idiomatskih izraza koji veoma doprinose opštem utisku koji naš engleski ostavlja na sagovornika. To su ustaljeni izrazi kakve imamo i u srpskom i veoma ih često koristimo, kao na primer: ustvari, uzgred budi rečeno, na kraju krajeva, za sada, hoću da kažem, mislim, sa druge strane, da budem iskrena, i sl. Ovi se izrazi uglavnom ne menjaju. Ovi izrazi su vam uglavnom već poznati na engleskom, ali budući da imaju poseban naziv u gramatici, ovde su ipak dati u primerima i prevedeni, kao dobri opštepoznati primeri idiomatskih izraza čija upotreba doprinosi da naša konverzacija na engleskom zvuči prirodno i vrlo često ni nemaju neku odgovajuću zamenu.", 
    exercisesIdioms:"Exercises with idioms and idiomatic expressions",
    exercisePurpose:"Ovaj tekst je radi vežbe sastavljen tako da obuhvati većinu idioma i idiomatskih izraza koji su ranije pomenuti.",
    exerciseInstruction:"Unesite reči koje nedostaju",
    exerciseTask2: "Zadatak",
-   exerciseInstruction2:`Pokušajte da sastavite svojih 5-10 rečenica sa idiomima i idiomatskim izrazima koji su vam interesantni. Ako želite povratnu informaciju, možete da ih pošaljete preko forme <a href='#contact-form'>Kontakt forma</a>`,
+   exerciseInstruction2:`Pokušajte da sastavite svojih 5-10 rečenica sa idiomima i idiomatskim izrazima koji su vam interesantni. Ako želite povratnu informaciju, možete da ih pošaljete preko forme:  <a data-i18n="home.contactForm" class="contact-link"
+            href="#contact-form">Kontakt forma</a>.`,
    aboutWebsiteAimHeading:"O vebsajtu i autorki",
-   websiteAimAndAuthor:`Vebsajt je napravljen sa ciljem da približi učenicima engleske idiome, idiomatske izraze, kolokacije, odnosno, sintagme i frazalne glagole pomoću jasnih objašnjenja i praktičnih primera.<br><br>
-   Autorka vebsajta je profesorka engleskog jezika koja se u slobodno vreme bavi veb programiranjem, tačnije, još uvek je neko ko uči veb programiranje. Upravo to što što i sama nešto uči smatra da joj pomaže da se smanji raskorak koji ponekad postoji između predavača i učenika. Neka pravila ili cele oblasti naučimo odmah a neka nam jednostavno ne idu. Za njih moramo da pronađemo pravi pristup. Otvorenost ka novom i istraživanju je najbolji put ka uspešnom savladavanju gradiva u bilo kojoj oblasti.`,
+   //websiteAimAndAuthor:`Vebsajt je napravljen sa ciljem da približi učenicima engleske idiome, idiomatske izraze, kolokacije, odnosno, sintagme i frazalne glagole pomoću jasnih objašnjenja i praktičnih primera.<br><br>
+   //Autorka vebsajta je profesorka engleskog jezika koja se u slobodno vreme bavi veb programiranjem, tačnije, još uvek je neko ko uči veb programiranje. Upravo to što i sama nešto uči smatra da joj pomaže da se smanji raskorak koji ponekad postoji između predavača i učenika. Neka pravila ili cele oblasti naučimo odmah a neka nam jednostavno ne idu. Za njih moramo da pronađemo pravi pristup. Otvorenost ka novom i istraživanju je najbolji put ka uspešnom savladavanju gradiva u bilo kojoj oblasti.`,
    contact:"Kontakt",
-   //submitQuestions:`Svoja pitanja, predloge ili urađene zadatke možete da pošaljete koristeći formu:
-//<a href="#contact-form">Kontakt forma</a>.`,
-submitQuestions: "Svoja pitanja u vezi idioma i idiomatskih izraza, predloge ili urađene zadatke možete da pošaljete koristeći formu:",
-    contactForm: "Kontakt forma",
+   submitQuestions: "Svoja pitanja u vezi idioma i idiomatskih izraza, predloge ili urađene zadatke možete da pošaljete koristeći formu:",
+   contactForm: "Kontakt forma",
    exercisesIdioms:"Zadaci za vežbanje",
-   back:"Idi na početak strane",
-   mblBreakIce:"",
-   tapIdiom: "Dotakni idiom da vidiš značenje"
+   back:"Idi na početak",
+   mblTapIdiom: "Dodirni idiom da vidiš značenje",
+   //Mobile translations 1
+   mblLookUpE:"",
+   mblLookUpS:"podići pogled / potražiti",
+   mblLookDownE:"",
+   mblLookDownS:"spustiti pogled / nipodaštavati",
+   mblTurnDownE:"",
+   mblTurnDownS:"smanjiti jačinu zvuka / odbaciti ponudu",
+   mblRunOutE:"",
+   mblRunOutS:"potrošiti, ostati bez nečega",
+   mblTurnUpE:"",
+   mblTurnUpS:"pojačati / pojaviti se",
+   mblSetUpE:"",
+   mblSetUpS:"podmetnuti, podvaliti",
+
+    //Mobile translations 2
+   mblBreakTheIceE:"",
+   mblBreakTheIceS:"Probiti led",
+   mblSoFarSoGoodE:"",
+   mblSoFarSoGoodS:"Zasad je dobro.",
+   mblItsAPieceOfCakeE:"",
+   mblItsAPieceOfCakeS:"Ništa lakše. Mačji kašalj.",
+   mblSpotOnE:"",
+   mblSpotOnS:"Baš tako. Baš kako treba.",
+   mblBreakALegE:"",
+   mblBreakALegS:`Srećno!`,
+   mblNoPainNoGainE:"",
+   mblNoPainNoGainS:`Bez muke nema nauke`,
+   mblTheLastStrawE:"",
+   mblTheLastStrawS:`Ovo je kap koja je prelila čašu. Sad je prevršilo meru.`,
+   mblNotRocketScienceE:"",
+   mblNotRocketScienceS:`Nije to tako komplikovano. Nije to neka nauka`,
+   mblTimeFliesE:"",
+   mblTimeFliesS:`Vreme leti`,
+   mblBetterLateThanNeverE:"",
+   mblBetterLateThanNeverS:`Bolje ikad nego nikad`,
+
+
+   //Mobile translations 3
+   mblByTheWayE:"",
+   mblByTheWayS:`Uzgred budi rečeno`,
+   mblForTheTimeBeingE:"",
+   mblForTheTimeBeingS:`za sada, privremeno`,
+   mblMyPleasureE:"",
+   mblMyPleasureS:`Nema na čemu. Bilo mi je zadovoljstvo.`,
+   mblInFactE:"",
+   mblInFactS:`ustvari`,
+   mblImeanE:"",
+   mblImeanS:`mislim, hoću da kažem`,
+   mblOnTheOtherHandE:"",
+   mblOnTheOtherHandS:`sa druge strane`,
+   mblToBeHonestE:"",
+   mblToBeHonestS:`Iskreno, da budem iskren/a`,
+   mblFingersCrossedE:"",
+   mblFingersCrossedS:`držimo palčeve, uz malo sreće`,
+   mblYouKnowE:"",
+   mblYouKnowS:`znaš, znate`,
+   mblAtTheEndOfTheDayE:"",
+   mblAtTheEndOfTheDayS:`na kraju krajeva`,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 };

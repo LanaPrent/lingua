@@ -24,6 +24,8 @@ header h1 {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items:center;
+  flex-wrap:wrap;
   background-color: goldenrod;
   position:sticky;
   top:0;
@@ -48,8 +50,12 @@ header h1 {
 .navbar a:focus{
   outline:2px solid #daa768;
 }
-
-
+/* this was supposed to replace inline css for the Home link, 
+but it isn't the same
+.home-link{
+  margin-left: auto;
+}
+*/
 /* Column container */
 .container {
   display: flex;
@@ -81,6 +87,12 @@ img{
     margin:0 auto 40px auto;
     max-width: 100%;
     height: auto;
+  }
+
+  .contact-link {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
   }
 
 /* Footer */
@@ -146,7 +158,7 @@ footer .b1{
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 349px) {
+@media screen and (max-width: 400px) { /* 500 instead of 349* in order to have 400px work*/
 
   .navbar{
  flex-direction: column;
@@ -177,6 +189,11 @@ footer .b1{
       /*justify-content: flex-start;*/
       align-items: stretch;
   }
+
+  footer a{
+    text-decoration: none;
+  }
+
   footer .b1{
     width:100%;
     /*width:auto;*/
@@ -314,10 +331,90 @@ footer .b1{
 
 /* Mobile only */
 
+/*show translations on the mobile*/
+
 @media (max-width: 768px) {
 
     .mobile-idiom-list {
         display: block;
+    }
+
+}
+/*Display a message how to see translation on the image on desktop
+only*/
+.desktopImage-only {
+  display: block;
+  text-align:center;
+}
+
+@media (max-width: 768px) {
+  .desktopImage-only {
+    display: none;
+  }
+}
+
+/*Arrange elements in navbar in two rows on the mobile
+these 3 lines added to .navbar near the top:
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+}
+*/
+
+/* ===== Navbar ===== */
+
+.home-link{
+    margin-left:0;
+}
+
+.navbar-tools{
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+
+#authButtons{
+    display:flex;
+    align-items:center;
+    margin-left:auto;
+}
+
+.lang-buttons{
+    display:flex;
+    gap:6px;
+    margin-left:12px;
+}
+
+@media (max-width:768px){
+
+    .navbar-tools{
+        flex-wrap:wrap;
+    }
+
+    #authButtons{
+        order:1;
+        width:100%;
+        justify-content:flex-end;
+        margin-left:0;
+        margin-bottom:8px;
+    }
+
+    .go-bottom{
+        order:2;
+    }
+
+    .home-link{
+        order:3;
+    }
+
+    .dropdown{
+        order:4;
+    }
+
+    .lang-buttons{
+        order:5;
+        margin-left:auto;
     }
 
 }
