@@ -28,7 +28,9 @@ const lang = req.headers["accept-language"]?.split(",")[0]
     });
   }
 
-  if (name.length > 100 || email.length > 100 || comments.length > 1000) {
+  //5000 instead of 1000 for sending contact messages
+  const MAX_COMMENT_LENGTH = 5000;
+  if (name.length > 100 || email.length > 100 || comments.length > MAX_COMMENT_LENGTH) {
     return res.status(400).json({
       success: false,
       message: t("TOO_LONG", lang),

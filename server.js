@@ -58,7 +58,7 @@ app.use(helmet({
 // BODY PARSERS & COOKIE
 // =======================
 
-app.use(express.json({ limit: "10kb" }));
+app.use(express.json({ limit: "100kb" })); //instead of 10Kb for contact messages
 app.use(express.urlencoded({ limit: "10kb", extended: true }));
 app.use(cookieParser());
 

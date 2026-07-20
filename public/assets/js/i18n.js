@@ -23,9 +23,6 @@ const translations = {
   logout:{
     message: "Log out"
   }, 
-   headline:{
-    title: "Welcome to the Dark Chocolate Benefits and Harms App"
-  }, 
   name:{
     placeholder: "Name"
   },
@@ -61,9 +58,6 @@ const translations = {
 logout:{
   message:"Odjavi se"
 },
-  headline:{
-    title: "Dobro došli na vebsajt o prednostima i manama crne čokolade"
-  },
   name:{
     placeholder:"Ime"
   },

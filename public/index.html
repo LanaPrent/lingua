@@ -152,7 +152,7 @@
             <span id="userInfo"></span>
             <a href="#" id="loginBtn" data-i18n="login.message">Prijava</a>
             <a href="#" id="registerBtn" data-i18n="register.message">Registracija</a>
-            <a href="#" id="logoutBtn" style="display:none;" data-i18n="logout.message">Odjava</a>
+            <a href="#" id="logoutBtn" class="display-none" data-i18n="logout.message">Odjava</a>
         </div>
 
         <div class="lang-buttons">
@@ -187,32 +187,30 @@
         sistem koji neprekidno pulsira, menja se, živi zajedno sa svojom društvenom zajednicom koja ga svakodnevno
         koristi.
       </p>-->
-      <p><br>
+     <section>
       <p data-i18n="home.sbLearning" class="faq-question"><strong>Kako učiti idiome?</strong></p>
       <p data-i18n="home.sbContext" class="faq-answer"><strong>Idiomi, kao uostalom i sve reči, najbolje se uče u
           kontekstu. </strong>Najbolje ćemo ih zapamtiti ako ih povežemo sa situacijom u
         kojoj su upotrebljeni. Idiome i reči ne učimo kao zapise u rečniku, same za sebe,
         kao parove značenja u maternjem i u stranom jeziku. Može i tako da se uči, ali onda najčešće na tome i ostane,
-        takve reči i izrazi nam ne budu baš i lako i pravilno upotrebljivi kad nam zatrebaju. <br><br>
-
-        Praktično pravilo: Nove izraze i reči učimo tako što razumemo i pamtimo situacije u kojima su upotrebljeni.
+        takve reči i izrazi nam ne budu baš i lako i pravilno upotrebljivi kad nam zatrebaju. 
+        </p>
+        <p data-i18n="home.sbPracticalRule" class="faq-answer">Praktično pravilo: Nove izraze i reči učimo tako što razumemo i pamtimo situacije u kojima su upotrebljeni.
         I rečenice u kojima smo ih čuli ili pročitali.
       </p>
-      </p>
-      <p><br>
-
+     </section>
+      <section>
       <p data-i18n="home.sbIdiomWhenHowMany" class="faq-question"><strong>Kada koristimo idiome i koliko često</strong></p>
       <p data-i18n="home.sbIdiomFrequency" class="faq-answer">Budući da im je glavna uloga da doprinesu živopisnosti
         svakodnevne konverzacije, mnogo češće
         se koriste u govoru nego u pisanom jeziku. U svom maternjem jeziku u govoru to najčešće činimo nesvesno,
         spontano, intuitivno osećamo kad su potrebni a kad ne. Jasno je da ako je previše toga rečeno u
         prenosnom smislu, izgubiće se osnovna poruka. To isto važi i za upotrebu idioma u engleskom jeziku.
-      </p><br>
+      </p>
+    </section>
 
       <section>
- 
     <p data-i18n="home.sbIdExpressionWhenHowMany" class="faq-question" >A kada i koliko često koristimo druge idiomatske izraze?</p>
-
      <p data-i18n="home.sbIdExpressionFrequency" class="faq-answer">
         Idiomatski izrazi su širi pojam koji obuhvata idiome, ali i druge izraze kao što su frazalni glagoli, sintagme, 
         izreke, poslovice, metafore i slično, odnosno ustaljene izraze. Za izreke, poslovice i verovatno metafore bi moglo
@@ -232,41 +230,46 @@
 <img src="/assets/images/cacao_pod_with_beans.jpeg" alt="A cacao pod with beans" width="280" height="160"><br><br>-->
 
       <div id="contact-form" class="contactForm-container">
-        <!--<h2>JSON Contact Form H5</h2>-->
         <form id="contactForm" novalidate>
-          <p data-i18n="home.contactForm" class="contact-link" style="color: black; text-align: center;">Kontakt forma</p>
+          <p data-i18n="home.contactForm" class="contact-link">Kontakt forma</p>
           <input type="hidden" id="csrfToken">
           <!-- Login/Register hidden CSRF inputs -->
           <input type="text" id="name" placeholder="Name" data-i18n-placeholder="name.placeholder" required>
           <input type="email" id="email" placeholder="Email" required>
-          <input type="text" name="website" autocomplete="off" tabindex="-1" style="display:none">
+          <input type="text" name="website" autocomplete="off" tabindex="-1" class="display-none">
           <input type="hidden" name="formStartTime" id="formStartTime">
           <textarea id="comments" placeholder="Comments" data-i18n-placeholder="comments.placeholder"
             required></textarea>
+            <!--Auto-grow as the user types-->
+            <script>
+              const textarea=document.getElementById("comments");
+              textarea.addEventListener("input", () =>{
+                textarea.style.height="auto";
+                textarea.style.height=textarea.scrollHeight+"px";
+              });
+            </script>
           <button id="submitBtn" type="submit" data-i18n="send.text">Send</button>
-          <div data-i18n="contact.sending" id="loadingSpinner" style="display:none; ">Submitting...</div>
+          <div data-i18n="contact.sending" id="loadingSpinner" class="display-none"; ">Submitting...</div>
         </form>
         <div id="responseMsg" style="color: transparent">response message</div>
       </div>
       <section>
         <p data-i18n="home.sbComments">Ovde možete da pošaljete svoje sugestije ili komentare.
         Ako želite, možete da pošaljete svoje primere rečenica i urađene zadatke ili pitanja u vezi sa njima.</p>
-
       </section>
-      <br><br><br><br>
-
-            <br>
+      
       <section id="about" aria-labelledby="about-heading">
         <h2 data-i18n="home.aboutWebsiteAimHeading" id="about-heading">O vebsajtu i autorki</h2>
-        <p data-i18n="home.websiteAimAndAuthor">
+        <p data-i18n="home.websiteAim">
           Vebsajt je napravljen sa ciljem da približi učenicima ili zaljubljenicima u jezik engleske idiome,
           idiomatske izraze, kolokacije, odnosno, sintagme i frazalne glagole
-          pomoću jasnih objašnjenja i praktičnih primera.<br><br>
+          pomoću jasnih objašnjenja i praktičnih primera.
+          </p>
+          <p data-i18n="home.websiteAuthor">
           Autorka vebsajta je...
         </p>
       </section>
 
-      <br>
       <section id="contact" aria-labelledby="contact-heading">
         <h2 data-i18n="home.contact"id="contact-heading">Kontakt</h2>
        <p ><span data-i18n="home.submitQuestions">
@@ -276,12 +279,13 @@
       </p>
       </section>
     </aside>
-    <main>
+    <main >
       <section aria-labelledby="main-heading">
 
         <h1 data-i18n="home.mainHeading" id="main-heading">
           Šta su idiomi i idiomatski izrazi i zašto su važni
         </h1>
+       
         <p data-i18n="home.dilemma" class="faq-question">Šta ima prednost u
           učenju stranog jezika, gramatika ili reči?</p>
         <p data-i18n="home.approach" class="faq-answer">Strane jezike odlučujemo da učimo iz raznih razloga.
@@ -296,17 +300,17 @@
           gledajući filmove, i prateći situacije u kojima se neki izraz ponavlja, slušajući pesme,
           čitajući knjige. Oni su ti koji nam omogućavaju da nešto zaista i kažemo na stranom jeziku
           da bi nas neki stranac razumeo. </p>
+         
 
-        <p data-i18n="home.listener">
+        <p data-i18n="home.listener" class="top-space2 bottom-space1">
           Čak i ako ne znamo gramatiku, kad upotrebimo samo odgovarajuću reč, naš sagovornik će
           uposliti svoje logičko razmišljanje i na osnovu konteksta, dovršiti za sebe ostatak
           rečenice koji nismo izgovorili. I imaćemo komunikaciju sa sagovornikom. Reči koje imaju
-          značenje omogućavaju sporazumevanje. <br>
-          <p data-i18n="home.ambiguity1">
-           Sandra more avion avgust
-        </p>
-
-          Sandra seaside plane August<br><br>
+          značenje omogućavaju sporazumevanje.</p> 
+          <p data-i18n="home.ambiguity1a" class="top-space1">
+           Sandra more avion avgust</p>
+          <p data-i18n="home.ambiguity1b">
+          Sandra seaside plane August</p>
 
           <p data-i18n="home.backbone">
           Ali ona nezanimljiva i pritom komplikovana apstraktna konstrukcija koju predstavlja
@@ -315,26 +319,25 @@
           sastavljene na stranom jeziku.
           </p>
           
-          <p data-i18n="home.ambiguity2">
+          <p data-i18n="home.ambiguity2a">
           Sandra id<em><b>e</b></em> <em><b>na</b></em> more avion<em><b>om</b></em> <em><b>u</b></em>
           avgust<em><b>u</b></em>. 
           </p>
-
+          <p data-i18n="home.ambiguity2b">
           Sandra go<em><b>es</b></em> <em><b>to the</b></em> seaside <em><b>by</b></em> plane
           <em><b>in</b></em> August.
-
-          <br><br><p data-i18n="home.clarity"> U prethodnom primeru je uglavnom sve jasno. Ali ovde baš i nije: </p>
-          <p data-i18n="home.ambiguity3">
-          Sestra drugarica auto</p>
-          
-          Sister friend car <br><br>
         </p>
-          <p data-i18n="home.ambiguity4">
+
+          <p data-i18n="home.clarity" class="top-space2"> U prethodnom primeru je uglavnom sve jasno. Ali ovde baš i nije: </p>
+          <p data-i18n="home.ambiguity3a">
+          Sestra drugarica auto</p>
+          <p data-i18n="home.ambiguity3b">
+          Sister friend car</p>
+          <p data-i18n="home.ambiguity4a" class="top-space2">
           Sa drugaricom? Kod drugarice? Drugaricinim autom?</p>
-          <p>
+          <p data-i18n="home.ambiguity4b">
           With a friend? To a friend's place? In a friend's car?
         </p>
-        <br>
 
 
         <p data-i18n="home.languageSegments">
@@ -362,9 +365,9 @@
           ili kad su u kombinaciji sa drugim rečima, ostavljajući nam prostor da eksperimentišemo
           i budemo originalni u svakodnevno konverzaciji, ili čak stvaramo književnost i poeziju.
           Sa druge strane, takve različite kombinacije reči po smislu u određenim situacijama dovode
-          do stvaranja idioma i idiomatskih izraza, ili jednostavno ustaljenih izraza.
+          do stvaranja idioma i idiomatskih izraza, ili jednostavno ustaljenih izraza.<br><br>
 
-          <br><br>Idiomi su posebna kategorija živopisnih izraza koja se neprekidno popunjava
+          Idiomi su posebna kategorija živopisnih izraza koja se neprekidno popunjava
           u svakom vremenu, povremeno gurajući u stranu neke od njih kao obeležene nekim ranijim
           vremenskim periodom i zastarele u sadašnje vreme, povremeno ih čak
           vraćajući u upotrebu.
@@ -458,8 +461,7 @@
 
         <figure>
         <img src="/assets/images/phrasal_verbs6-meaning.png" alt="meaning of 6 phrasal verbs" width="420" height="300"
-          usemap="#dc_map1" class="image-center"
-          style="display:block; margin:0 auto 40px auto; max-width:100%; height:auto;">
+          usemap="#dc_map1" class="image-center">
         <map name="dc_map1">
           <area shape="circle" coords="60,20,70" title="podići pogled/potražiti nepoznatu reč">
           <area shape="circle" coords="60,115,70" title="spustiti pogled/gledati sa visine na nekoga, nipodaštavati">
@@ -469,14 +471,14 @@
           <area shape="circle" coords="180,220,70" title="organizovati/podmetnuti">
         </map>
       
-      <figcaption data-i18n="home.cursorToRead" class="desktopImage-only" style="text-align: center">Postavite kursor na početak izraza da biste pogledali značenje</figcaption>
+      <figcaption data-i18n="home.cursorToRead" class="desktopImage-only">Postavite kursor na početak izraza da biste pogledali značenje</figcaption>
       </figure>
   </section>   
       <section>  <!--FOR MOBILE TRANSLATIONS 1 -->
            
         <div class="mobile-idiom-list">
 
-  <h3 data-i18n="home.mblTapIdiom" style="font-style:italic">Dodirni idiom da vidiš prevod</h3>
+  <h3 data-i18n="home.mblTapIdiom" class="font-italic">Dodirni idiom da vidiš prevod</h3>
 
   <div class="idiom-item">
     <button class="idiom-question">
@@ -579,8 +581,7 @@
           <figure>
 
           <img src="/assets/images/true_idioms10-meaning.png" alt="meaning of 10 true idioms" width="420" height="300"
-            usemap="#dc_map2" class="image-center"
-            style="display:block; margin:0 auto 40px auto; max-width:100%; height:auto;">
+            usemap="#dc_map2" class="image-center">
           <map name="dc_map2">
             <area shape="circle" coords="40,20,30" title="probiti led">
             <area shape="circle" coords="200,10,50" title="Za sad je dobro.">
@@ -600,7 +601,7 @@
             <section> <!--FOR MOBILE TRANSLATIONS 2 -->
         <div class="mobile-idiom-list">
 
-  <h3 data-i18n="home.mblTapIdiom" style="font-style: italic;">Tap an idiom to reveal the meaning and translation</h3>
+  <h3 data-i18n="home.mblTapIdiom" class="font-italic">Tap an idiom to reveal the meaning and translation</h3>
 
   <div class="idiom-item">
     <button class="idiom-question">
@@ -734,8 +735,7 @@
         <figure>
 
         <img src="/assets/images/idiomatic_expressions10-meaning.png" alt="meaning of phrasal verbs" width="420"
-          height="300" usemap="#dc_map3" class="image-center"
-          style="display:block; margin:0 auto 40px auto; max-width:100%; height:auto;">
+          height="300" usemap="#dc_map3" class="image-center">
         <map name="dc_map3">
           <area shape="circle" coords="40,20,30" title="uzgred budi rečeno">
           <area shape="circle" coords="200,10,50" title="za sada, privremeno">
@@ -748,7 +748,7 @@
           <area shape="circle" coords="330,190,30" title="znaš, znate">
           <area shape="circle" coords="100,270,70" title="na kraju krajeva">
         </map>
-        <figcaption data-i18n="home.cursorToRead" class="desktopImage-only" style="text-align: center">Postavite kursor na početak izraza da biste pogledali značenje</figcaption>
+        <figcaption data-i18n="home.cursorToRead" class="desktopImage-only">Postavite kursor na početak izraza da biste pogledali značenje</figcaption>
 
       </section>
 
@@ -756,7 +756,7 @@
         
         <div class="mobile-idiom-list">
 
-  <h3 data-i18n="home.mblTapIdiom" style="font-style: italic;">Tap an idiomatic expression to reveal the meaning and translation</h3>
+  <h3 data-i18n="home.mblTapIdiom" class="font-italic">Tap an idiomatic expression to reveal the meaning and translation</h3>
 
   <div class="idiom-item">
     <button class="idiom-question">
@@ -864,38 +864,35 @@
         <h2 data-i18n="home.exercisesIdioms" id="exercises-heading">Vežbanja i zadaci sa idiomima i idiomatskim izrazima</h2>
         <p data-i18n="home.exercisePurpose">Ovaj tekst je radi vežbe sastavljen tako da obuhvati većinu idioma i idiomatskih izraza koji su ranije pomenuti.</p>
         <h3 data-i18n="home.exerciseInstruction">Unesite reči koje nedostaju</h3>
-        <p>
-          Learners sometimes find idioms a bit annoying because they are not easy to learn. <br>
-          __fact, idioms are very colourful and interesting. And, to __honest, the more <br>
-          idioms you learn, the easier it becomes to understand films and songs. Learning <br>
-          them isn't really a ___of cake, but ___the other hand, if one wants to learn a <br>
-          language well, they need to learn idioms. No ___, no gain. Sometimes people realize <br>
-          it immediately, sometimes they don't. But better late ____ never. For many <br>
-          learners, the last ____ often comes when they realize they still can't enjoy their <br>
-          favourite song or film, even after studying the language for quite some time. <br>
-          By the ____, learning idioms is not too difficult. Just listen and read carefully,<br>
-          look ___ the idiom in the dictionary, remember the context and try to think of <br>
-          your own examples. At the ___ of the day, it's not _____ science, you know. If you <br>
-          think that the best way to learn idioms is to read a lot of books or articles in <br>
-          English, and watch a lot of films in English and not run out of patience, you are <br>
-          spot ___. I mean, time ____, and, fingers _____, you'll notice progress before <br>
-          you know it. For the time ____, it's enough to recognize idioms when you hear them. <br>
-          In the meantime, don't let anyone look down ___ you because they speak better <br>
-          English. You have taken an important step by deciding to learn idioms. So far, <br>
-          so good. Just keep it up.<br>
+        <p class="line-width2">
+          Learners sometimes find idioms a bit annoying because they are not easy to learn. 
+          __fact, idioms are very colourful and interesting. And, to __honest, the more 
+          idioms you learn, the easier it becomes to understand films and songs. Learning 
+          them isn't really a ___of cake, but ___the other hand, if one wants to learn a 
+          language well, they need to learn idioms. No ___, no gain. Sometimes people realize 
+          it immediately, sometimes they don't. But better late ____ never. For many 
+          learners, the last ____ often comes when they realize they still can't enjoy their 
+          favourite song or film, even after studying the language for quite some time. 
+          By the ____, learning idioms is not too difficult. Just listen and read carefully,
+          look ___ the idiom in the dictionary, remember the context and try to think of 
+          your own examples. At the ___ of the day, it's not _____ science, you know. If you 
+          think that the best way to learn idioms is to read a lot of books or articles in 
+          English, and watch a lot of films in English and not run out of patience, you are 
+          spot ___. I mean, time ____, and, fingers _____, you'll notice progress before 
+          you know it. For the time ____, it's enough to recognize idioms when you hear them. 
+          In the meantime, don't let anyone look down ___ you because they speak better 
+          English. You have taken an important step by deciding to learn idioms. So far, 
+          so good. Just keep it up.
         </p>
 
-        <br>
-        <h3 data-i18n="home.exerciseTask2">Zadatak</h3>
-        <p data-i18n="home.exerciseInstruction2">
+        
+        <h3 data-i18n="home.exerciseTask2" class="top-space1">Zadatak</h3>
+        <p data-i18n="home.exerciseInstruction2" class="bottom-space1">
           Pokušajte da sastavite svojih 5-10 rečenica sa idiomima i idiomatskim izrazima <br>
           koji su vam interesantni. Ako želite povratnu informaciju, možete da ih pošaljete preko forme: 
             <a data-i18n="home.contactForm" class="contact-link"
             href="#contact-form">Kontakt forma</a></p> 
-          <br>
       </section>
-
-
     </main>
   </div>
 
@@ -929,7 +926,7 @@
           required>
         <button type="submit" data-i18n="login.button">Login</button>
       </form>
-      <div id="loginSpinner" style="display:none;">
+      <div id="loginSpinner" class="display-none;">
         <span data-i18n="common.submitting">Submitting...</span>
       </div>
       <div id="loginMsg"></div>
@@ -949,14 +946,12 @@
           required>
         <button type="submit" data-i18n="register.button">Register</button>
       </form>
-      <div id="registerSpinner" style="display:none;">Submitting...</div>
+      <div id="registerSpinner" class="display-none">Submitting...</div>
       <div id="registerMsg"></div>
     </div>
   </div>
 
-  
-
-  <!--prefill the fields if the user is logged in.-->
+<!--prefill the fields if the user is logged in.-->
   <script>
     // Fetch CSRF token
     fetch("/csrf-token")
@@ -975,6 +970,7 @@
         }
       });
   </script>
+
   <script src="assets/js/api.js" defer></script>
   <script src="assets/js/contact.js" defer></script>
   <script type="module" src="assets/js/auth.js" defer></script>
@@ -983,7 +979,6 @@
   <div id="ld-json-container"></div>
   <script src="assets/js/seo.js" defer></script>
   <script src="assets/js/idiomMobileTranslations.js" defer></script>
-
   <div id="bottom"></div>
 </body>
 

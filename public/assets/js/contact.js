@@ -67,8 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
         startField.value = Date.now();
     }
 });
-
-
+/*
+//Auto-grow as the user types
+const textarea=document.getElementById("comments");
+              textarea.addEventListener("input", () =>{
+                textarea.style.height="auto";
+                textarea.style.height=textarea.scrollHeight+"px";
+              });
+*/
 // ===== Submit Contact Form =====
 
 contactForm.addEventListener("submit", async (e) => {
