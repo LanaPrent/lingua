@@ -964,25 +964,8 @@
 
   
 
-  <!--prefill the fields if the user is logged in.-->
-  <script>
-    // Fetch CSRF token
-    fetch("/csrf-token")
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("csrfToken").value = data.csrfToken;
-      });
-
-    // Fetch login status
-    fetch("/api/status")
-      .then(res => res.json())
-      .then(user => {
-        if (user.loggedIn) {
-          document.getElementById("name").value = user.username;
-          document.getElementById("email").value = user.email;
-        }
-      });
-  </script>
+  
+  
   <script src="assets/js/api.js" defer></script>
   <script src="assets/js/contact.js" defer></script>
   <script type="module" src="assets/js/auth.js" defer></script>

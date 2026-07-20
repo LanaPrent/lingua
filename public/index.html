@@ -228,28 +228,19 @@
 <a href="#" data-protected="chocolate_eating_advice.html">Safe Chocolate Eating Advice</a>
 <img src="/assets/images/cacao_pods.jpeg" alt="Cacao pods" width="180" height="280" style="text-align:left"><br><br><br>
 <img src="/assets/images/cacao_pod_with_beans.jpeg" alt="A cacao pod with beans" width="280" height="160"><br><br>-->
-
+ 
       <div id="contact-form" class="contactForm-container">
         <form id="contactForm" novalidate>
-          <p data-i18n="home.contactForm" class="contact-link">Kontakt forma</p>
+          <p data-i18n="home.contactForm" style="text-decoration:none; color:green; font-weight:bold;" >Kontakt forma</p>
           <input type="hidden" id="csrfToken">
           <!-- Login/Register hidden CSRF inputs -->
           <input type="text" id="name" placeholder="Name" data-i18n-placeholder="name.placeholder" required>
           <input type="email" id="email" placeholder="Email" required>
-          <input type="text" name="website" autocomplete="off" tabindex="-1" class="display-none">
+          <input type="text" name="website" autocomplete="off" tabindex="-1" style="display:none"><!--only inline css style="display:none" works, something overrides the class-->
           <input type="hidden" name="formStartTime" id="formStartTime">
-          <textarea id="comments" placeholder="Comments" data-i18n-placeholder="comments.placeholder"
-            required></textarea>
-            <!--Auto-grow as the user types-->
-            <script>
-              const textarea=document.getElementById("comments");
-              textarea.addEventListener("input", () =>{
-                textarea.style.height="auto";
-                textarea.style.height=textarea.scrollHeight+"px";
-              });
-            </script>
+          <textarea id="comments" placeholder="Comments" data-i18n-placeholder="comments.placeholder" required></textarea>
           <button id="submitBtn" type="submit" data-i18n="send.text">Send</button>
-          <div data-i18n="contact.sending" id="loadingSpinner" class="display-none"; ">Submitting...</div>
+          <div data-i18n="contact.sending" id="loadingSpinner" class="display-none">Submitting...</div>
         </form>
         <div id="responseMsg" style="color: transparent">response message</div>
       </div>
@@ -261,7 +252,7 @@
       <section id="about" aria-labelledby="about-heading">
         <h2 data-i18n="home.aboutWebsiteAimHeading" id="about-heading">O vebsajtu i autorki</h2>
         <p data-i18n="home.websiteAim">
-          Vebsajt je napravljen sa ciljem da približi učenicima ili zaljubljenicima u jezik engleske idiome,
+          Vebsajt je napravljen sa ciljem da zaljubljenicima u jezik približi engleske idiome,
           idiomatske izraze, kolokacije, odnosno, sintagme i frazalne glagole
           pomoću jasnih objašnjenja i praktičnih primera.
           </p>
@@ -745,7 +736,7 @@
           <area shape="circle" coords="40,110,30" title="sa druge strane">
           <area shape="circle" coords="270,150,30" title="iskreno, da budem iskrena">
           <area shape="circle" coords="30,170,30" title="držimo palčeve">
-          <area shape="circle" coords="330,190,30" title="znaš, znate">
+          <area shape="circle" coords="330,190,30" title="znaš, znate (kao uvod)">
           <area shape="circle" coords="100,270,70" title="na kraju krajeva">
         </map>
         <figcaption data-i18n="home.cursorToRead" class="desktopImage-only">Postavite kursor na početak izraza da biste pogledali značenje</figcaption>
@@ -844,7 +835,7 @@
     </button>
     <div class="idiom-answer">
       <p data-i18n="home.mblYouKnowE"><strong>Meaning:</strong> used when referring to something the other person knows, or hesitating</p>
-      <p data-i18n="home.mblYouKnowS"><strong>Translation:</strong>znaš, znate</p>
+      <p data-i18n="home.mblYouKnowS"><strong>Translation:</strong>znaš, znate (kao uvod)</p>
     </div>
   </div>
 
@@ -926,7 +917,7 @@
           required>
         <button type="submit" data-i18n="login.button">Login</button>
       </form>
-      <div id="loginSpinner" class="display-none;">
+      <div id="loginSpinner" class="display-none">
         <span data-i18n="common.submitting">Submitting...</span>
       </div>
       <div id="loginMsg"></div>
@@ -950,26 +941,6 @@
       <div id="registerMsg"></div>
     </div>
   </div>
-
-<!--prefill the fields if the user is logged in.-->
-  <script>
-    // Fetch CSRF token
-    fetch("/csrf-token")
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("csrfToken").value = data.csrfToken;
-      });
-
-    // Fetch login status
-    fetch("/api/status")
-      .then(res => res.json())
-      .then(user => {
-        if (user.loggedIn) {
-          document.getElementById("name").value = user.username;
-          document.getElementById("email").value = user.email;
-        }
-      });
-  </script>
 
   <script src="assets/js/api.js" defer></script>
   <script src="assets/js/contact.js" defer></script>
