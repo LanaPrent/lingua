@@ -84,12 +84,12 @@ section+section{
 
 /* Change color on hover */
 .navbar  a:hover {
-  background-color: rgb(214, 140, 88);;
+  background-color:rgb(248, 238, 225)  ;/*rgb(214, 140, 88)*/
   color: black;
 }
 
 .navbar a:focus{
-  outline:2px solid burlywood;
+  outline:2px solid rgb(248, 238, 225) ;/*burlywood*/
 }
 /* this was supposed to replace inline css for the Home link, 
 but it isn't the same
@@ -115,7 +115,7 @@ aside {
   /* Main column */
   main {
     flex: 70%;
-    background-color: rgb(214, 140, 88);
+    background-color:rgb(248, 238, 225) ;/*rgb(214, 140, 88)*/
     padding: 20px;
   }
 
@@ -362,7 +362,7 @@ footer .b1{
     overflow: hidden;
 
     /*background: #f5f5f5;*/
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(248, 238, 225);
 
     padding: 0 15px;
 
@@ -428,9 +428,13 @@ these 3 lines added to .navbar near the top:
 .dropbtn{
   background-color: goldenrod;
 }
+.dropbtn:hover{
+  background-color:rgb(248, 238, 225);
+  color:black;
+}
 
 .dropdown-content{
-  background-color: rgb(214, 140, 88);
+  background-color: rgb(214, 140, 88);/* */
 }
 
 #authButtons{
@@ -443,6 +447,7 @@ these 3 lines added to .navbar near the top:
     display:flex;
     gap:6px;
     margin-left:12px;
+    background-color: goldenrod;
 }
 
 @media (max-width:768px){

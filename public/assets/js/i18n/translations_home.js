@@ -272,7 +272,7 @@ home: {
    mblFingersCrossedE:"",
    mblFingersCrossedS:`držimo palčeve, uz malo sreće`,
    mblYouKnowE:"",
-   mblYouKnowS:`znaš, znate (kao uvod)`,
+   mblYouKnowS:`znaš, znate (kao uvod, podsećanje ili dok smišljamo šta ćemo dalje reći)`,
    mblAtTheEndOfTheDayE:"",
    mblAtTheEndOfTheDayS:`na kraju krajeva`,
 
