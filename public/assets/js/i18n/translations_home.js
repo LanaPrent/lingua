@@ -100,7 +100,7 @@ home: {
    contact:"Contact",
    submitQuestions:"You can send your questions about idioms or idiomatic expressions, suggestions, or completed exercises using the form:",
    exercises:"Exercises",
-   back:"Go to the top",
+   back:"Back to top",
    mblTapIdiom:"Tap an idiom to reveal the meaning",
     //Mobile translations 1
    mblLookUpE:`move eyes upwards / to search for data in a book,computer,etc.`,
