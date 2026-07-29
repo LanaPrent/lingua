@@ -1,4 +1,6 @@
-  /*Modern reset*/
+  /*Modern reset - eliminate unintended browser discrepancies,
+  improve default text legibility, and establish sane defaults 
+  for responsive layouts. */
  *, *::before, *::after {
   box-sizing: border-box;
 }
