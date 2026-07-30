@@ -124,7 +124,7 @@ contactForm.addEventListener("submit", async (e) => {
         //responseMsg.innerText = err.message; //instead of this, write the code until responseMsg.Style.color
         if(err.message ==="Failed to fetch"){
             responseMsg.innerText = localStorage.getItem("language")==="sr"?
-            "Povezivanje trenutno nije uspelo": "Unable to connect right now";
+            "Povezivanje trenutno nije uspelo. Pokušajte kasnije": "Unable to connect right now. Please try later.";
 
 }else{
     responseMsg.innerText = err.message;

@@ -94,11 +94,17 @@ home: {
    exerciseTask2: "Exercise",
    exerciseInstruction2:`Try to put together your own 5–10 sentences using idioms and idiomatic expressions that you find interesting.  If you would like to get feedback, you can send them through the form: <a data-i18n="home.contactForm" class="contact-link" href="#contact-form">Contact form</a>.`,
    contactForm:"Contact form",
-   aboutWebsiteAimHeading:"About the website and its author",
+   aboutWebsiteAimHeading:"About the website",
    websiteAim:`This website is yet another in a long series of attempts to make sense of English idioms, while also taking a closer look at idiomatic expressions, collocations, phrases, and phrasal verbs through clear explanations and practical examples.`,
-   //websiteAuthor:`The author of this website is a teacher who enjoys web programming in her free time. More specifically, she is still learning web development. She believes that being a learner herself helps bridge the gap that sometimes exists between teachers and students. Some rules or entire topics are easy to grasp right away, while others aren't. For those, it is important to find the right approach. Being open to new ideas and willing to explore are the best path to successfully mastering any subject.`,
+   websiteAuthor:`The author of this website is a teacher who enjoys web programming in her free time. More specifically, she is still learning web development. She believes that being a learner herself helps bridge the gap that sometimes exists between teachers and students. Some rules or entire topics are easy to grasp right away, while others aren't. For those, it is important to find the right approach. Being open to new ideas and willing to explore are the best path to successfully mastering any subject.`,
    contact:"Contact",
    submitQuestions:"You can send your questions about idioms or idiomatic expressions, suggestions, or completed exercises using the form:",
+   footerAbout:"About",
+   footerContact:"Contact",
+   footerSiteDescriptionShort:"English through idioms and phrases",
+   footerSiteDescriptionLong:"Getting closer to natural English through idioms, collocations, phrasal verbs and everyday idiomatic expressions",
+   footerAvailableLanguages:"Available in English and Serbian",
+   footerLegalProtection:" © 2026 Lingua English idioms and idiomatic expressions",
    exercises:"Exercises",
    back:"Back to top",
    mblTapIdiom:"Tap an idiom to reveal the meaning",
@@ -266,9 +272,15 @@ home: {
    exerciseTask2: "Zadatak",
    exerciseInstruction2:`Pokušajte da sastavite svojih 5-10 rečenica sa idiomima i idiomatskim izrazima koji su vam interesantni. Ako želite povratnu informaciju, možete da ih pošaljete preko forme:  <a data-i18n="home.contactForm" class="contact-link"
             href="#contact-form">Kontakt forma</a>.`,
-   aboutWebsiteAimHeading:"O vebsajtu i autorki",
+   footerAbout:"O autoru",
+   footerContact:"Kontakt",
+   footerSiteDescriptionShort:"Engleski kroz idiome i idiomatske izraze",
+   footerSiteDescriptionLong:"Upoznavanje sa engleskim kroz idiome, ustaljene sintagme, frazalne glagole i svakodnevne idiomatske izraze",
+   footerAvailableLanguages:"Dostupno na srpskom i na engleskom jeziku",
+   footerLegalProtection:" © 2026 Lingua Engleski idiomi i idiomatski izrazi",
+   aboutWebsiteAimHeading:"O vebsajtu",
    websiteAim:`Ovo je još jedan osvrt na engleske idiome kroz praktične primere o tome šta su ustvari idiomi i koliko su važni, naporedo sa frazalnim glagolima, ali i manje pominjanim ali ništa manje važnim drugim idiomatskim izrazima koji su možda i najviše zaslužni za to da naš engleski zvuči prirodno.`,
-   //websiteAuthor: `Autorka vebsajta je profesorka koja se u slobodno vreme bavi veb programiranjem, tačnije, još uvek uči veb programiranje. Upravo to što i sama nešto uči smatra da joj pomaže da se smanji raskorak koji ponekad postoji između predavača i učenika. Neka pravila ili cele oblasti naučimo odmah a neka nam jednostavno ne idu. Za njih moramo da pronađemo pravi pristup. Otvorenost ka novom i istraživanju je najbolji put ka uspešnom savladavanju gradiva u bilo kojoj oblasti.`,
+   websiteAuthor: `Autorka vebsajta je profesorka koja se u slobodno vreme bavi veb programiranjem, tačnije, još uvek uči veb programiranje. Upravo to što i sama nešto uči smatra da joj pomaže da se smanji raskorak koji ponekad postoji između predavača i učenika. Neka pravila ili cele oblasti naučimo odmah a neka nam jednostavno ne idu. Za njih moramo da pronađemo pravi pristup. Otvorenost ka novom i istraživanju je najbolji put ka uspešnom savladavanju gradiva u bilo kojoj oblasti.`,
    contact:"Kontakt",
    submitQuestions: `Svoja pitanja u vezi idioma i idiomatskih izraza, predloge ili urađene zadatke možete da pošaljete koristeći <strong>Kontakt formu</strong>.`,
    contactForm: "Kontakt forma",
@@ -350,3 +362,4 @@ home: {
         }
     }
 };
+

@@ -7,7 +7,7 @@ nav: {
     about: "About",
     contact: "Contact Info",
     go: "Go to bottom",
-    back: "Go to top"
+    back: "Back to top"
 },
   login:{
     message: "Log in",

@@ -26,8 +26,8 @@ const messages = {
       botDetected: "Detektovan bot"
     },
     contact: {
-      success: "Poruka je poslata",
-      saved: "Poruka je sačuvana",
+      success: "Vaša poruka je poslata",
+      saved: "Vaša poruka je sačuvana",
       sending: "Slanje...",
       tooLong: "Predugačak unos",
      // noConnection: "Nije uspelo povezivanje"
