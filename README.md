@@ -49,8 +49,8 @@ ________________________________________
 🟡 CONTENT (project-specific / business data)
 These files define what the website says and shows, not how it works.
 Pages (HTML content)
-•	public/About.html 
-•	public/Contact.html 
+•	public/about.html 
+•	public/contact_info.html 
 •	public/Chocolate_Brands.html 
 •	public/Chocolate_Eating_Advice.html 
 •	public/why_cocoa_is_dangerous.html 
