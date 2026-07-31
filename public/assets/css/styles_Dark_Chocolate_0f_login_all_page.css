@@ -648,6 +648,14 @@ these 3 lines added to .navbar near the top:
         order:5;
         margin-left:auto;
     }
+    .content{
+      margin:2rem auto;
+      padding:0 1.25rem;
+    }
+
+    p{
+      font-size: 1.1rem;
+    }
 
 }
 
