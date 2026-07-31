@@ -295,11 +295,11 @@ home: {
    mblTurnDownE:"",
    mblTurnDownS:"smanjiti jačinu zvuka / odbaciti ponudu",
    mblRunOutE:"",
-   mblRunOutS:"potrošiti, ostati bez nečega",
+   mblRunOutS:"istrčati / potrošiti ostati bez nečega",
    mblTurnUpE:"",
    mblTurnUpS:"pojačati / pojaviti se",
    mblSetUpE:"",
-   mblSetUpS:"podmetnuti, podvaliti",
+   mblSetUpS:"organizovati / podmetnuti, podvaliti",
 
     //Mobile translations 2
    mblBreakTheIceE:"",

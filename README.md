@@ -41,7 +41,7 @@ These are application behavior scripts, not content:
 •	public/assets/js/slideshow_responsiveCarousel.js 
 ________________________________________
 Styling system (CORE CSS)
-•	public/assets/css/styles_Dark_Chocolate_0f_login.css 
+•	public/assets/css/styles_Dark_Chocolate_0f_login_all_page.css 
 •	public/assets/css/styles_Form_0b.css 
 •	public/assets/css/styles_modern_reset_0c.css 
 •	public/assets/css/slideshow_responsiveCarousel.css 
