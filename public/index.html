@@ -220,7 +220,7 @@
       Kontakt forma
     </h3>
 
-    <p>
+    <p data-i18n="home.anyComment">
       Imate pitanje ili želite komentar na svoje primere?
     </p>
 
@@ -1026,7 +1026,7 @@
           Pokušajte da sastavite svojih 5-10 rečenica sa idiomima i idiomatskim izrazima <br>
           koji su vam interesantni. Ako želite povratnu informaciju, možete da ih pošaljete preko forme: 
             <a data-i18n="home.contactForm" class="contact-link"
-            href="#contact-form">Kontakt forma</a></p> 
+            href="#contact-form" >Kontakt forma</a></p> 
       </section>
     </main>
   </div>
@@ -1063,10 +1063,11 @@
 
   <footer id="bottom">
     <div class="footer-top">
-      <button class="b1" style="margin-left:auto;" data-i18n="home.exercisesIdioms"
-      data-protected='/members/exercises'>Exercises with idioms and idiomatic expressions</button>
-  <button data-i18n="home.footerAbout" class="b1" onclick="location='about.html'">About</button>
-  <button data-i18n="home.footerContact" class="b1" onclick="location='contact_info.html'">Contact</button>
+  <a data-protected='/members/exercises' href="/members/exercises.html" data-i18n="home.exercisesIdioms" style="margin-left:auto; text-decoration: none;" class="b1">Exercises with idioms</a>
+ 
+  <a href="about.html" data-i18n="home.footerAbout" style="margin-left:auto; text-decoration: none;" class="b1">About</a>
+  <a href="contact_info.html" data-i18n="home.footerContact" style="margin-left:auto; text-decoration: none;" class="b1">Contact</a>
+ 
   <a href="#top" style="margin-left:auto; text-decoration: none;" data-i18n="nav.back" class="b1">Idi na početak ↑</a>
   </div>
   <div class="footer-info footer-text">

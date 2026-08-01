@@ -305,16 +305,17 @@ footer {
 }
 
 
-/*
+/**/
 .footer-top{
   display:flex;
     flex-wrap:wrap;
     gap:12px;
     align-items:center;
     justify-content:center;
+    gap:12px 20px;
 }
 
-*/
+
 .footer-bottom{
   margin-top:20px;
   text-align:center;
