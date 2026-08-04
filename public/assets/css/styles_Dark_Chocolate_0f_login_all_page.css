@@ -416,7 +416,10 @@ footer .b1:disabled {
     /*width:auto;*/
   }
 }
-
+  footer .footer-link {
+    margin-left: auto;
+    text-decoration: none;
+  }
 
 /*modal styling for login - .modal, .modal-content, .close*/
 .modal {

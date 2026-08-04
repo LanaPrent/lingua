@@ -181,7 +181,7 @@ home: {
         home: {
             sending:"Slanje...",
    headline: "Živopisni svet idioma kao vodič kroz kulturu i istoriju",
-   motto:"",
+   siteTitle: "Idiomi i Idiomatski izrazi u srpskom i engleskom|Lingua",
    sidebarHeading: "Idiomi vedre i oblače",
    quickGuide:"Brzi vodič",
    idiomsGuideContext:"Učite idiome u kontekstu.",

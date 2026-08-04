@@ -1,4 +1,3 @@
-//a new version with a code added at the end of the file 
 const fs = require("fs");
 const path = require("path");
 
@@ -12,16 +11,12 @@ const logFile = path.join(logsDir, "app.log");
 // =========================
 
 // Change to false before deploying if you don't want DEBUG messages.
-//const DEBUG = true;
-const DEBUG = process.env.DEBUG === "true";
+const DEBUG = true;
+
 
 //Limit the size of logs folder
-//const MAX_SIZE = 
-const MAX_SIZE = Number(process.env.LOG_MAX_SIZE) || 5 * 1024 * 1024; //5MB
-//const MAX_FILES =3;
-const MAX_FILES =
-    Number(process.env.LOG_MAX_FILES) || 3;
-
+const MAX_SIZE = 5 * 1024 * 1024; //5MB
+const MAX_FILES =3;
 
 // Ensure logs directory exists
 if (!fs.existsSync(logsDir)){
