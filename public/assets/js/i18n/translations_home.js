@@ -3,7 +3,7 @@ export const homeTranslations = {
 home: {
     sending: "Sending...",
    headline: "A colorful world of idioms as a culture and history guide",
-   siteTitle: "Idiomatic expressions in Serbian and English | Lingua",
+   siteTitle: "Idioms and other idiomatic expressions in Serbian and English | Lingua",
    motto:"",
    sidebarHeading: "Idioms call the tune",
    quickGuide:"Quick Guide",
@@ -181,7 +181,7 @@ home: {
         home: {
             sending:"Slanje...",
    headline: "Živopisni svet idioma kao vodič kroz kulturu i istoriju",
-   siteTitle: "Idiomi i Idiomatski izrazi u srpskom i engleskom|Lingua",
+   siteTitle: "Idiomi i drugi idiomatski izrazi u srpskom i engleskom|Lingua",
    sidebarHeading: "Idiomi vedre i oblače",
    quickGuide:"Brzi vodič",
    idiomsGuideContext:"Učite idiome u kontekstu.",
