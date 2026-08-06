@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
 <head>
-    <title data-i18n="home.about">About</title>
+    <title data-i18n="home.about">O autorki / About </title>
    
     <link rel="stylesheet" href="assets/css/styles_Dark_Chocolate_0f_login_all_page.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!---->
      <style>
 body {
     margin: 0;
-    padding: 30px 20px;
+   /* padding: 30px 20px;*/
     background: blanchedalmond;
     font-family: Inter, system-ui, sans-serif;
     line-height: 1.6;
 }
+
+
 
 .content {
     max-width: 70ch;
@@ -26,12 +29,26 @@ content p{
        max-width: 95%;
        margin:30px;
        margin-bottom: 50px;
+       
     }
+
+     .page-content{
+        max-width: 70ch;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+        margin-top:4rem;
+    }
+    footer{
+        margin-top: 4rem;
+    }
+    h2{
+    margin-top:5rem;
+}
 
 @media (max-width: 768px) {
 
     body {
-        padding: 40px 18px;
+       /* padding: 40px 18px;*/
         font-size: 1.1rem;
     }
 
@@ -43,19 +60,31 @@ content p{
        margin:10px;
        margin-bottom: 50px;
     }
-
+   
 }
   </style>
+  
 </head>
 
 <body style="background-color:blanchedalmond;">
+    <header id="top">
+    <h1 class="article-width" id="s1" data-i18n="home.headline">Par reči o autorki sajta i sadržaja / About the author of website and content</h1>
+  </header>
 
+<nav class="navbar">
+
+    <div class="navbar-tools">
+        <a href="#bottom" class="go-bottom" data-i18n="nav.go">Idi na kraj / Bottom</a>
+        <a href="/" class="home-link" data-i18n="nav.home">Početna / Home</a>
+</nav>
+
+    
 <div class="content">
      <p style=max-width:70ch;>
       Autorka vebsajta je profesorka engleskog koja se u slobodno vreme bavi veb programiranjem, tačnije, i dalje uči veb programiranje. 
       Upravo to što i sama nešto uči smatra da joj pomaže da se smanji raskorak koji ponekad postoji između predavača i učenika. 
       Neka pravila ili cele oblasti naučimo odmah a neka nam jednostavno ne idu. Za njih moramo da pronađemo pravi pristup. 
-      Otvorenost ka novom i istraživanju je najbolji put ka uspešnom savladavanju gradiva u bilo kojoj oblasti.
+      Otvorenost ka novom i istraživanju je najbolji put ka uspešnom savladavanju gradiva u bilo kojoj oblasti.<br> Hvala na izdvojenom vremenu, <br>Lana, Beograd, 30.07.2026.
      </p>
 
      <p style=max-width:70ch;>
@@ -63,12 +92,25 @@ content p{
       More specifically, she is still learning web development. She believes that being a learner herself helps bridge the gap that sometimes 
       exists between teachers and students. Some rules or entire topics are easy to grasp right away, while others aren't. 
       For those, it is important to find the right approach. 
-      Being open to new ideas and willing to explore are the best path to successfully mastering any subject.
+      Being open to new ideas and willing to explore are the best path to successfully mastering any subject.<br>Thank you for your time, <br>Lana, Belgrade, 30 July 2026
      </p>
 </div>
 
-
+<footer id="bottom">
+    <div>
+  <a href="contact_info.html" data-i18n="home.footerContact" class="b1 footer-link">Kontakt / Contact</a>
+  <a href="#top" data-i18n="nav.back" class="b1 footer-link">Vrh / Top ↑</a>
+  </div>
+  <div class="footer-info footer-text">
+  <p class="footer-text" data-i18n="home.footerSiteDescriptionShort">Engleski kroz idiome i idiomatske izraze / English through idioms and phrases</p>
+  <p class="footer-text" data-i18n="home.footerSiteDescriptionLong">Upoznavanje sa engleskim kroz idiome, svakodnevne izraze i frazalne glagole / Getting to know English through idioms, phrases and phrasal verbs</p>  
+  <p class="footer-text" data-i18n="home.footerAvailableLanguages">Dostupno na srpskom i na engleskom / Available in Serbian and English</p>
+    </div>
+    <div class="footer-bottom">
+   <p class="footer-text" data-i18n="home.footerLegalProtection"> 2026 Lingua Engleski idiomi i sintagme / 2026 Lingua English idioms and phrases</p>
+  </div>
+ 
+</footer>
 
 </body>
 </html>
-

@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
 <head>
-    <title data-i18n="home.contact">Contact</title>
+    <title data-i18n="home.about">Kontakt / Contact </title>
    
     <link rel="stylesheet" href="assets/css/styles_Dark_Chocolate_0f_login_all_page.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-          <style>
+
+<!---->
+     <style>
 body {
     margin: 0;
-    padding: 30px 20px;
+   /* padding: 30px 20px;*/
     background: blanchedalmond;
     font-family: Inter, system-ui, sans-serif;
     line-height: 1.6;
 }
 
+
+
 .content {
-   /* max-width: 70ch;*/
+    max-width: 70ch;
     margin: 0 auto;
     text-align: center;
 }
 
+content p{
+       /* margin: 50px;*/
+       max-width: 95%;
+       margin:30px;
+       margin-bottom: 50px;
+       
+    }
+
+     .page-content{
+        max-width: 70ch;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+        margin-top:4rem;
+    }
+    footer{
+        margin-top: 4rem;
+    }
+    h2{
+    margin-top:5rem;
+}
+
+
 @media (max-width: 768px) {
 
     body {
-        padding: 40px 18px;
+        /*padding: 40px 18px;*/
         font-size: 1.1rem;
     }
 
@@ -32,22 +57,31 @@ body {
         max-width: 100%;
     }
     .content p{
-   
-       max-width: 95%;
+        max-width: 95%;
        margin:10px;
        margin-bottom: 50px;
     }
-    
-
+   
 }
   </style>
+  
 </head>
 
 <body style="background-color:blanchedalmond;">
+    <header id="top">
+    <h1 class="article-width" id="s1" data-i18n="home.headline">Kontakt / Contact</h1>
+  </header>
 
+<nav class="navbar">
 
+    <div class="navbar-tools">
+        <a href="#bottom" class="go-bottom" data-i18n="nav.go">Idi na kraj / Bottom</a>
+        <a href="/" class="home-link" data-i18n="nav.home">Početna / Home</a>
+</nav>
+
+    
 <div class="content">
-     <p style=max-width:70ch;>
+      <p style=max-width:70ch;>
 Sve predloge, komentare, urađene zadatke i vežbe, kao i pitanja u vezi online individualnih časova engleskog jezika 
 (svakodnevna i poslovna konverzacija) od A do C nivoa možete da pošaljete preko kontakt forme na glavnoj stranici. 
 </p>
@@ -57,6 +91,25 @@ Sve predloge, komentare, urađene zadatke i vežbe, kao i pitanja u vezi online 
     (everyday and business conversation) A-C level can be sent through the Contact Form on the main page. 
 </p>
 </div>
+
+<footer id="bottom">
+    <div>
+  <!--<a href="contact_info.html" data-i18n="home.footerContact" class="b1 footer-link">Kontakt / Contact</a>-->
+  
+  <div class="footer-top"> <!--div and class added to shift the link to the center-->
+  <a href="#top" data-i18n="nav.back" class="b1 footer-link"> Vrh / Top ↑</a>
+</div>
+  </div>
+  <div class="footer-info footer-text">
+  <p class="footer-text" data-i18n="home.footerSiteDescriptionShort">Engleski kroz idiome i idiomatske izraze / English through idioms and phrases</p>
+  <p class="footer-text" data-i18n="home.footerSiteDescriptionLong">Upoznavanje sa engleskim kroz idiome, svakodnevne izraze i frazalne glagole / Getting to know English through idioms, phrases and phrasal verbs</p>  
+  <p class="footer-text" data-i18n="home.footerAvailableLanguages">Dostupno na srpskom i na engleskom / Available in Serbian and English</p>
+    </div>
+    <div class="footer-bottom">
+   <p class="footer-text" data-i18n="home.footerLegalProtection"> 2026 Lingua Engleski idiomi i sintagme / 2026 Lingua English idioms and phrases</p>
+  </div>
+ 
+</footer>
 
 </body>
 </html>

@@ -1,18 +1,20 @@
 Folder PATH listing for volume EXTERNAL_USB
-Volume serial number is 00000054 0644:BCB8
+Volume serial number is 0000002A 0644:BCB8
 E:.
 |   .env
 |   .gitignore
 |   database.sql
+|   Debugging-notes.md
 |   index_Idioms.html
 |   package-lock.json
 |   package.json
-|   projectStructure.txt
+|   projectstructure.txt
 |   README.md
 |   server.js
 |   
 +---config
 |       db.js
+|       logger copy.js
 |       logger.js
 |       session.js
 |       
@@ -2575,16 +2577,22 @@ E:.
 |       why_cocoa_is_dangerous.html
 |       
 +---public
-|   |   About.html
-|   |   Contact_info.html
+|   |   about.html
+|   |   contact_info.html
+|   |   index copy after redesign1.html
+|   |   index copy.html
 |   |   index.html
-|   |   index_copy.html
+|   |   index_orig.html
+|   |   index_test.html
 |   |   
 |   +---assets
 |   |   +---css
 |   |   |       slideshow_responsiveCarousel.css
+|   |   |       styles_Dark_Chocolate_0f_login_all_page after first redesign2 .css
+|   |   |       styles_Dark_Chocolate_0f_login_all_page copy1.css
 |   |   |       styles_Dark_Chocolate_0f_login_all_page.css
-|   |   |       styles_Dark_Chocolate_0f_login_all_page_copy.css
+|   |   |       styles_Dark_Chocolate_0f_login_all_page_before footer fixing.css
+|   |   |       styles_Dark_Chocolate_0f_login_all_page_colors partly changed copy3.css
 |   |   |       styles_Form_0b.css
 |   |   |       styles_modern_reset_0c.css
 |   |   |       
@@ -2622,6 +2630,7 @@ E:.
 |   |   \---js
 |   |       |   api.js
 |   |       |   auth.js
+|   |       |   Components.js
 |   |       |   contact.js
 |   |       |   contact_copy.js
 |   |       |   i18n.js
@@ -2642,9 +2651,10 @@ E:.
 |   |               translations_ui.js
 |   |               translator.js
 |   |               
-|   +---content
-|   |   \---images
-|   \---core
+|   \---components
+|           footer.html
+|           header.html
+|           
 +---routes
 |       adminRoutes.js
 |       authRoutes.js
