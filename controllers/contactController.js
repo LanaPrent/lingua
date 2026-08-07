@@ -1,7 +1,8 @@
 const logger = require("../config/logger");
 const conn = require("../config/db");
 const { sendContactEmail } = require("../services/emailService");
-const {t} = require("../services/i18nMessages");
+const { t } = require("../services/i18nMessages");
+const validator = require("validator");
 
 exports.submitContactForm = async (req, res) => {
   //console.log("REQUEST BODY:", req.body);
@@ -18,7 +19,7 @@ const lang = req.headers["accept-language"]?.split(",")[0]
   }
 
   name = name?.normalize("NFKC").trim();
-  email = email?.normalize("NFKC").trim();
+  email = email?.normalize("NFKC").trim().toLowerCase();
   comments = comments?.normalize("NFKC").trim();
 
   if (!name || !email || !comments) {
@@ -36,13 +37,20 @@ const lang = req.headers["accept-language"]?.split(",")[0]
       message: t("TOO_LONG", lang),
     });
   }
-
+/* replaced by library validator.js
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({
       success: false,
       message: t("INVALID_EMAIL", lang),
     });
   }
+*/
+if (!validator.isEmail(email)) {
+  return res.status(400).json({
+    success: false,
+    message: t("INVALID_EMAIL", lang),
+  });
+}
 
   conn.execute(
     "INSERT INTO users (name,email,comments) VALUES (?,?,?)",
