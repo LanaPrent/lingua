@@ -26,18 +26,23 @@ const messages = {
 
   EMAIL_SENT: {
     en: "Your message has been sent",
-    sr: "Poruka je poslata",
+    sr: "Vaša poruka je poslata",
   },
 
   EMAIL_SAVED: {
     en: "Your message has been saved",
-    sr: "Poruka je sačuvana",
+    sr: "Vaša poruka je sačuvana",
   },
 
   GENERAL_ERROR: {
     en: "Something went wrong",
     sr: "Došlo je do greške",
   },
+
+  SUBMITTING: {    //
+    en:"Submitting....",
+    sr:"Slanje...."
+  }
 };
 
 // helper function

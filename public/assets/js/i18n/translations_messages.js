@@ -10,7 +10,7 @@ const messages = {
     contact: {
       success: "Your message has been sent",
       saved: "Your message has been saved",
-      sending: "Sending...",
+      submitting: "Submitting...",
       tooLong: "Input too long",
       //noConnection: "Failed to fetch"
     },
@@ -28,7 +28,7 @@ const messages = {
     contact: {
       success: "Vaša poruka je poslata",
       saved: "Vaša poruka je sačuvana",
-      sending: "Slanje...",
+      submitting: "Slanje...",
       tooLong: "Predugačak unos",
      // noConnection: "Nije uspelo povezivanje"
     },

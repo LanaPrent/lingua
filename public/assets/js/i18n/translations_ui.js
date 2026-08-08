@@ -35,6 +35,9 @@ nav: {
     success: "You registered successfully",
     userExists: "A user with this email already exists"
   },
+  changePassword:{
+    message: "Change password"
+  },
   logout:{
     message: "Log out",
     success: "Logged out successfully",
@@ -118,6 +121,9 @@ nav: {
  submit:{
   message: "Pošalji"
  },
+  changePassword:{
+    message: "Promeni lozinku"
+  },
 logout:{
   message:"Odjavi se",
   success:"Uspešno ste se odjavili", 

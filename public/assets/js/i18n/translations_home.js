@@ -1,7 +1,7 @@
 export const homeTranslations = {
     en: {
 home: {
-    sending: "Sending...",
+    submitting: "Submitting...",
    headline: "A colorful world of idioms as a culture and history guide",
    siteTitle: "Idioms and other idiomatic expressions in Serbian and English | Lingua",
    motto:"",
@@ -179,7 +179,7 @@ home: {
 
     sr: {
         home: {
-            sending:"Slanje...",
+            submitting:"Slanje...",
    headline: "Živopisni svet idioma kao vodič kroz kulturu i istoriju",
    siteTitle: "Idiomi i drugi idiomatski izrazi u srpskom i engleskom|Lingua",
    sidebarHeading: "Idiomi vedre i oblače",

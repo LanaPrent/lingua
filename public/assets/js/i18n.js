@@ -31,7 +31,8 @@ const translations = {
   },
   send:{
     text: "Send"
-  }
+  },
+  changePsw: "Change password"
 },
  
   sr: {
@@ -66,7 +67,8 @@ logout:{
   },
   send:{
     text:"Pošalji"
-  }
+  },
+  changePsw:"Promeni lozinku"
 }
 };
 
