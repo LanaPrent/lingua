@@ -159,3 +159,151 @@ exports.status = (req, res) => {
         });
     }
 };
+/* Change password */
+exports.changePassword = async (req, res) => {
+
+    const {
+        currentPassword,
+        newPassword,
+        confirmPassword
+    } = req.body;
+
+
+    // ===== Check that user is logged in =====
+
+    if (!req.session.userId) {
+
+        return res.status(401).json({
+            success: false,
+            message: "You must be logged in."
+        });
+    }
+
+
+    // ===== Check that all fields were provided =====
+
+    if (!currentPassword || !newPassword || !confirmPassword) {
+
+        return res.status(400).json({
+            success: false,
+            message: "All fields are required."
+        });
+    }
+
+
+    // ===== Check that new passwords match =====
+
+    if (newPassword !== confirmPassword) {
+
+        return res.status(400).json({
+            success: false,
+            message: "New passwords do not match."
+        });
+    }
+
+
+    try {
+
+        // ===== Get current password hash from database =====
+
+        conn.execute(
+            "SELECT password_hash FROM auth_users WHERE id = ?",
+            [req.session.userId],
+
+            async (err, results) => {
+
+                if (err) {
+
+                    logger.error(err.message);
+
+                    return res.status(500).json({
+                        success: false,
+                        message: "common.databaseError"
+                    });
+                }
+
+
+                // ===== Check that user exists =====
+
+                if (results.length === 0) {
+
+                    return res.status(404).json({
+                        success: false,
+                        message: "User not found."
+                    });
+                }
+
+
+                const user = results[0];
+
+
+                // ===== Check current password =====
+
+                const passwordMatch = await bcrypt.compare(
+                    currentPassword,
+                    user.password_hash
+                );
+
+
+                if (!passwordMatch) {
+
+                    return res.status(400).json({
+                        success: false,
+                        message: "Current password is incorrect."
+                    });
+                }
+
+
+                // ===== Hash new password =====
+
+                const newPasswordHash =
+                    await bcrypt.hash(newPassword, 12);
+
+
+                // ===== Update password in database =====
+/**/
+                conn.execute(
+                    "UPDATE auth_users SET password_hash = ? WHERE id = ?",
+                    [
+                        newPasswordHash,
+                        req.session.userId
+                    ],
+
+                    (err) => {
+
+                        if (err) {
+
+                            logger.error(err.message);
+
+                            return res.status(500).json({
+                                success: false,
+                                message: "common.databaseError"
+                            });
+                        }
+
+
+
+
+                        // ===== Success =====
+
+                        res.json({
+                            success: true,
+                            message: "Password changed successfully."
+                        });
+
+                    }
+                );
+
+            }
+        );
+
+    } catch (err) {
+
+        logger.error(err.message);
+
+        return res.status(500).json({
+            success: false,
+            message: "common.serverError"
+        });
+    }
+};

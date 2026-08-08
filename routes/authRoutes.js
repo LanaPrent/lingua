@@ -7,7 +7,8 @@ const {
     register,
     login,
     logout,
-    status
+    status,
+    changePassword
 } = require("../controllers/authController");
 
 router.post(
@@ -20,6 +21,12 @@ router.post(
     "/login",
     csrfProtection,
     login
+);
+
+router.post(
+    "/change-password",
+    csrfProtection,
+    changePassword
 );
 
 router.post(

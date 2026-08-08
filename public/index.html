@@ -153,6 +153,7 @@
             <a href="#" id="loginBtn" data-i18n="login.message">Prijava</a>
             <a href="#" id="registerBtn" data-i18n="register.message">Registracija</a>
             <a href="#" id="logoutBtn" class="display-none" data-i18n="logout.message">Odjava</a>
+            <a href="#" id="changePsw" class="display-none" data-i18n="changepsw.message">Promeni lozinku</a>
         </div>
 
         <div class="lang-buttons">
@@ -1128,6 +1129,52 @@
       <div id="registerMsg"></div>
     </div>
   </div>
+
+
+  <!-- ===== CHANGE PASSWORD MODAL ===== -->
+<div id="changePasswordModal" class="modal">
+    <div class="modal-content">
+
+        <span class="close" id="closeChangePassword">&times;</span>
+
+        <h2>Change Password</h2>
+
+        <form id="changePasswordForm" novalidate>
+
+            <input
+                type="hidden"
+                id="csrfChangePassword"
+                name="_csrf">
+
+            <input
+                type="password"
+                id="currentPassword"
+                placeholder="Current Password"
+                required>
+
+            <input
+                type="password"
+                id="newPassword"
+                placeholder="New Password"
+                required>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm New Password"
+                required>
+
+            <button type="submit">
+                Change Password
+            </button>
+
+        </form>
+
+        <div id="changePasswordMsg"></div>
+
+    </div>
+</div>
+  
 
   <script src="assets/js/api.js" defer></script>
   <script src="assets/js/contact.js" defer></script>

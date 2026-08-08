@@ -29,6 +29,28 @@ const loginMsg = document.getElementById("loginMsg");
 
 const registerMsg = document.getElementById("registerMsg");
 
+// ===== Change Password =====
+
+const changePasswordBtn =
+    document.getElementById("changePsw");
+
+const changePasswordModal =
+    document.getElementById("changePasswordModal");
+
+const closeChangePassword =
+    document.getElementById("closeChangePassword");
+
+const changePasswordForm =
+    document.getElementById("changePasswordForm");
+
+const changePasswordMsg =
+    document.getElementById("changePasswordMsg");
+
+const changePasswordCsrfInput =
+    document.getElementById("csrfChangePassword");
+
+
+
 const loginCsrfInput =
     document.getElementById("csrfLogin");
 
@@ -44,15 +66,13 @@ async function loadCsrfToken() {
         const data = await apiFetch("/csrf-token");
 
         loginCsrfInput.value = data.csrfToken;
-
         registerCsrfInput.value = data.csrfToken;
-
+        changePasswordCsrfInput.value = data.csrfToken;
     } catch (err) {
 
         console.error("CSRF load failed:", err);
     }
 }
-
 loadCsrfToken();
 
 // ===== Modal logic =====
@@ -63,6 +83,15 @@ loginBtn.addEventListener("click", () => {
 
     document.getElementById("loginEmail").focus();
 });
+
+changePasswordBtn.addEventListener("click", () => {
+
+    changePasswordModal.style.display = "block";
+
+    document.getElementById("currentPassword").focus();
+
+});
+
 
 registerBtn.addEventListener("click", () => {
 
@@ -75,6 +104,13 @@ closeLogin.addEventListener("click", () => {
 
     loginModal.style.display = "none";
 });
+
+closeChangePassword.addEventListener("click", () => {
+
+    changePasswordModal.style.display = "none";
+
+});
+
 
 closeRegister.addEventListener("click", () => {
 
@@ -92,6 +128,11 @@ window.addEventListener("click", (e) => {
 
         registerModal.style.display = "none";
     }
+
+    if (e.target === changePasswordModal) {
+
+    changePasswordModal.style.display = "none";
+}
 });
 
 // ===== Navbar auth state =====
@@ -111,6 +152,8 @@ async function updateAuthButtons() {
 
             logoutBtn.style.display = "inline-block";
 
+            changePasswordBtn.style.display = "inline-block";
+
             //userInfo.textContent = `Welcome, ${data.username}`
             /*
             const lng = localStorage.getItem("language") || "en";
@@ -129,6 +172,8 @@ async function updateAuthButtons() {
             registerBtn.style.display = "inline-block";
 
             logoutBtn.style.display = "none";
+
+            changePasswordBtn.style.display="none";
 
             userInfo.textContent=""; 
         }
@@ -298,6 +343,121 @@ if (!data.password) {
         registerMsg.style.color = "red";
     }
 });
+
+ // ===== Change Password =====
+
+changePasswordForm.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    changePasswordMsg.innerText = "";
+
+    const data = {
+
+        currentPassword:
+            document.getElementById("currentPassword").value,
+
+        newPassword:
+            document.getElementById("newPassword").value,
+
+        confirmPassword:
+            document.getElementById("confirmPassword").value,
+
+        _csrf:
+            changePasswordCsrfInput.value
+    };
+
+
+    // ===== Basic validation =====
+
+    if (!data.currentPassword) {
+
+        changePasswordMsg.innerText =
+            "Please enter your current password.";
+
+        changePasswordMsg.style.color = "red";
+
+        return;
+    }
+
+    if (!data.newPassword) {
+
+        changePasswordMsg.innerText =
+            "Please enter a new password.";
+
+        changePasswordMsg.style.color = "red";
+
+        return;
+    }
+
+    if (!data.confirmPassword) {
+
+        changePasswordMsg.innerText =
+            "Please confirm your new password.";
+
+        changePasswordMsg.style.color = "red";
+
+        return;
+    }
+
+    if (data.newPassword !== data.confirmPassword) {
+
+        changePasswordMsg.innerText =
+            "New passwords do not match.";
+
+        changePasswordMsg.style.color = "red";
+
+        return;
+    }
+
+
+    // ===== Send request to server =====
+
+    try {
+
+        const result = await apiFetch(
+            "/api/change-password",
+            {
+                method: "POST",
+                body: JSON.stringify(data)
+            }
+        );
+
+
+        changePasswordMsg.innerText =
+            result.message;
+
+        changePasswordMsg.style.color =
+            result.success ? "green" : "red";
+
+
+        // ===== Password changed successfully =====
+
+        if (result.success) {
+
+            setTimeout(() => {
+
+                changePasswordModal.style.display = "none";
+
+                changePasswordForm.reset();
+
+                changePasswordMsg.innerText = "";
+
+            }, 1500);
+        }
+
+    } catch (err) {
+
+        console.error(err);
+
+        changePasswordMsg.innerText =
+            err.message;
+
+        changePasswordMsg.style.color = "red";
+    }
+
+});
+
 
 // ===== Logout =====
 
