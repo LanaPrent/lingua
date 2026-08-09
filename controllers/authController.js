@@ -4,9 +4,9 @@ const logger = require("../config/logger");
 
 exports.register = async (req, res) => {
 
-    const { username, email, password } = req.body;
+    const { username, email, password, recoveryQuestion, recoveryAnswer } = req.body;
 
-    if (!username || !email || !password) {
+    if (!username || !email || !password ||!recoveryQuestion ||!recoveryAnswer) {
         return res.status(400).json({
             success: false,
             message: "common.requiredFields"
@@ -14,12 +14,17 @@ exports.register = async (req, res) => {
     }
 
     try {
-
+        // ===== Hash password =====
         const hash = await bcrypt.hash(password, 12);
+        
+        // ===== Hash recovery answer =====
+        const recoveryAnswerHash = await bcrypt.hash(recoveryAnswer, 12);
 
+        // ===== Save user =====
         conn.execute(
-            "INSERT INTO auth_users (username, email, password_hash) VALUES (?, ?, ?)",
-            [username, email, hash],
+            `INSERT INTO auth_users (username, email, password_hash, recovery_question, recovery_answer_hash) VALUES (?, ?, ?, ?, ?)`,
+           
+            [username, email, hash, recoveryQuestion, recoveryAnswerHash],
 
             (err) => {
 
@@ -31,6 +36,8 @@ exports.register = async (req, res) => {
                            message: "register.userExists"
                         });
                     }
+
+                    logger.error(err.message);
 
                     return res.status(500).json({
                         success: false,
@@ -159,6 +166,80 @@ exports.status = (req, res) => {
         });
     }
 };
+
+exports.getRecoveryQuestion = (req, res) => {
+
+    const { email } = req.body;
+
+
+    // ===== Check email =====
+
+    if (!email) {
+
+        return res.status(400).json({
+            success: false,
+            message: "Email is required."
+        });
+    }
+
+
+    // ===== Find user =====
+
+    conn.execute(
+        `SELECT recovery_question
+         FROM auth_users
+         WHERE email = ?`,
+
+        [email],
+
+        (err, results) => {
+
+            if (err) {
+
+                logger.error(err.message);
+
+                return res.status(500).json({
+                    success: false,
+                    message: "common.databaseError"
+                });
+            }
+
+
+            // ===== User not found =====
+
+            if (results.length === 0) {
+
+                return res.status(404).json({
+                    success: false,
+                    message: "User not found."
+                });
+            }
+
+
+            // ===== Check recovery question =====
+
+            if (!results[0].recovery_question) {
+
+                return res.status(400).json({
+                    success: false,
+                    message: "Recovery is not configured for this account."
+                });
+            }
+
+
+            // ===== Success =====
+
+            res.json({
+                success: true,
+                recoveryQuestion:
+                    results[0].recovery_question
+            });
+
+        }
+    );
+};
+
+
 /* Change password */
 exports.changePassword = async (req, res) => {
 

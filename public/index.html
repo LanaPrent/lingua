@@ -1098,6 +1098,7 @@
     <div class="modal-content">
       <span class="close" id="closeLogin">&times;</span>
       <h2 data-i18n="login.title">Login</h2>
+
       <form id="loginForm" novalidate>
         <input type="hidden" id="csrfLogin" name="_csrf">
         <input type="email" id="loginEmail" placeholder="Email" data-i18n-placeholder="login.email" required>
@@ -1105,12 +1106,51 @@
           required>
         <button type="submit" data-i18n="login.button">Login</button>
       </form>
+      <a href="#" id="forgotPasswordBtn">
+        Forgot Password?
+      </a>
       <div id="loginSpinner" class="display-none">
         <span data-i18n="common.submitting">Submitting...</span>
       </div>
       <div id="loginMsg"></div>
     </div>
   </div>
+
+  <!-- ===== FORGOT PASSWORD MODAL ===== -->
+
+<div id="forgotPasswordModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" id="closeForgotPassword">&times;</span>
+
+        <h2>Forgot Password?</h2>
+
+        <form id="forgotPasswordForm" novalidate>
+
+            <input
+                type="hidden"
+                id="csrfForgotPassword"
+                name="_csrf">
+
+            <input
+                type="email"
+                id="forgotPasswordEmail"
+                placeholder="Email"
+                required>
+
+            <button type="submit">
+                Continue
+            </button>
+
+        </form>
+
+        <div id="forgotPasswordMsg"></div>
+
+    </div>
+
+</div>
+
 
   <!-- ===== REGISTER MODAL ===== -->
   <div id="registerModal" class="modal">
@@ -1123,6 +1163,9 @@
         <input type="email" id="regEmail" data-i18n-placeholder="register.email" placeholder="Email" required>
         <input type="password" id="regPassword" data-i18n-placeholder="register.password" placeholder="Password"
           required>
+        <input type="text" id="regRecoveryQuestion" placeholder="Recovery question" required>
+        <input type="text" id="regRecoveryAnswer" placeholder="Recovery answer" required>
+      
         <button type="submit" data-i18n="register.button">Register</button>
       </form>
       <div id="registerSpinner" class="display-none">Submitting...</div>

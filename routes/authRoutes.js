@@ -8,7 +8,8 @@ const {
     login,
     logout,
     status,
-    changePassword
+    changePassword,
+    getRecoveryQuestion
 } = require("../controllers/authController");
 
 router.post(
@@ -22,6 +23,13 @@ router.post(
     csrfProtection,
     login
 );
+
+router.post(
+    "/recovery-question",
+    csrfProtection,
+    getRecoveryQuestion
+);
+
 
 router.post(
     "/change-password",

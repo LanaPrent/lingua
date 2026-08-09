@@ -49,6 +49,25 @@ const changePasswordMsg =
 const changePasswordCsrfInput =
     document.getElementById("csrfChangePassword");
 
+// ===== Forgot Password =====
+
+const forgotPasswordBtn =
+    document.getElementById("forgotPasswordBtn");
+
+const forgotPasswordModal =
+    document.getElementById("forgotPasswordModal");
+
+const closeForgotPassword =
+    document.getElementById("closeForgotPassword");
+
+const forgotPasswordForm =
+    document.getElementById("forgotPasswordForm");
+
+const forgotPasswordMsg =
+    document.getElementById("forgotPasswordMsg");
+
+const forgotPasswordCsrfInput =
+    document.getElementById("csrfForgotPassword");
 
 
 const loginCsrfInput =
@@ -56,6 +75,64 @@ const loginCsrfInput =
 
 const registerCsrfInput =
     document.getElementById("csrfRegister");
+forgotPasswordForm.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+    //console.log("FORGOT PASSWORD FORM SUBMITTED");
+
+    forgotPasswordMsg.innerText = "";
+
+
+    const data = {
+
+        email:
+            document.getElementById("forgotPasswordEmail").value,
+
+        _csrf:
+            forgotPasswordCsrfInput.value
+    };
+
+
+    // ===== Basic validation =====
+
+    if (!data.email) {
+
+        forgotPasswordMsg.innerText =
+            "Please enter your email.";
+
+        forgotPasswordMsg.style.color = "red";
+
+        return;
+    }
+
+
+    // ===== Send request =====
+
+    try {
+
+        const result = await apiFetch(
+            "/api/recovery-question",
+            {
+                method: "POST",
+                body: JSON.stringify(data)
+            }
+        );
+
+
+        console.log(result);
+
+    } catch (err) {
+
+        console.error(err);
+
+        forgotPasswordMsg.innerText =
+            err.message;
+
+        forgotPasswordMsg.style.color = "red";
+    }
+
+});
+
 
 // ===== Load CSRF =====
 
@@ -68,6 +145,8 @@ async function loadCsrfToken() {
         loginCsrfInput.value = data.csrfToken;
         registerCsrfInput.value = data.csrfToken;
         changePasswordCsrfInput.value = data.csrfToken;
+        forgotPasswordCsrfInput.value = data.csrfToken;
+
     } catch (err) {
 
         console.error("CSRF load failed:", err);
@@ -133,7 +212,32 @@ window.addEventListener("click", (e) => {
 
     changePasswordModal.style.display = "none";
 }
+if (e.target === forgotPasswordModal) {
+
+    forgotPasswordModal.style.display = "none";
+}
+
+
 });
+
+forgotPasswordBtn.addEventListener("click", (e) => {
+
+    e.preventDefault();
+
+    loginModal.style.display = "none";
+
+    forgotPasswordModal.style.display = "block";
+
+    document
+        .getElementById("forgotPasswordEmail")
+        .focus();
+});
+
+closeForgotPassword.addEventListener("click", () => {
+
+    forgotPasswordModal.style.display = "none";
+});
+
 
 // ===== Navbar auth state =====
 
@@ -279,6 +383,12 @@ registerForm.addEventListener("submit", async (e) => {
 
         password:
             document.getElementById("regPassword").value,
+        
+        recoveryQuestion:
+            document.getElementById("regRecoveryQuestion").value,
+        
+        recoveryAnswer:
+            document.getElementById("regRecoveryAnswer").value,
 
         _csrf: registerCsrfInput.value
     };
@@ -304,7 +414,17 @@ if (!data.password) {
     return;
 }
 
+if (!data.recoveryQuestion) {
+    registerMsg.innerText="Please enter a recovery question.";
+    registerMsg.style.color="red";
+    return;
+}
 
+if(!data.recoveryAnswer) {
+    registerMsg.innerText = "Please enter a recovery answer.";
+    registerMsg.style.color="red";
+    return;
+}
 
     try {
 
