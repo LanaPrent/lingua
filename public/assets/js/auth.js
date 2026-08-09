@@ -69,36 +69,309 @@ const forgotPasswordMsg =
 const forgotPasswordCsrfInput =
     document.getElementById("csrfForgotPassword");
 
+const recoveryQuestion =
+document.getElementById("recoveryQuestion");
 
+const recoveryAnswer =
+document.getElementById("recoveryAnswer");
+    
 const loginCsrfInput =
     document.getElementById("csrfLogin");
 
 const registerCsrfInput =
     document.getElementById("csrfRegister");
+
+    // ===== Forgot Password State =====
+
+let recoveryQuestionShown = false;
+let recoveryAnswerVerified = false;
+
+   // ===== New Password Modal =====
+   const newPasswordModal =
+document.getElementById("newPasswordModal");
+const closeNewPassword =
+document.getElementById("closeNewPassword");
+const newPasswordForm =
+document.getElementById("newPasswordForm");
+const newPasswordMsg =
+document.getElementById("newPasswordMsg");
+/*
+const resetPasswordBtn =
+document.getElementById("resetPasswordBtn");
+ */
+
+// =====================================================
+// FORGOT PASSWORD
+// =====================================================
+
 forgotPasswordForm.addEventListener("submit", async (e) => {
 
     e.preventDefault();
-    //console.log("FORGOT PASSWORD FORM SUBMITTED");
 
     forgotPasswordMsg.innerText = "";
 
+    const email =
+        document.getElementById("forgotPasswordEmail").value.trim();
 
-    const data = {
+    const answer =
+        recoveryAnswer.value.trim();
 
-        email:
-            document.getElementById("forgotPasswordEmail").value,
+    // =====================================================
+    // STEP 1: Get recovery question
+    // =====================================================
 
-        _csrf:
-            forgotPasswordCsrfInput.value
-    };
+    if (!recoveryQuestionShown) {
+
+        if (!email) {
+
+            forgotPasswordMsg.innerText =
+                "Please enter your email.";
+
+            forgotPasswordMsg.style.color = "red";
+
+            return;
+        }
+
+        try {
+
+            const result = await apiFetch(
+                "/api/recovery-question",
+                {
+                    method: "POST",
+
+                    body: JSON.stringify({
+                        email: email,
+                        _csrf: forgotPasswordCsrfInput.value
+                    })
+                }
+            );
+
+            if (result.success) {
+
+                recoveryQuestion.innerText =
+                    result.recoveryQuestion;
+
+                recoveryAnswer.style.display = "block";
+
+                recoveryAnswer.focus(); // line added
+
+                recoveryQuestionShown = true;
+
+                forgotPasswordMsg.innerText =
+                    "Please enter your answer.";
+
+                forgotPasswordMsg.style.color = "black";
+            }
+
+        } catch (err) {
+
+            console.error(err);
+
+            forgotPasswordMsg.innerText =
+                err.message;
+
+            forgotPasswordMsg.style.color = "red";
+        }
+
+        return;
+    }
 
 
-    // ===== Basic validation =====
+    // =====================================================
+    // STEP 2: Verify recovery answer
+    // =====================================================
 
-    if (!data.email) {
+    if (!recoveryAnswerVerified) {
+
+        if (!answer) {
+
+            forgotPasswordMsg.innerText =
+                "Please enter your recovery answer.";
+
+            forgotPasswordMsg.style.color = "red";
+
+            return;
+        }
+
+        try {
+
+            const result = await apiFetch(
+                "/api/verify-recovery-answer",
+                {
+                    method: "POST",
+
+                    body: JSON.stringify({
+                        email: email,
+                        recoveryAnswer: answer,
+                        _csrf: forgotPasswordCsrfInput.value
+                    })
+                }
+            );
+
+            if (result.success) {
+
+                recoveryAnswerVerified = true;
+
+                forgotPasswordMsg.innerText =
+                    "Answer verified.";
+
+                forgotPasswordMsg.style.color = "green";
+
+                // Close the recovery modal
+                forgotPasswordModal.style.display = "none";
+
+                // Open the new-password modal
+                newPasswordModal.style.display = "block";
+
+                // Put the cursor in the first password field
+                document.getElementById("forgotNewPassword").focus();
+
+            }
+
+        } catch (err) {
+
+            console.error(err);
+
+            forgotPasswordMsg.innerText =
+                err.message;
+
+            forgotPasswordMsg.style.color = "red";
+        }
+
+        return;
+    }
+});
+
+
+// =====================================================
+// NEW PASSWORD
+// =====================================================
+
+    newPasswordForm.addEventListener("submit", async (e) => {
+e.preventDefault();
+
+newPasswordMsg.innerText = "";
+
+const newPassword =
+    document.getElementById("forgotNewPassword").value;
+
+const confirmPassword =
+    document.getElementById("forgotConfirmPassword").value;
+
+
+// ===== Basic validation =====
+
+if (!newPassword || !confirmPassword) {
+
+    newPasswordMsg.innerText =
+        "Please enter and confirm your new password.";
+
+    newPasswordMsg.style.color = "red";
+
+    return;
+}
+
+
+if (newPassword !== confirmPassword) {
+
+    newPasswordMsg.innerText =
+        "New passwords do not match.";
+
+    newPasswordMsg.style.color = "red";
+
+    return;
+}
+
+
+// ===== Reset password =====
+
+try {
+
+    const result = await apiFetch(
+        "/api/reset-password",
+        {
+            method: "POST",
+
+            body: JSON.stringify({
+                newPassword: newPassword,
+                confirmPassword: confirmPassword,
+                _csrf: forgotPasswordCsrfInput.value
+            })
+        }
+    );
+
+
+    newPasswordMsg.innerText =
+        result.message;
+
+    newPasswordMsg.style.color =
+        result.success ? "green" : "red";
+
+    // ===== Password reset successful =====
+    if (result.success) {
+
+        setTimeout(() => {
+
+            newPasswordModal.style.display = "none";
+
+            newPasswordForm.reset();
+
+            recoveryQuestion.innerText = "";
+
+            recoveryAnswer.value = "";
+
+            recoveryAnswer.style.display = "none";
+
+            recoveryQuestionShown = false;
+
+            recoveryAnswerVerified = false;
+            
+            forgotPasswordForm.reset();
+
+            forgotPasswordMsg.innerText = "";
+
+            newPasswordMsg.innerText = "";
+
+        }, 1500);
+    }
+
+} catch (err) {
+
+    console.error(err);
+
+    newPasswordMsg.innerText =
+        err.message;
+
+    newPasswordMsg.style.color = "red";
+}
+});
+
+/*
+    // =====================================================
+    // STEP 3: Reset password
+    // =====================================================
+
+    const newPassword =
+        document.getElementById("forgotNewPassword").value;
+
+    const confirmPassword =
+        document.getElementById("forgotConfirmPassword").value;
+
+
+    if (!newPassword || !confirmPassword) {
 
         forgotPasswordMsg.innerText =
-            "Please enter your email.";
+            "Please enter and confirm your new password.";
+
+        forgotPasswordMsg.style.color = "red";
+
+        return;
+    }
+
+    if (newPassword !== confirmPassword) {
+
+        forgotPasswordMsg.innerText =
+            "New passwords do not match.";
 
         forgotPasswordMsg.style.color = "red";
 
@@ -106,20 +379,57 @@ forgotPasswordForm.addEventListener("submit", async (e) => {
     }
 
 
-    // ===== Send request =====
-
     try {
 
         const result = await apiFetch(
-            "/api/recovery-question",
+            "/api/reset-password",
             {
                 method: "POST",
-                body: JSON.stringify(data)
+
+                body: JSON.stringify({
+                    newPassword: newPassword,
+                    confirmPassword: confirmPassword,
+                    _csrf: forgotPasswordCsrfInput.value
+                })
             }
         );
 
 
-        console.log(result);
+        forgotPasswordMsg.innerText =
+            result.message;
+
+        forgotPasswordMsg.style.color =
+            result.success ? "green" : "red";
+
+
+        if (result.success) {
+
+            setTimeout(() => {
+
+                forgotPasswordModal.style.display = "none";
+
+                forgotPasswordForm.reset();
+
+                recoveryQuestion.innerText = "";
+
+                recoveryAnswer.style.display = "none";
+
+                document.getElementById(
+                    "newPasswordFields"
+                ).style.display = "none";
+
+                document.getElementById(
+                    "forgotPasswordSubmit"
+                ).innerText = "Continue";
+
+                recoveryQuestionShown = false;
+
+                recoveryAnswerVerified = false;
+
+                forgotPasswordMsg.innerText = "";
+
+            }, 1500);
+        }
 
     } catch (err) {
 
@@ -132,7 +442,7 @@ forgotPasswordForm.addEventListener("submit", async (e) => {
     }
 
 });
-
+*/
 
 // ===== Load CSRF =====
 
@@ -216,7 +526,10 @@ if (e.target === forgotPasswordModal) {
 
     forgotPasswordModal.style.display = "none";
 }
+if (e.target === newPasswordModal) {
 
+    newPasswordModal.style.display="none";
+}
 
 });
 
@@ -238,6 +551,9 @@ closeForgotPassword.addEventListener("click", () => {
     forgotPasswordModal.style.display = "none";
 });
 
+closeNewPassword.addEventListener("click",()=>{
+    newPasswordModal.style.display="none";
+});
 
 // ===== Navbar auth state =====
 
@@ -258,12 +574,6 @@ async function updateAuthButtons() {
 
             changePasswordBtn.style.display = "inline-block";
 
-            //userInfo.textContent = `Welcome, ${data.username}`
-            /*
-            const lng = localStorage.getItem("language") || "en";
-            const welcome = translations[lng].welcome.text;
-            userInfo.textContent = `${welcome} ${data.username}`;
-            */
             const lng = localStorage.getItem("language") || "en";
             const welcomeText = translations?.[lng]?.welcome?.text ||"Welcome,";
             const username=data.username||"";
@@ -309,7 +619,7 @@ loginForm.addEventListener("submit", async (e) => {
         _csrf: loginCsrfInput.value
     };
     /**/
-    //for separate error messages
+    // ===== Basic validation =====//for separate error messages
     if (!data.email) {
     loginMsg.innerText =
         translate("login.emailRequired");
@@ -392,7 +702,7 @@ registerForm.addEventListener("submit", async (e) => {
 
         _csrf: registerCsrfInput.value
     };
-//check added before calling API
+// ===== Basic validation =====//check added before calling API
     if (!data.username) {
     registerMsg.innerText =
         translate("register.usernameRequired");
@@ -599,7 +909,7 @@ logoutBtn.addEventListener("click", async (e) => {
         const msg = document.getElementById("authMsg");
 
 //msg.textContent = "Logged out successfully";
-const lng=localStorage.getItem("language") || "en";
+//const lng=localStorage.getItem("language") || "en";
 //msg.textContent = translations[lng].logout.success;
 msg.textContent = translate("logout.success");
 msg.classList.add("show");
@@ -614,7 +924,7 @@ setTimeout(() => {
     const msg = document.getElementById("authMsg");
 
     //msg.textContent = "Logout failed";
-    const lng=localStorage.getItem("language") || "en";
+    //const lng=localStorage.getItem("language") || "en";
     //msg.textContent=translations[lng].logout.failed;
     msg.textContent = translate("logout.failed");
 
@@ -626,6 +936,10 @@ setTimeout(() => {
     }, 2500);
 }
 });
+
+// =====================================================
+// PROTECTED LINKS
+// =====================================================
 
 window.openLoginModal = function () {
     document.getElementById("loginModal").style.display = "block";

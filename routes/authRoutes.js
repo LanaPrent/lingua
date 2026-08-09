@@ -9,7 +9,10 @@ const {
     logout,
     status,
     changePassword,
-    getRecoveryQuestion
+    getRecoveryQuestion,
+    verifyRecoveryAnswer,
+    resetPassword
+
 } = require("../controllers/authController");
 
 router.post(
@@ -30,6 +33,17 @@ router.post(
     getRecoveryQuestion
 );
 
+router.post(
+    "/verify-recovery-answer",
+    csrfProtection,
+    verifyRecoveryAnswer
+);
+
+router.post(
+    "/reset-password",
+    csrfProtection,
+    resetPassword
+);
 
 router.post(
     "/change-password",
@@ -41,6 +55,9 @@ router.post(
     "/logout",
     logout
 );
+
+
+
 
 router.get(
     "/status",

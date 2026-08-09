@@ -238,6 +238,160 @@ exports.getRecoveryQuestion = (req, res) => {
         }
     );
 };
+exports.verifyRecoveryAnswer = async (req, res) => {
+
+    const { email, recoveryAnswer } = req.body;
+
+    if (!email || !recoveryAnswer) {
+
+        return res.status(400).json({
+            success: false,
+            message: "Email and recovery answer are required."
+        });
+    }
+
+    try {
+
+        conn.execute(
+            `SELECT id, recovery_answer_hash
+             FROM auth_users
+             WHERE email = ?`,
+            [email],
+
+            async (err, results) => {
+
+                if (err) {
+
+                    logger.error(err.message);
+
+                    return res.status(500).json({
+                        success: false,
+                        message: "common.databaseError"
+                    });
+                }
+
+                if (results.length === 0) {
+
+                    return res.status(400).json({
+                        success: false,
+                        message: "The recovery answer is incorrect."
+                    });
+                }
+
+                const user = results[0];
+
+                const answerMatch = await bcrypt.compare(
+                    recoveryAnswer,
+                    user.recovery_answer_hash
+                );
+
+                if (!answerMatch) {
+
+                    return res.status(400).json({
+                        success: false,
+                        message: "The recovery answer is incorrect."
+                    });
+                }
+
+                // Remember which account passed recovery verification
+                req.session.recoveryUserId = user.id;
+
+                res.json({
+                    success: true,
+                    message: "Recovery answer verified."
+                });
+            }
+        );
+
+    } catch (err) {
+
+        logger.error(err.message);
+
+        return res.status(500).json({
+            success: false,
+            message: "common.serverError"
+        });
+    }
+};
+
+//add password reset
+exports.resetPassword = async (req, res) => {
+
+    const {
+        newPassword,
+        confirmPassword
+    } = req.body;
+
+    if (!req.session.recoveryUserId) {
+
+        return res.status(401).json({
+            success: false,
+            message: "Recovery verification required."
+        });
+    }
+
+    if (!newPassword || !confirmPassword) {
+
+        return res.status(400).json({
+            success: false,
+            message: "All fields are required."
+        });
+    }
+
+    if (newPassword !== confirmPassword) {
+
+        return res.status(400).json({
+            success: false,
+            message: "New passwords do not match."
+        });
+    }
+
+    try {
+
+        const newPasswordHash =
+            await bcrypt.hash(newPassword, 12);
+
+        conn.execute(
+            `UPDATE auth_users
+             SET password_hash = ?
+             WHERE id = ?`,
+            [
+                newPasswordHash,
+                req.session.recoveryUserId
+            ],
+
+            (err) => {
+
+                if (err) {
+
+                    logger.error(err.message);
+
+                    return res.status(500).json({
+                        success: false,
+                        message: "common.databaseError"
+                    });
+                }
+
+                // Recovery process is finished
+                delete req.session.recoveryUserId;
+
+                res.json({
+                    success: true,
+                    message: "Password reset successfully."
+                });
+            }
+        );
+
+    } catch (err) {
+
+        logger.error(err.message);
+
+        return res.status(500).json({
+            success: false,
+            message: "common.serverError"
+        });
+    }
+};
 
 
 /* Change password */

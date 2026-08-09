@@ -31,6 +31,9 @@ nav: {
     emailRequired:"Email is required",
     usernameRequired:"Username is required",
     passwordRequired:"Password is required",
+    recoveryInfo:"Please enter your own password recovery question and answer:",
+    recoveryQuestion:"Recovery question",
+    recoveryAnswer:"Recovery answer",
 
     success: "You registered successfully",
     userExists: "A user with this email already exists"
@@ -114,6 +117,9 @@ nav: {
     emailRequired:"Unesite email adresu",
     usernameRequired:"Unesite korisničko ime",
     passwordRequired:"Unesite lozinku",
+    recoveryInfo:"Unesite svoje sigurnosno pitanje i odgovor za slučaj da zaboravite lozinku:",
+    recoveryQuestion:"Sigurnosno pitanje",
+    recoveryAnswer:"Sigurnosni odgovor",
 
     success: "Uspešno ste se registrovali",
     userExists: "Korisnik već postoji"

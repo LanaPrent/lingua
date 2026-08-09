@@ -1138,10 +1138,10 @@
                 id="forgotPasswordEmail"
                 placeholder="Email"
                 required>
+            <p id="recoveryQuestion"></p>
+            <input type="text" id="recoveryAnswer" placeholder="Your answer" required style="display:none;">
 
-            <button type="submit">
-                Continue
-            </button>
+<button type="submit" id="forgotPasswordSubmit">Continue</button><!---->
 
         </form>
 
@@ -1149,6 +1149,39 @@
 
     </div>
 
+</div>
+
+<!-- ===== SET NEW PASSWORD MODAL ===== -->
+<div id="newPasswordModal" class="modal">
+<div class="modal-content">
+
+    <span class="close" id="closeNewPassword">&times;</span>
+
+    <h2>Set New Password</h2>
+
+    <form id="newPasswordForm" novalidate>
+
+        <input
+            type="password"
+            id="forgotNewPassword"
+            placeholder="New password"
+            required>
+
+        <input
+            type="password"
+            id="forgotConfirmPassword"
+            placeholder="Confirm new password"
+            required>
+
+        <button type="submit" id="resetPasswordBtn">
+            Reset Password
+        </button>
+
+    </form>
+
+    <div id="newPasswordMsg"></div>
+
+</div>
 </div>
 
 
@@ -1162,11 +1195,12 @@
         <input type="text" id="regUsername" data-i18n-placeholder="register.username" placeholder="Username" required>
         <input type="email" id="regEmail" data-i18n-placeholder="register.email" placeholder="Email" required>
         <input type="password" id="regPassword" data-i18n-placeholder="register.password" placeholder="Password"
-          required>
-        <input type="text" id="regRecoveryQuestion" placeholder="Recovery question" required>
-        <input type="text" id="regRecoveryAnswer" placeholder="Recovery answer" required>
+          required><br><br><br>
+          <p data-i18n="register.recoveryInfo">Unesite svoje sigurnosno pitanje i odgovor za slučaj da zaboravite lozinku:</p>
+        <input type="text" id="regRecoveryQuestion" data-i18n-placeholder="register.recoveryQuestion" placeholder="Recovery question" required>
+        <input type="text" id="regRecoveryAnswer" data-i18n-placeholder="register.recoveryAnswer" placeholder="Recovery answer" required><br><br><br>
       
-        <button type="submit" data-i18n="register.button">Register</button>
+        <button type="submit" data-i18n="register.button">Register</button><br><br>
       </form>
       <div id="registerSpinner" class="display-none">Submitting...</div>
       <div id="registerMsg"></div>
