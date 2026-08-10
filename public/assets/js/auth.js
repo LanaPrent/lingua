@@ -1,4 +1,4 @@
-//import {translations} from "../js/i18n/translations.js";
+
 import {translations} from "./i18n/translations.js";
 import {translate} from "./i18n/translator.js";
 //console.log("auth.js loaded");
@@ -557,7 +557,7 @@ closeNewPassword.addEventListener("click",()=>{
 
 // ===== Navbar auth state =====
 
-async function updateAuthButtons() {
+export async function updateAuthButtons() {   //export added to allow welcome message change when logged in
 
     try {
         //import {translations} from "./translations.js";
