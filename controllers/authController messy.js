@@ -9,7 +9,7 @@ exports.register = async (req, res) => {
     if (!username || !email || !password ||!recoveryQuestion ||!recoveryAnswer) {
         return res.status(400).json({
             success: false,
-            message: "ui.registerAllFieldsRequired" //changed common.fieldsRequired
+            message: "ui.contactFormRequiredFields"
         });
     }
 
@@ -33,7 +33,7 @@ exports.register = async (req, res) => {
                     if (err.code === "ER_DUP_ENTRY") {
                         return res.status(400).json({
                             success: false,
-                           message: "ui.registeredUserExists"//changed register.userExists
+                           message: "ui.formRegisterUserExists"
                         });
                     }
 
@@ -41,16 +41,14 @@ exports.register = async (req, res) => {
 
                     return res.status(500).json({
                         success: false,
-                        message:"ui.contactDatabaseError"
-                        //message:"common.databaseError"
+                        message:"ui.contactFormDatabaseError"
                     });
                 }
                 
 
                 res.json({
                     success: true,
-                    message: "ui.registerSuccess"
-                    //message: "register.success"
+                    message: "ui.formRegisterSuccess"
                 });
             }
         );
@@ -59,11 +57,9 @@ exports.register = async (req, res) => {
 
         logger.error(err.message);
 
-
         res.status(500).json({
             success: false,
-            message: "ui.contactServerError"
-            //message: "common.serverError"
+            message: "ui.contactFormServerError"
         });
     }
 };
@@ -76,8 +72,7 @@ exports.login = async (req, res) => {
     if (!email || !password) {
         return res.status(400).json({
             success: false,
-            message:"ui.loginAllFieldsRequired"
-            //message:"common.requiredFields"
+            message:"ui.contactFormRequiredFields"
         });
     }
 
@@ -91,8 +86,7 @@ exports.login = async (req, res) => {
             if (err) {
                 return res.status(500).json({
                     success: false,
-                    message: "ui.contactDatabaseError"
-                    //message: "common.databaseError"
+                    message: "ui.contactFormDatabaseError"
                 });
             }
             //console.log("Number of users found:", results.length);
@@ -100,8 +94,7 @@ exports.login = async (req, res) => {
             if (results.length === 0) {
                 return res.status(400).json({
                     success: false,
-                    message: "ui.loginInvalidCredentials"
-                    //message: "login.invalidCredentials"
+                    message: "ui.formLoginInvalidCredentials"
                 });
             }
 
@@ -117,8 +110,7 @@ exports.login = async (req, res) => {
             if (!match) {
                 return res.status(400).json({
                     success: false,
-                    message: "ui.loginInvalidCredentials"
-                    //message: "login.invalidCredentials"
+                    message: "ui.formLoginInvalidCredentials"
                 });
             }
             //console.log(user);
@@ -130,8 +122,7 @@ exports.login = async (req, res) => {
             res.json({
                 success: true,
                 //message: "Login successful"
-                message: "ui.loginSuccess"
-                //message: "login.success"
+                message: "ui.formLoginSuccess"
             });
         }
     );
@@ -145,7 +136,6 @@ exports.logout = (req, res) => {
             return res.status(500).json({
                 success: false,
                 message:"ui.logoutFailed"
-                //message:"logout.failed"
             });
         }
 
@@ -154,7 +144,6 @@ exports.logout = (req, res) => {
         res.json({
             success: true,
             message: "ui.logoutSuccess"
-            //message: "logout.success"
         });
     });
 };
@@ -181,18 +170,16 @@ exports.getRecoveryQuestion = (req, res) => {
 
     const { email } = req.body;
 
-
     // ===== Check email =====
 
     if (!email) {
 
         return res.status(400).json({
             success: false,
-            message:"ui.emailRequired"
+            message:"ui.formLoginEmailRequired"
             //message: "Email is required."
         });
     }
-
 
     // ===== Find user =====
 
@@ -211,11 +198,9 @@ exports.getRecoveryQuestion = (req, res) => {
 
                 return res.status(500).json({
                     success: false,
-                    message: "ui.contactDatabaseError"
-                    //message: "common.databaseError"
+                    message: "ui.formDatabaseError"
                 });
             }
-
 
             // ===== User not found =====
 
@@ -223,11 +208,10 @@ exports.getRecoveryQuestion = (req, res) => {
 
                 return res.status(404).json({
                     success: false,
-                    message: "ui.userNotFound"
+                    message: "ui.formUserNotFound"
                     //message: "User not found."
                 });
             }
-
 
             // ===== Check recovery question =====
 
@@ -235,11 +219,10 @@ exports.getRecoveryQuestion = (req, res) => {
 
                 return res.status(400).json({
                     success: false,
-                    message: "ui.recoveryNotConfigured"
+                    message: "ui.formNoRecovery"
                     //message: "Recovery is not configured for this account."
                 });
             }
-
 
             // ===== Success =====
 
@@ -260,7 +243,7 @@ exports.verifyRecoveryAnswer = async (req, res) => {
 
         return res.status(400).json({
             success: false,
-            message: "ui.emailAndRecoveryAnswerRequired"
+            message:"ui.formEmailAndRecoveryRequired",
             //message: "Email and recovery answer are required."
         });
     }
@@ -281,8 +264,7 @@ exports.verifyRecoveryAnswer = async (req, res) => {
 
                     return res.status(500).json({
                         success: false,
-                        message: "ui.contactDatabaseError"
-                        //message: "common.databaseError"
+                        message: "ui.formDatabaseError"
                     });
                 }
 
@@ -290,8 +272,8 @@ exports.verifyRecoveryAnswer = async (req, res) => {
 
                     return res.status(400).json({
                         success: false,
-                        message: "ui.incorrectRecoveryAnswer"
-                        //message: "The recovery answer is incorrect."
+                        message: "ui.formRecoveryIncorrect",
+                       //message: "The recovery answer is incorrect."
                     });
                 }
 
@@ -306,7 +288,7 @@ exports.verifyRecoveryAnswer = async (req, res) => {
 
                     return res.status(400).json({
                         success: false,
-                        message: "ui.incorrectRecoveryAnswer"
+                        message: "ui.formRecoveryIncorrect",
                         //message: "The recovery answer is incorrect."
                     });
                 }
@@ -316,7 +298,7 @@ exports.verifyRecoveryAnswer = async (req, res) => {
 
                 res.json({
                     success: true,
-                    message: "ui.recoveryAnswerVerified"
+                    message: "ui.formRecoveryVerified",
                     //message: "Recovery answer verified."
                 });
             }
@@ -325,23 +307,10 @@ exports.verifyRecoveryAnswer = async (req, res) => {
     } catch (err) {
 
         logger.error(err.message);
-        console.error("Recovery answer error:", err);
-    console.log("Error message:", err.message);
-    console.log(
-        "Translated:",
-        translate(err.message)
-    );
-
-    forgotPasswordMsg.innerText =
-        translate(err.message);
-
-    forgotPasswordMsg.style.color = "red";
 
         return res.status(500).json({
             success: false,
-            message: "ui.contactServerError",
-            //message: "common.serverError"
-
+            message: "ui.formServerError"
         });
     }
 };
@@ -358,7 +327,7 @@ exports.resetPassword = async (req, res) => {
 
         return res.status(401).json({
             success: false,
-            message: "ui.recoveryVerificationRequired"
+            message:"ui.formRecoveryVerification",
             //message: "Recovery verification required."
         });
     }
@@ -367,7 +336,7 @@ exports.resetPassword = async (req, res) => {
 
         return res.status(400).json({
             success: false,
-            message: "ui.registerAllFieldsRequired"
+            message:"ui.contactFormRequiredFields",
             //message: "All fields are required."
         });
     }
@@ -376,7 +345,7 @@ exports.resetPassword = async (req, res) => {
 
         return res.status(400).json({
             success: false,
-            message: "ui.passwordsNotMatch"
+            message:"ui.formPasswordsNotMatch",
             //message: "New passwords do not match."
         });
     }
@@ -403,8 +372,7 @@ exports.resetPassword = async (req, res) => {
 
                     return res.status(500).json({
                         success: false,
-                        message: "ui.contactDatabaseError"
-                        //message: "common.databaseError"
+                        message: "ui.formDatabaseError"
                     });
                 }
 
@@ -413,7 +381,7 @@ exports.resetPassword = async (req, res) => {
 
                 res.json({
                     success: true,
-                    message: "ui.passwordResetSuccess"
+                    message:"ui.formPasswordResetSuccess",
                     //message: "Password reset successfully."
                 });
             }
@@ -425,12 +393,10 @@ exports.resetPassword = async (req, res) => {
 
         return res.status(500).json({
             success: false,
-            message: "ui.contactServerError"
-           //message: "common.serverError"
+            message: "ui.contactFormServerError"
         });
     }
 };
-
 
 /* Change password */
 exports.changePassword = async (req, res) => {
@@ -441,18 +407,16 @@ exports.changePassword = async (req, res) => {
         confirmPassword
     } = req.body;
 
-
     // ===== Check that user is logged in =====
 
     if (!req.session.userId) {
 
         return res.status(401).json({
             success: false,
-            message: "ui.loginRequired"
+            message:"ui.formMustLogIn",
             //message: "You must be logged in."
         });
     }
-
 
     // ===== Check that all fields were provided =====
 
@@ -460,11 +424,10 @@ exports.changePassword = async (req, res) => {
 
         return res.status(400).json({
             success: false,
-            message: "ui.contactRequiredFields"
+            message:"ui.contactFormRequiredFields",
             //message: "All fields are required."
         });
     }
-
 
     // ===== Check that new passwords match =====
 
@@ -472,11 +435,10 @@ exports.changePassword = async (req, res) => {
 
         return res.status(400).json({
             success: false,
-            message: "ui.passwordsNotMatch"
+            message: "ui.formPasswordsNotMatch",
             //message: "New passwords do not match."
         });
     }
-
 
     try {
 
@@ -494,11 +456,9 @@ exports.changePassword = async (req, res) => {
 
                     return res.status(500).json({
                         success: false,
-                        message: "ui.contactDatabaseError"
-                        //message: "common.databaseError"
+                        message: "ui.contactFormDatabaseError"
                     });
                 }
-
 
                 // ===== Check that user exists =====
 
@@ -506,14 +466,12 @@ exports.changePassword = async (req, res) => {
 
                     return res.status(404).json({
                         success: false,
-                        message: "ui.userNotFound"
-                        //message: "User not found."
+                        message: "ui.formUserNotFound",
+                        message: "User not found."
                     });
                 }
 
-
                 const user = results[0];
-
 
                 // ===== Check current password =====
 
@@ -522,22 +480,19 @@ exports.changePassword = async (req, res) => {
                     user.password_hash
                 );
 
-
                 if (!passwordMatch) {
 
                     return res.status(400).json({
                         success: false,
-                        message: "ui.currentPasswordIncorrect"
+                        message: "ui.formPasswordIncorrect",
                         //message: "Current password is incorrect."
                     });
                 }
-
 
                 // ===== Hash new password =====
 
                 const newPasswordHash =
                     await bcrypt.hash(newPassword, 12);
-
 
                 // ===== Update password in database =====
 /**/
@@ -556,13 +511,9 @@ exports.changePassword = async (req, res) => {
 
                             return res.status(500).json({
                                 success: false,
-                                message: "ui.contactDatabaseError"
-                                //message: "common.databaseError"
+                                message:"ui.contactFormDatabaseError"
                             });
                         }
-
-
-
 
                         // ===== Success =====
 
@@ -584,8 +535,8 @@ exports.changePassword = async (req, res) => {
 
         return res.status(500).json({
             success: false,
-            message: "ui.contactServerError"
-            //message: "common.serverError"
+            message: "ui.contactFormServerError"
         });
     }
 };
+

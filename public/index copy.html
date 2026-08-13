@@ -133,7 +133,7 @@
 <nav class="navbar">
 
     <div class="navbar-tools">
-        <a href="#bottom" class="go-bottom" data-i18n="ui.navGo">Idi na kraj</a>
+        <a href="#bottom" class="go-botto" data-i18n="ui.navGo">Idi na kraj</a>
         <a href="/" class="home-link" data-i18n="ui.navHome">Početna</a>
         <div class="dropdown">
             <button class="dropbtn" data-i18n="ui.navContent">Sadržaj ▾</button>
@@ -149,14 +149,11 @@
         </div>
 
         <div id="authButtons">
-            <span id="userInfo">
-              <span id="welcomeText" data-i18n="ui.loginWelcome"></span>
-              <span id="username"></span>
-            </span>
-            <a href="#" id="loginBtn" data-i18n="ui.loginTitle">Prijava</a>
-            <a href="#" id="registerBtn" data-i18n="ui.registerTitle">Registracija</a>
+            <span id="userInfo"></span>
+            <a href="#" id="loginBtn" data-i18n="ui.formLoginMessage">Prijava</a>
+            <a href="#" id="registerBtn" data-i18n="ui.formRegisterMessage">Registracija</a>
             <a href="#" id="logoutBtn" class="display-none" data-i18n="ui.logoutMessage">Odjava</a>
-            <a href="#" id="changePsw" class="display-none" data-i18n="ui.changePasswordMessage">Promeni lozinku</a>
+            <a href="#" id="changePsw" class="display-none" data-i18n="ui.formPasswordChangeButton">Promeni lozinku</a>
         </div>
 
         <div class="lang-buttons">
@@ -237,7 +234,7 @@
         type="text"
         id="name"
         placeholder="Name"
-        data-i18n-placeholder="ui.contactNamePlaceholder"
+        data-i18n-placeholder="name.placeholder"
         required>
 
 
@@ -265,14 +262,14 @@
       <textarea
         id="comments"
         placeholder="Comments"
-        data-i18n-placeholder="ui.contactCommentsPlaceholder"
+        data-i18n-placeholder="comments.placeholder"
         required></textarea>
 
 
       <button
         id="submitBtn"
         type="submit"
-        data-i18n="ui.contactSubmitButton">
+        data-i18n="send.text">
         Submit
       </button>
 
@@ -1073,7 +1070,7 @@
   <a href="contact_info.html" data-i18n="home.footerContact" class="b1 footer-link">Contact</a>
   <!--<button class="b1" onclick="location='exercises1.html'">Exercises1</button> -->
  
-  <a href="#top" data-i18n="ui.navBack" class="b1 footer-link">Idi na početak ↑</a>
+  <a href="#top" data-i18n="nav.back" class="b1 footer-link">Idi na početak ↑</a>
   </div>
   <div class="footer-info footer-text">
   <p class="footer-text" data-i18n="home.footerSiteDescriptionShort">Engleski kroz idiome i idiomatske izraze</p>
@@ -1095,25 +1092,24 @@
 
     
   
-
   <!-- ===== LOGIN MODAL ===== -->
   <div id="loginModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeLogin">&times;</span>
-      <h2 data-i18n="ui.loginTitle">Login</h2>
+      <h2 data-i18n="ui.formLoginTitle">Login</h2>
 
       <form id="loginForm" novalidate>
         <input type="hidden" id="csrfLogin" name="_csrf">
-        <input type="email" id="loginEmail" placeholder="Email" data-i18n-placeholder="ui.loginEmail" required>
-        <input type="password" id="loginPassword" placeholder="Password" data-i18n-placeholder="ui.loginPassword"
+        <input type="email" id="loginEmail" placeholder="Email" data-i18n-placeholder="ui.formLoginEmail" required>
+        <input type="password" id="loginPassword" placeholder="Password" data-i18n-placeholder="ui.formLoginPassword"
           required>
-        <button type="submit" data-i18n="ui.loginButton">Login</button>
+        <button type="submit" data-i18n="ui.formLoginButton">Login</button>
       </form>
-      <a href="#" id="forgotPasswordBtn" data-i18n="ui.forgotPassword">
+      <a href="#" id="forgotPasswordBtn" data-i18n="ui.formForgotPassword">
         Forgot Password?
       </a>
       <div id="loginSpinner" class="display-none">
-        <span data-i18n="ui.contactSubmitting">Submitting...</span>
+        <span data-i18n="ui.contactFormSubmitting">Submitting...</span>
       </div>
       <div id="loginMsg"></div>
     </div>
@@ -1127,7 +1123,7 @@
 
         <span class="close" id="closeForgotPassword">&times;</span>
 
-        <h2 data-i18n="ui.forgotPassword">Forgot Password?</h2>
+        <h2 data-i18n="ui.formForgotPassword">Forgot Password?</h2>
 
         <form id="forgotPasswordForm" novalidate>
 
@@ -1142,8 +1138,9 @@
                 placeholder="Email"
                 required>
             <p id="recoveryQuestion"></p>
-            <input type="text" id="recoveryAnswer" data-i18n-placeholder="ui.forgotRecoveryAnswerPlaceholder" placeholder="Your answer" required style="display:none;">
-            <button type="submit" id="forgotPasswordSubmit" data-i18n="ui.continueButton">Continue</button><!---->
+            <input type="text" id="recoveryAnswer" data-i18n-placeholder="ui.formRecoveryAnswerPlaceholder" placeholder="Your answer" required style="display:none;">
+
+<button type="submit" id="forgotPasswordSubmit" data-i18n="ui.formContinueButton">Continue</button><!---->
 
         </form>
 
@@ -1159,23 +1156,23 @@
 
     <span class="close" id="closeNewPassword">&times;</span>
 
-    <h2 data-i18n="ui.setNewPassword" >Set New Password</h2>
+    <h2 data-i18n="ui.formSetNewPaswordTitle">Set New Password</h2>
 
     <form id="newPasswordForm" novalidate>
 
         <input
             type="password"
             id="forgotNewPassword"
-            data-i18n-placeholder="ui.newPasswordPlaceholder" placeholder="New password"
+            data-i18n-placeholder="ui.formSetNewPasswordPlaceholderNew" placeholder="New password"
             required>
 
         <input
             type="password"
             id="forgotConfirmPassword"
-            data-i18n-placeholder="ui.confirmNewPasswordPlaceholder" placeholder="Confirm new password"
+            data-i18n-placeholder="ui.formSetNewPasswordPlaceholderConfirm" placeholder="Confirm new password"
             required>
 
-        <button type="submit" id="resetPasswordBtn" data-i18n="ui.resetPasswordButton">
+        <button type="submit" id="resetPasswordBtn" data-i18n-placeholder="ui.formSetNewPasswordPlaceholderButton">
             Reset Password
         </button>
 
@@ -1186,29 +1183,27 @@
 </div>
 </div>
 
-
   <!-- ===== REGISTER MODAL ===== -->
   <div id="registerModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeRegister">&times;</span>
-      <h2 data-i18n="ui.registerTitle">Register</h2>
+      <h2 data-i18n="ui.formRegisterTitle">Register</h2>
       <form id="registerForm" novalidate>
         <input type="hidden" id="csrfRegister" name="_csrf">
-        <input type="text" id="regUsername" data-i18n-placeholder="ui.registerUsernamePlaceholder" placeholder="Username" required>
-        <input type="email" id="regEmail" data-i18n-placeholder="ui.registerEmailPlaceholder" placeholder="Email" required>
-        <input type="password" id="regPassword" data-i18n-placeholder="ui.registerPasswordPlaceholder" placeholder="Password"
+        <input type="text" id="regUsername" data-i18n-placeholder="ui.formRegisterUsername" placeholder="Username" required>
+        <input type="email" id="regEmail" data-i18n-placeholder="ui.formRegisterEmail" placeholder="Email" required>
+        <input type="password" id="regPassword" data-i18n-placeholder="ui.formRegisterPassword" placeholder="Password"
           required><br><br><br>
-          <p data-i18n="ui.registerRecoveryInfo">Unesite svoje sigurnosno pitanje i odgovor za slučaj da zaboravite lozinku:</p>
-        <input type="text" id="regRecoveryQuestion" data-i18n-placeholder="ui.registerRecoveryQuestionPlaceholder" placeholder="Recovery question" required>
-        <input type="text" id="regRecoveryAnswer" data-i18n-placeholder="ui.registerRecoveryAnswerPlaceholder" placeholder="Recovery answer" required><br><br><br>
+          <p data-i18n="ui.formRegisterRecoveryInfo">Unesite svoje sigurnosno pitanje i odgovor za slučaj da zaboravite lozinku:</p>
+        <input type="text" id="regRecoveryQuestion" data-i18n-placeholder="ui.formRegisterRecoveryQuestion" placeholder="Recovery question" required>
+        <input type="text" id="regRecoveryAnswer" data-i18n-placeholder="ui.formRegisterRecoveryAnswer" placeholder="Recovery answer" required><br><br><br>
       
-        <button type="submit" data-i18n="ui.registerButton">Register</button><br><br>
+        <button type="submit" data-i18n="ui.formRegisterButton">Register</button><br><br>
       </form>
-      <div id="registerSpinner" class="display-none" data-i18n="ui.contactSubmitting">Submitting...</div>
+      <div id="registerSpinner" class="display-none">Submitting...</div>
       <div id="registerMsg"></div>
     </div>
   </div>
-
 
   <!-- ===== CHANGE PASSWORD MODAL ===== -->
 <div id="changePasswordModal" class="modal">
@@ -1216,7 +1211,7 @@
 
         <span class="close" id="closeChangePassword">&times;</span>
 
-        <h2 data-i18n="ui.changePasswordMessage">Change Password</h2>
+        <h2 data-i18n="ui.formPasswordChangeTitle">Change Password</h2>
 
         <form id="changePasswordForm" novalidate>
 
@@ -1228,22 +1223,22 @@
             <input
                 type="password"
                 id="currentPassword"
-                data-i18n-placeholder="ui.currentPasswordPlaceholder" placeholder="Current Password"
+                data-i18n-placeholder="ui.formPasswordChangePlaceholderCurrent" placeholder="Current Password"
                 required>
 
             <input
                 type="password"
                 id="newPassword"
-                data-i18n-placeholder="ui.newPasswordPlaceholder" placeholder="New Password"
+                data-i18n-placeholder="ui.formPasswordChangePlaceholderNew" placeholder="New Password"
                 required>
 
             <input
                 type="password"
                 id="confirmPassword"
-                data-i18n-placeholder="ui.confirmNewPasswordPlaceholder"placeholder="Confirm New Password"
+                data-i18n-placeholder="ui.formPasswordChangePlaceholderConfirm" placeholder="Confirm New Password"
                 required>
 
-            <button type="submit" data-i18n="ui.changePasswordMessage">
+            <button type="submit" data-i18n="ui.formPasswordChangeButton">
                 Change Password
             </button>
 
@@ -1253,6 +1248,7 @@
 
     </div>
 </div>
+  
   
 
   <script src="assets/js/api.js" defer></script>

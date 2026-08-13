@@ -1,5 +1,5 @@
 Folder PATH listing for volume EXTERNAL_USB
-Volume serial number is 0000002A 0644:BCB8
+Volume serial number is 000000C2 0644:BCB8
 E:.
 |   .env
 |   .gitignore
@@ -8,7 +8,7 @@ E:.
 |   index_Idioms.html
 |   package-lock.json
 |   package.json
-|   projectstructure.txt
+|   projectStructure.txt
 |   README.md
 |   server.js
 |   
@@ -20,6 +20,9 @@ E:.
 |       
 +---controllers
 |   |   adminController.js
+|   |   authController copy 2.js
+|   |   authController copy.js
+|   |   authController messy.js
 |   |   authController.js
 |   |   contactController.js
 |   |   
@@ -2558,6 +2561,251 @@ E:.
 |   |       package.json
 |   |       README.md
 |   |       
+|   +---validator
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   validator.js
+|   |   |   validator.min.js
+|   |   |   
+|   |   +---es
+|   |   |   |   index.js
+|   |   |   |   
+|   |   |   \---lib
+|   |   |       |   alpha.js
+|   |   |       |   blacklist.js
+|   |   |       |   contains.js
+|   |   |       |   equals.js
+|   |   |       |   escape.js
+|   |   |       |   isAbaRouting.js
+|   |   |       |   isAfter.js
+|   |   |       |   isAlpha.js
+|   |   |       |   isAlphanumeric.js
+|   |   |       |   isAscii.js
+|   |   |       |   isBase32.js
+|   |   |       |   isBase58.js
+|   |   |       |   isBase64.js
+|   |   |       |   isBefore.js
+|   |   |       |   isBIC.js
+|   |   |       |   isBoolean.js
+|   |   |       |   isBtcAddress.js
+|   |   |       |   isByteLength.js
+|   |   |       |   isCreditCard.js
+|   |   |       |   isCurrency.js
+|   |   |       |   isDataURI.js
+|   |   |       |   isDate.js
+|   |   |       |   isDecimal.js
+|   |   |       |   isDivisibleBy.js
+|   |   |       |   isEAN.js
+|   |   |       |   isEmail.js
+|   |   |       |   isEmpty.js
+|   |   |       |   isEthereumAddress.js
+|   |   |       |   isFloat.js
+|   |   |       |   isFQDN.js
+|   |   |       |   isFullWidth.js
+|   |   |       |   isHalfWidth.js
+|   |   |       |   isHash.js
+|   |   |       |   isHexadecimal.js
+|   |   |       |   isHexColor.js
+|   |   |       |   isHSL.js
+|   |   |       |   isIBAN.js
+|   |   |       |   isIdentityCard.js
+|   |   |       |   isIMEI.js
+|   |   |       |   isIn.js
+|   |   |       |   isInt.js
+|   |   |       |   isIP.js
+|   |   |       |   isIPRange.js
+|   |   |       |   isISBN.js
+|   |   |       |   isISIN.js
+|   |   |       |   isISO15924.js
+|   |   |       |   isISO31661Alpha2.js
+|   |   |       |   isISO31661Alpha3.js
+|   |   |       |   isISO31661Numeric.js
+|   |   |       |   isISO4217.js
+|   |   |       |   isISO6346.js
+|   |   |       |   isISO6391.js
+|   |   |       |   isISO8601.js
+|   |   |       |   isISRC.js
+|   |   |       |   isISSN.js
+|   |   |       |   isJSON.js
+|   |   |       |   isJWT.js
+|   |   |       |   isLatLong.js
+|   |   |       |   isLength.js
+|   |   |       |   isLicensePlate.js
+|   |   |       |   isLocale.js
+|   |   |       |   isLowercase.js
+|   |   |       |   isLuhnNumber.js
+|   |   |       |   isMACAddress.js
+|   |   |       |   isMagnetURI.js
+|   |   |       |   isMailtoURI.js
+|   |   |       |   isMD5.js
+|   |   |       |   isMimeType.js
+|   |   |       |   isMobilePhone.js
+|   |   |       |   isMongoId.js
+|   |   |       |   isMultibyte.js
+|   |   |       |   isNumeric.js
+|   |   |       |   isOctal.js
+|   |   |       |   isPassportNumber.js
+|   |   |       |   isPort.js
+|   |   |       |   isPostalCode.js
+|   |   |       |   isRFC3339.js
+|   |   |       |   isRgbColor.js
+|   |   |       |   isSemVer.js
+|   |   |       |   isSlug.js
+|   |   |       |   isStrongPassword.js
+|   |   |       |   isSurrogatePair.js
+|   |   |       |   isTaxID.js
+|   |   |       |   isTime.js
+|   |   |       |   isULID.js
+|   |   |       |   isUppercase.js
+|   |   |       |   isURL.js
+|   |   |       |   isUUID.js
+|   |   |       |   isVariableWidth.js
+|   |   |       |   isVAT.js
+|   |   |       |   isWhitelisted.js
+|   |   |       |   ltrim.js
+|   |   |       |   matches.js
+|   |   |       |   normalizeEmail.js
+|   |   |       |   rtrim.js
+|   |   |       |   stripLow.js
+|   |   |       |   toBoolean.js
+|   |   |       |   toDate.js
+|   |   |       |   toFloat.js
+|   |   |       |   toInt.js
+|   |   |       |   trim.js
+|   |   |       |   unescape.js
+|   |   |       |   whitelist.js
+|   |   |       |   
+|   |   |       \---util
+|   |   |               algorithms.js
+|   |   |               assertString.js
+|   |   |               checkHost.js
+|   |   |               includesArray.js
+|   |   |               includesString.js
+|   |   |               merge.js
+|   |   |               multilineRegex.js
+|   |   |               nullUndefinedCheck.js
+|   |   |               toString.js
+|   |   |               typeOf.js
+|   |   |               
+|   |   \---lib
+|   |       |   alpha.js
+|   |       |   blacklist.js
+|   |       |   contains.js
+|   |       |   equals.js
+|   |       |   escape.js
+|   |       |   isAbaRouting.js
+|   |       |   isAfter.js
+|   |       |   isAlpha.js
+|   |       |   isAlphanumeric.js
+|   |       |   isAscii.js
+|   |       |   isBase32.js
+|   |       |   isBase58.js
+|   |       |   isBase64.js
+|   |       |   isBefore.js
+|   |       |   isBIC.js
+|   |       |   isBoolean.js
+|   |       |   isBtcAddress.js
+|   |       |   isByteLength.js
+|   |       |   isCreditCard.js
+|   |       |   isCurrency.js
+|   |       |   isDataURI.js
+|   |       |   isDate.js
+|   |       |   isDecimal.js
+|   |       |   isDivisibleBy.js
+|   |       |   isEAN.js
+|   |       |   isEmail.js
+|   |       |   isEmpty.js
+|   |       |   isEthereumAddress.js
+|   |       |   isFloat.js
+|   |       |   isFQDN.js
+|   |       |   isFullWidth.js
+|   |       |   isHalfWidth.js
+|   |       |   isHash.js
+|   |       |   isHexadecimal.js
+|   |       |   isHexColor.js
+|   |       |   isHSL.js
+|   |       |   isIBAN.js
+|   |       |   isIdentityCard.js
+|   |       |   isIMEI.js
+|   |       |   isIn.js
+|   |       |   isInt.js
+|   |       |   isIP.js
+|   |       |   isIPRange.js
+|   |       |   isISBN.js
+|   |       |   isISIN.js
+|   |       |   isISO15924.js
+|   |       |   isISO31661Alpha2.js
+|   |       |   isISO31661Alpha3.js
+|   |       |   isISO31661Numeric.js
+|   |       |   isISO4217.js
+|   |       |   isISO6346.js
+|   |       |   isISO6391.js
+|   |       |   isISO8601.js
+|   |       |   isISRC.js
+|   |       |   isISSN.js
+|   |       |   isJSON.js
+|   |       |   isJWT.js
+|   |       |   isLatLong.js
+|   |       |   isLength.js
+|   |       |   isLicensePlate.js
+|   |       |   isLocale.js
+|   |       |   isLowercase.js
+|   |       |   isLuhnNumber.js
+|   |       |   isMACAddress.js
+|   |       |   isMagnetURI.js
+|   |       |   isMailtoURI.js
+|   |       |   isMD5.js
+|   |       |   isMimeType.js
+|   |       |   isMobilePhone.js
+|   |       |   isMongoId.js
+|   |       |   isMultibyte.js
+|   |       |   isNumeric.js
+|   |       |   isOctal.js
+|   |       |   isPassportNumber.js
+|   |       |   isPort.js
+|   |       |   isPostalCode.js
+|   |       |   isRFC3339.js
+|   |       |   isRgbColor.js
+|   |       |   isSemVer.js
+|   |       |   isSlug.js
+|   |       |   isStrongPassword.js
+|   |       |   isSurrogatePair.js
+|   |       |   isTaxID.js
+|   |       |   isTime.js
+|   |       |   isULID.js
+|   |       |   isUppercase.js
+|   |       |   isURL.js
+|   |       |   isUUID.js
+|   |       |   isVariableWidth.js
+|   |       |   isVAT.js
+|   |       |   isWhitelisted.js
+|   |       |   ltrim.js
+|   |       |   matches.js
+|   |       |   normalizeEmail.js
+|   |       |   rtrim.js
+|   |       |   stripLow.js
+|   |       |   toBoolean.js
+|   |       |   toDate.js
+|   |       |   toFloat.js
+|   |       |   toInt.js
+|   |       |   trim.js
+|   |       |   unescape.js
+|   |       |   whitelist.js
+|   |       |   
+|   |       \---util
+|   |               algorithms.js
+|   |               assertString.js
+|   |               checkHost.js
+|   |               includesArray.js
+|   |               includesString.js
+|   |               merge.js
+|   |               multilineRegex.js
+|   |               nullUndefinedCheck.js
+|   |               toString.js
+|   |               typeOf.js
+|   |               
 |   +---vary
 |   |       HISTORY.md
 |   |       index.js
@@ -2573,88 +2821,85 @@ E:.
 |           
 +---protected
 |       chocolate_eating_advice.html
+|       exercises copy before h&f.html
 |       exercises.html
 |       why_cocoa_is_dangerous.html
 |       
 +---public
+|   |   about copy before h&f.html
 |   |   about.html
 |   |   contact_info.html
-|   |   index copy after redesign1.html
+|   |   exercises1 before h&f..html
+|   |   index copy before ui translations.html
+|   |   index copy pre polja za promenu lozinke.html
 |   |   index copy.html
 |   |   index.html
-|   |   index_orig.html
 |   |   index_test.html
 |   |   
-|   +---assets
-|   |   +---css
-|   |   |       slideshow_responsiveCarousel.css
-|   |   |       styles_Dark_Chocolate_0f_login_all_page after first redesign2 .css
-|   |   |       styles_Dark_Chocolate_0f_login_all_page copy1.css
-|   |   |       styles_Dark_Chocolate_0f_login_all_page.css
-|   |   |       styles_Dark_Chocolate_0f_login_all_page_before footer fixing.css
-|   |   |       styles_Dark_Chocolate_0f_login_all_page_colors partly changed copy3.css
-|   |   |       styles_Form_0b.css
-|   |   |       styles_modern_reset_0c.css
-|   |   |       
-|   |   +---images
-|   |   |       cacao_pods.jpeg
-|   |   |       cacao_pod_with_beans.jpeg
-|   |   |       dark_chocolate.jpeg
-|   |   |       dark_chocolate2.jpeg
-|   |   |       dark_chocolate3.jpeg
-|   |   |       dark_chocolate4.jpeg
-|   |   |       idExp2-MyPleasure_FingersCrossed3.png
-|   |   |       idExp4-BTW_inFact_forTheTimeBeing_atTheEndOfTheDay2.png
-|   |   |       idExp4-YouKnow_IMean_OnTheOtherHand_ToBeHonest1.png
-|   |   |       idiomatic_expressions10-meaning.png
-|   |   |       pairs_phrasal_verbs-idioms_turn_up4.png
-|   |   |       pairs_phrasal_verbs_idioms-look_down2.png
-|   |   |       pairs_phrasal_verbs_idioms-look_up1 copy.png
-|   |   |       pairs_phrasal_verbs_idioms-look_up1.png
-|   |   |       pairs_phrasal_verbs_idioms-run_out3.png
-|   |   |       pairs_phrasal_verbs_idioms-set_up6.png
-|   |   |       pairs_phrasal_verbs_idioms-turn_down5.png
-|   |   |       phrasal_verbs6-meaning.png
-|   |   |       true_idioms-better_late_than_never9.png
-|   |   |       true_idioms-break_a_leg2.png
-|   |   |       true_idioms-break_the_ice1.png
-|   |   |       true_idioms-not_rocket_science7.png
-|   |   |       true_idioms-no_pain_no_gain6.png
-|   |   |       true_idioms-piece_of_cake3.png
-|   |   |       true_idioms-so_far_so_good10.png
-|   |   |       true_idioms-spot_on5.png
-|   |   |       true_idioms-the_last_straw8.png
-|   |   |       true_idioms-time_flies4.png
-|   |   |       true_idioms10-meaning.png
-|   |   |       
-|   |   \---js
-|   |       |   api.js
-|   |       |   auth.js
-|   |       |   Components.js
-|   |       |   contact.js
-|   |       |   contact_copy.js
-|   |       |   i18n.js
-|   |       |   idiomMobileTranslations.js
-|   |       |   script.js
-|   |       |   seo.js
-|   |       |   slideshow_responsiveCarousel.js
-|   |       |   
-|   |       \---i18n
-|   |               initI18n.js
-|   |               lang.js
-|   |               translations.js
-|   |               translations_articles.js
-|   |               translations_content.js
-|   |               translations_exercises.js
-|   |               translations_home.js
-|   |               translations_messages.js
-|   |               translations_ui.js
-|   |               translator.js
-|   |               
-|   \---components
-|           footer.html
-|           header.html
-|           
+|   \---assets
+|       +---css
+|       |       slideshow_responsiveCarousel.css
+|       |       styles_Dark_Chocolate_0f_login_all_page.css
+|       |       styles_Form_0b.css
+|       |       styles_modern_reset_0c.css
+|       |       
+|       +---images
+|       |       cacao_pods.jpeg
+|       |       cacao_pod_with_beans.jpeg
+|       |       dark_chocolate.jpeg
+|       |       dark_chocolate2.jpeg
+|       |       dark_chocolate3.jpeg
+|       |       dark_chocolate4.jpeg
+|       |       idExp2-MyPleasure_FingersCrossed3.png
+|       |       idExp4-BTW_inFact_forTheTimeBeing_atTheEndOfTheDay2.png
+|       |       idExp4-YouKnow_IMean_OnTheOtherHand_ToBeHonest1.png
+|       |       idiomatic_expressions10-meaning.png
+|       |       pairs_phrasal_verbs-idioms_turn_up4.png
+|       |       pairs_phrasal_verbs_idioms-look_down2.png
+|       |       pairs_phrasal_verbs_idioms-look_up1 copy.png
+|       |       pairs_phrasal_verbs_idioms-look_up1.png
+|       |       pairs_phrasal_verbs_idioms-run_out3.png
+|       |       pairs_phrasal_verbs_idioms-set_up6.png
+|       |       pairs_phrasal_verbs_idioms-turn_down5.png
+|       |       phrasal_verbs6-meaning.png
+|       |       true_idioms-better_late_than_never9.png
+|       |       true_idioms-break_a_leg2.png
+|       |       true_idioms-break_the_ice1.png
+|       |       true_idioms-not_rocket_science7.png
+|       |       true_idioms-no_pain_no_gain6.png
+|       |       true_idioms-piece_of_cake3.png
+|       |       true_idioms-so_far_so_good10.png
+|       |       true_idioms-spot_on5.png
+|       |       true_idioms-the_last_straw8.png
+|       |       true_idioms-time_flies4.png
+|       |       true_idioms10-meaning.png
+|       |       
+|       \---js
+|           |   api.js
+|           |   auth.js
+|           |   components.js
+|           |   contact.js
+|           |   i18n.js
+|           |   idiomMobileTranslations.js
+|           |   script.js
+|           |   seo.js
+|           |   slideshow_responsiveCarousel.js
+|           |   
+|           \---i18n
+|                   initI18n.js
+|                   lang.js
+|                   translations.js
+|                   translations_articles.js
+|                   translations_content.js
+|                   translations_exercises.js
+|                   translations_home.js
+|                   translations_messages.js
+|                   translations_ui copy before changing authController file.js
+|                   translations_ui copy.js
+|                   translations_ui.js
+|                   translations_ui_messy.js
+|                   translator.js
+|                   
 +---routes
 |       adminRoutes.js
 |       authRoutes.js

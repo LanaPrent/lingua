@@ -2,6 +2,19 @@
 import {translations} from "./i18n/translations.js";
 import {translate} from "./i18n/translator.js";
 //console.log("auth.js loaded");
+console.log("Current language:", localStorage.getItem("language"));
+console.log("Translation object:", translations);
+console.log(
+    "ui.enterRecoveryAnswer:",
+    translations[
+        localStorage.getItem("language") || "en"
+    ]?.ui?.enterRecoveryAnswer
+);
+console.log(
+    "translate():",
+    translate("ui.enterRecoveryAnswer")
+);
+
 
 
 // ===== Elements =====
@@ -125,7 +138,9 @@ forgotPasswordForm.addEventListener("submit", async (e) => {
         if (!email) {
 
             forgotPasswordMsg.innerText =
-                "Please enter your email.";
+
+             translate("ui.emailRequired");
+                //"Please enter your email.";
 
             forgotPasswordMsg.style.color = "red";
 
@@ -158,7 +173,8 @@ forgotPasswordForm.addEventListener("submit", async (e) => {
                 recoveryQuestionShown = true;
 
                 forgotPasswordMsg.innerText =
-                    "Please enter your answer.";
+                     translate("ui.enterRecoveryAnswer" )
+                    //"Please enter your answer";
 
                 forgotPasswordMsg.style.color = "black";
             }
@@ -168,7 +184,7 @@ forgotPasswordForm.addEventListener("submit", async (e) => {
             console.error(err);
 
             forgotPasswordMsg.innerText =
-                err.message;
+                translate(err.message);
 
             forgotPasswordMsg.style.color = "red";
         }
@@ -186,7 +202,8 @@ forgotPasswordForm.addEventListener("submit", async (e) => {
         if (!answer) {
 
             forgotPasswordMsg.innerText =
-                "Please enter your recovery answer.";
+                  translate("ui.enterRecoveryAnswer");
+                //"Please enter your recovery answer.";
 
             forgotPasswordMsg.style.color = "red";
 
@@ -213,7 +230,8 @@ forgotPasswordForm.addEventListener("submit", async (e) => {
                 recoveryAnswerVerified = true;
 
                 forgotPasswordMsg.innerText =
-                    "Answer verified.";
+                translate(result.message)
+                //    "Answer verified.";
 
                 forgotPasswordMsg.style.color = "green";
 
@@ -233,7 +251,8 @@ forgotPasswordForm.addEventListener("submit", async (e) => {
             console.error(err);
 
             forgotPasswordMsg.innerText =
-                err.message;
+           // err.message;
+                translate(err.message);
 
             forgotPasswordMsg.style.color = "red";
         }
@@ -264,18 +283,19 @@ const confirmPassword =
 if (!newPassword || !confirmPassword) {
 
     newPasswordMsg.innerText =
-        "Please enter and confirm your new password.";
+     translate("ui.registerAllFieldsRequired");
+       // "Please enter and confirm your new password.";
 
     newPasswordMsg.style.color = "red";
 
     return;
 }
 
-
 if (newPassword !== confirmPassword) {
 
     newPasswordMsg.innerText =
-        "New passwords do not match.";
+         translate("ui.passwordsNotMatch");
+       // "New passwords do not match.";
 
     newPasswordMsg.style.color = "red";
 
@@ -302,7 +322,8 @@ try {
 
 
     newPasswordMsg.innerText =
-        result.message;
+         translate(result.message);
+        //result.message;
 
     newPasswordMsg.style.color =
         result.success ? "green" : "red";
@@ -340,109 +361,13 @@ try {
     console.error(err);
 
     newPasswordMsg.innerText =
-        err.message;
+        translate(err.message);
+        //err.message;
 
     newPasswordMsg.style.color = "red";
 }
 });
 
-/*
-    // =====================================================
-    // STEP 3: Reset password
-    // =====================================================
-
-    const newPassword =
-        document.getElementById("forgotNewPassword").value;
-
-    const confirmPassword =
-        document.getElementById("forgotConfirmPassword").value;
-
-
-    if (!newPassword || !confirmPassword) {
-
-        forgotPasswordMsg.innerText =
-            "Please enter and confirm your new password.";
-
-        forgotPasswordMsg.style.color = "red";
-
-        return;
-    }
-
-    if (newPassword !== confirmPassword) {
-
-        forgotPasswordMsg.innerText =
-            "New passwords do not match.";
-
-        forgotPasswordMsg.style.color = "red";
-
-        return;
-    }
-
-
-    try {
-
-        const result = await apiFetch(
-            "/api/reset-password",
-            {
-                method: "POST",
-
-                body: JSON.stringify({
-                    newPassword: newPassword,
-                    confirmPassword: confirmPassword,
-                    _csrf: forgotPasswordCsrfInput.value
-                })
-            }
-        );
-
-
-        forgotPasswordMsg.innerText =
-            result.message;
-
-        forgotPasswordMsg.style.color =
-            result.success ? "green" : "red";
-
-
-        if (result.success) {
-
-            setTimeout(() => {
-
-                forgotPasswordModal.style.display = "none";
-
-                forgotPasswordForm.reset();
-
-                recoveryQuestion.innerText = "";
-
-                recoveryAnswer.style.display = "none";
-
-                document.getElementById(
-                    "newPasswordFields"
-                ).style.display = "none";
-
-                document.getElementById(
-                    "forgotPasswordSubmit"
-                ).innerText = "Continue";
-
-                recoveryQuestionShown = false;
-
-                recoveryAnswerVerified = false;
-
-                forgotPasswordMsg.innerText = "";
-
-            }, 1500);
-        }
-
-    } catch (err) {
-
-        console.error(err);
-
-        forgotPasswordMsg.innerText =
-            err.message;
-
-        forgotPasswordMsg.style.color = "red";
-    }
-
-});
-*/
 
 // ===== Load CSRF =====
 
@@ -573,11 +498,15 @@ export async function updateAuthButtons() {   //export added to allow welcome me
             logoutBtn.style.display = "inline-block";
 
             changePasswordBtn.style.display = "inline-block";
-
+/*replaced with text below to bring welcome message back to translation system
             const lng = localStorage.getItem("language") || "en";
             const welcomeText = translations?.[lng]?.welcome?.text ||"Welcome,";
             const username=data.username||"";
             userInfo.textContent = `${welcomeText} ${username}`;
+*/
+        const username = document.getElementById("username");
+    username.textContent = data.username || "";
+
 
         } else {
 
@@ -611,7 +540,7 @@ loginForm.addEventListener("submit", async (e) => {
     const data = {
 
         email:
-            document.getElementById("loginEmail").value,
+            document.getElementById("loginEmail").value.trim(),
 
         password:
             document.getElementById("loginPassword").value,
@@ -619,22 +548,22 @@ loginForm.addEventListener("submit", async (e) => {
         _csrf: loginCsrfInput.value
     };
     /**/
-    // ===== Basic validation =====//for separate error messages
+    // ===== Client-side validation Basic validation =====//for separate error messages
     if (!data.email) {
     loginMsg.innerText =
-        translate("login.emailRequired");
+        translate("ui.loginEmailRequired");
     loginMsg.style.color = "red";
     return;
 }
 
 if (!data.password) {
     loginMsg.innerText =
-        translate("login.passwordRequired");
+        translate("ui.loginPasswordRequired");
     loginMsg.style.color = "red";
     return;
 }
     
-
+// ===== Send request to server =====
     try {
 
         const result = await apiFetch("/api/login", {
@@ -644,8 +573,10 @@ if (!data.password) {
             body: JSON.stringify(data)
         });
 
+        // Server returned a translation key.
         //loginMsg.innerText = result.message;
-        loginMsg.innerText=translate(result.message);
+        loginMsg.innerText=
+        translate(result.message);
 
         loginMsg.style.color =
             result.success ? "green" : "red";
@@ -669,7 +600,10 @@ if (!data.password) {
 
         console.error(err);
 
-        loginMsg.innerText = translate(err.message);
+        // apiFetch throws Error(data.message)
+        // when the server returns an error.
+        loginMsg.innerText = 
+            translate(err.message);
 
         loginMsg.style.color = "red";
     }
@@ -686,56 +620,60 @@ registerForm.addEventListener("submit", async (e) => {
     const data = {
 
         username:
-            document.getElementById("regUsername").value,
+            document.getElementById("regUsername").value.trim(),
 
         email:
-            document.getElementById("regEmail").value,
+            document.getElementById("regEmail").value.trim(),
 
         password:
             document.getElementById("regPassword").value,
         
         recoveryQuestion:
-            document.getElementById("regRecoveryQuestion").value,
+            document.getElementById("regRecoveryQuestion").value.trim(),
         
         recoveryAnswer:
-            document.getElementById("regRecoveryAnswer").value,
+            document.getElementById("regRecoveryAnswer").value.trim(),
 
         _csrf: registerCsrfInput.value
     };
-// ===== Basic validation =====//check added before calling API
-    if (!data.username) {
+// ===== Client-side validation  Basic validation =====//check added before calling API
+    if (!data.username) {     //1
     registerMsg.innerText =
-        translate("register.usernameRequired");
+        translate("ui.registerUsernameRequired");
     registerMsg.style.color = "red";
     return;
 }
 
-if (!data.email) {
+if (!data.email) {         //2
     registerMsg.innerText =
-        translate("register.emailRequired");
+        translate("ui.registerEmailRequired");
     registerMsg.style.color = "red";
     return;
 }
 
-if (!data.password) {
+if (!data.password) {     //3
     registerMsg.innerText =
-        translate("register.passwordRequired");
+        translate("ui.registerPasswordRequired");
     registerMsg.style.color = "red";
     return;
 }
 
-if (!data.recoveryQuestion) {
-    registerMsg.innerText="Please enter a recovery question.";
+if (!data.recoveryQuestion) {       //4
+    registerMsg.innerText=
+    translate("ui.enterRecoveryQuestion");
+    //"Please enter a recovery question.";
     registerMsg.style.color="red";
     return;
 }
 
-if(!data.recoveryAnswer) {
-    registerMsg.innerText = "Please enter a recovery answer.";
+if(!data.recoveryAnswer) {         //5
+    registerMsg.innerText = 
+    translate("ui.enterRecoveryAnswer");
+    //"Please enter a recovery answer.";
     registerMsg.style.color="red";
     return;
 }
-
+       // ===== Send request to server =====
     try {
 
         const result = await apiFetch("/api/register", {
@@ -746,7 +684,8 @@ if(!data.recoveryAnswer) {
         });
         //console.log(result);
 
-        registerMsg.innerText = translate(result.message);
+        registerMsg.innerText = 
+        translate(result.message);
 
         registerMsg.style.color =
             result.success ? "green" : "red";
@@ -768,7 +707,8 @@ if(!data.recoveryAnswer) {
 
         console.error(err);
 
-        registerMsg.innerText = translate(err.message);
+        registerMsg.innerText = 
+        translate(err.message);
 
         registerMsg.style.color = "red";
     }
@@ -798,12 +738,13 @@ changePasswordForm.addEventListener("submit", async (e) => {
     };
 
 
-    // ===== Basic validation =====
+    // ===== Client-side validation Basic validation =====
 
     if (!data.currentPassword) {
 
         changePasswordMsg.innerText =
-            "Please enter your current password.";
+        translate("ui.currentPasswordRequired");
+        // "Please enter your current password.";
 
         changePasswordMsg.style.color = "red";
 
@@ -813,7 +754,8 @@ changePasswordForm.addEventListener("submit", async (e) => {
     if (!data.newPassword) {
 
         changePasswordMsg.innerText =
-            "Please enter a new password.";
+            translate("ui.enterNewPassword");
+           // "Please enter a new password.";
 
         changePasswordMsg.style.color = "red";
 
@@ -823,7 +765,8 @@ changePasswordForm.addEventListener("submit", async (e) => {
     if (!data.confirmPassword) {
 
         changePasswordMsg.innerText =
-            "Please confirm your new password.";
+        translate("ui.confirmNewPassword");
+        //"Please confirm your new password.";
 
         changePasswordMsg.style.color = "red";
 
@@ -833,7 +776,8 @@ changePasswordForm.addEventListener("submit", async (e) => {
     if (data.newPassword !== data.confirmPassword) {
 
         changePasswordMsg.innerText =
-            "New passwords do not match.";
+        translate("ui.passwordsNotMatch");
+            // "New passwords do not match.";
 
         changePasswordMsg.style.color = "red";
 
@@ -855,7 +799,8 @@ changePasswordForm.addEventListener("submit", async (e) => {
 
 
         changePasswordMsg.innerText =
-            result.message;
+        translate(result.message);
+           //result.message;
 
         changePasswordMsg.style.color =
             result.success ? "green" : "red";
@@ -881,7 +826,8 @@ changePasswordForm.addEventListener("submit", async (e) => {
         console.error(err);
 
         changePasswordMsg.innerText =
-            err.message;
+        translate(err.message);
+            //err.message;
 
         changePasswordMsg.style.color = "red";
     }
@@ -895,9 +841,11 @@ logoutBtn.addEventListener("click", async (e) => {
 
     e.preventDefault();
 
+    const msg = document.getElementById("authMsg");
+
     try {
 
-        await apiFetch("/api/logout", {
+        const result = await apiFetch("/api/logout", {
 
             method: "POST"
         });
@@ -906,12 +854,15 @@ logoutBtn.addEventListener("click", async (e) => {
 
         //alert("Logged out");
 
-        const msg = document.getElementById("authMsg");
+        //const msg = document.getElementById("authMsg");
 
 //msg.textContent = "Logged out successfully";
 //const lng=localStorage.getItem("language") || "en";
 //msg.textContent = translations[lng].logout.success;
-msg.textContent = translate("logout.success");
+
+msg.textContent= translate(result.message)
+//msg.textContent = translate("ui.logoutSuccess");
+//msg.textContent = translate("ui.logoutSuccess");
 msg.classList.add("show");
 
 setTimeout(() => {
@@ -921,12 +872,14 @@ setTimeout(() => {
     } catch (err) {
     console.error(err);
 
-    const msg = document.getElementById("authMsg");
+    //const msg = document.getElementById("authMsg");
 
     //msg.textContent = "Logout failed";
     //const lng=localStorage.getItem("language") || "en";
     //msg.textContent=translations[lng].logout.failed;
-    msg.textContent = translate("logout.failed");
+   
+   msg.textContent=translate(err.message)
+   // msg.textContent = translate("ui.logoutFailed");
 
     msg.classList.add("show", "error"); // optional "error" class for red color
 

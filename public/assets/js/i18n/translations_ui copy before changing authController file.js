@@ -14,9 +14,7 @@ ui: {
     loginEmail: "Email",
     loginPassword: "Password",
     loginEmailRequired:"Email is required",
-    loginRequired:"You must be logged in",//new
     loginPasswordRequired:"Password is required",
-    loginAllFieldsRequired:"All fields are required",//new
 
     loginSuccess: "Login successful",
     loginWelcome: "Welcome,",
@@ -27,7 +25,6 @@ ui: {
     registerUsernamePlaceholder: "Username",
     registerEmailPlaceholder: "Email",
     registerPasswordPlaceholder: "Password",
-    registerAllFieldsRequired:"All fields required", //new
     registerEmailRequired:"Email is required",
     registerUsernameRequired:"Username is required",
     registerPasswordRequired:"Password is required",
@@ -49,19 +46,11 @@ ui: {
 
     resetPasswordButton:"Reset password",
     forgotPassword:"Forgot password?",
-    emailAndAnswerRequired:"Email and recovery answer required",
-    emailRequired:"Please enter your email",
+    enterEmail:"Please enter your email",
     forgotRecoveryAnswerPlaceholder:"Your answer",
     enterRecoveryAnswer:"Please enter your answer",
     incorrectRecoveryAnswer:"Your recovery answer is incorrect",
-    recoveryVerificationRequired: "Recovery verification required",
-    recoveryAnswerVerified:"Recovery answer verified",//novo
-    userNotFound:"User not found",
-    recoveryNotConfigured:"Recovery question and answer not configured for this account",
     passwordResetSuccess:"Password reset successfully",
-    passwordChangeSuccess:"Password changed successfully", //new
-    currentPasswordRequired:"Please enter your current password",
-    currentPasswordIncorrect:"Current password is incorrect", //new
     
     logoutMessage: "Log out",
     logoutSuccess: "Logged out successfully",
@@ -107,9 +96,7 @@ ui: {
     loginEmail: "Email",
     loginPassword: "Lozinka",
     loginEmailRequired:"Unesite email adresu",
-    loginRequired:"Potrebno je da se prijavite",//new
     loginPasswordRequired:"Unesite lozinku",
-    loginAllFieldsRequired:"Popunite sva polja",//new
      
     loginSuccess: "Uspešno ste se prijavili",
     loginWelcome: "Dobrodošli,",
@@ -120,7 +107,6 @@ ui: {
     registerUsernamePlaceholder:"Korisničko ime",
     registerEmailPlaceholder:"Email",
     registerPasswordPlaceholder:"Lozinka",
-    registerAllFieldsRequired:"Popunite sva polja", //new
     registerEmailRequired:"Unesite email adresu",
     registerUsernameRequired:"Unesite korisničko ime",
     registerPasswordRequired:"Unesite lozinku",
@@ -142,18 +128,11 @@ ui: {
 
   resetPasswordButton:"Resetuj lozinku",
   forgotPassword:"Zaboravili ste lozinku?",
-  emailAndRecoveryAnswerRequired:"Unesite email i sigurnosni odgovor",
-  emailRequired:"Unesite svoj email",
+  enterEmail:"Unesite svoj email",
   forgotRecoveryAnswerPlaceholder:"Vaš odgovor",
   enterRecoveryAnswer:"Unesite svoj odgovor",
   incorrectRecoveryAnswer:"Netačan sigurnosni odgovor",
-  recoveryAnswerVerified:"Sigurnosni odgovor je potvrđen",//novo
-  userNotFound:"Korisnik nije pronađen",
-  recoveryNotConfigured:"Za ovaj nalog nisu uneti sigurnosno pitanje i odgovor",//new
   passwordResetSuccess:"Lozinka je uspešno resetovana",
-  passwordChangeSuccess:"Lozinka je uspešno promenjena", //new
-  currentPasswordRequired:"Unesite svoju sadašnju lozinku",
-  currentPasswordIncorrect:"Sadašnja lozinka je netačna", //new
   
   
   logoutMessage:"Odjavi se",

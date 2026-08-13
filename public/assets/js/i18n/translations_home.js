@@ -1,7 +1,7 @@
 export const homeTranslations = {
     en: {
 home: {
-    submitting: "Submitting...",
+    //submitting: "Submitting...",
    headline: "A colorful world of idioms as a culture and history guide",
    siteTitle: "Idioms and other idiomatic expressions in Serbian and English | Lingua",
    motto:"",
@@ -170,16 +170,13 @@ home: {
    mblYouKnowS:"",
    mblAtTheEndOfTheDayE:"after considering everything",
    mblAtTheEndOfTheDayS:""
-  
-
-
     },
 },
     
 
     sr: {
         home: {
-            submitting:"Slanje...",
+           // submitting:"Slanje...",
    headline: "Živopisni svet idioma kao vodič kroz kulturu i istoriju",
    siteTitle: "Idiomi i drugi idiomatski izrazi u srpskom i engleskom|Lingua",
    sidebarHeading: "Idiomi vedre i oblače",
@@ -209,7 +206,7 @@ home: {
    expressionsMessage:"izrazi, a ne samo pojedinačne reči ili gramatička pravila, su ti koji nam omogućavaju da nešto zaista i kažemo na stranom jeziku tako da nas sagovornik lepo razume",
    expressionsFilms:"izraze najbolje učimo gledajući filmove, i prateći situacije u kojima se neki izraz ponavlja, slušajući pesme, čitajući knjige",
    listener: "Čak i ako ne znamo gramatiku, kad upotrebimo samo odgovarajuću reč, naš sagovornik će uposliti svoje logičko razmišljanje i na osnovu konteksta, dovršiti za sebe ostatak rečenice koji nismo izgovorili. I imaćemo komunikaciju sa sagovornikom. Reči koje imaju značenje omogućavaju sporazumevanje.",   
-   backbone: "Ali ona mnogima nezanimljiva i pritom komplikovana apstraktna konstrukcija koju predstavlja gramatika omogućava da te reči stavimo u jasan odnos, i pravilno sastavljamo rečenice na stranom jeziku. Na isti način nam gramatika omogućava i da pravilno razumemo rečenice sastavljene na stranom jeziku.",
+   backbone: "Ali upravo ona mnogima nezanimljiva i pritom komplikovana apstraktna konstrukcija koju predstavlja gramatika omogućava da te reči stavimo u jasan odnos, i pravilno sastavljamo rečenice na stranom jeziku. Na isti način nam gramatika omogućava i da pravilno razumemo rečenice sastavljene na stranom jeziku.",
    clarity: "U prethodnom primeru je uglavnom sve jasno. Ali ovde baš i nije:",
    ambiguity1a:"Sandra more avion avgust",
    ambiguity1b:"Sandra seaside plane August",
@@ -346,21 +343,7 @@ home: {
    mblYouKnowS:`znaš, znate (kao uvod, podsećanje ili dok smišljamo šta ćemo dalje reći)`,
    mblAtTheEndOfTheDayE:"",
    mblAtTheEndOfTheDayS:`na kraju krajeva`,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
-    }
+        },
+    },
 };
 
