@@ -10,7 +10,7 @@ const messages = {
     contact: {
       success: "Your message has been sent",
       saved: "Your message has been saved",
-      submitting: "Submitting...",
+      submitting: "Submitting..",
       tooLong: "Input too long",
       //noConnection: "Failed to fetch"
     },

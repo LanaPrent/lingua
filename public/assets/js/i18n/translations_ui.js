@@ -171,7 +171,7 @@ ui: {
     contactCommentsPlaceholder: "Komentari",
     contactSubmitButton:"Pošalji",
     contactRequiredFields: "Sva polja su obavezna",
-  contactSubmitting: "Slanje...",
+  contactSubmitting: "Slanje....",
   contactDatabaseError: "Greška u bazi podataka",
     contactServerError: "Greška na serveru",
     

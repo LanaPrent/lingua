@@ -176,7 +176,7 @@ home: {
 
     sr: {
         home: {
-           // submitting:"Slanje...",
+           //submitting:"Slanje...",
    headline: "Živopisni svet idioma kao vodič kroz kulturu i istoriju",
    siteTitle: "Idiomi i drugi idiomatski izrazi u srpskom i engleskom|Lingua",
    sidebarHeading: "Idiomi vedre i oblače",
