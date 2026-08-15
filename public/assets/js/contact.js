@@ -135,6 +135,6 @@ contactForm.addEventListener("submit", async (e) => {
 }else{
     responseMsg.innerText = err.message;
 }
-        responseMsg.style.color = "green";
+        responseMsg.style.color = "red";
     }
 });
