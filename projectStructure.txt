@@ -1,5 +1,5 @@
 Folder PATH listing for volume EXTERNAL_USB
-Volume serial number is 000000C2 0644:BCB8
+Volume serial number is 0000009C 0644:BCB8
 E:.
 |   .env
 |   .gitignore
@@ -21,13 +21,15 @@ E:.
 +---controllers
 |   |   adminController.js
 |   |   authController copy 2.js
-|   |   authController copy.js
-|   |   authController messy.js
+|   |   authController copy before fixing modal translations.js
+|   |   authController copy2 before  adding regex to register email.js
 |   |   authController.js
 |   |   contactController.js
 |   |   
 |   \---logs
 +---logs
+|       app.log
+|       
 +---middleware
 |       adminAuth.js
 |       authMiddleware.js
@@ -2897,7 +2899,6 @@ E:.
 |                   translations_ui copy before changing authController file.js
 |                   translations_ui copy.js
 |                   translations_ui.js
-|                   translations_ui_messy.js
 |                   translator.js
 |                   
 +---routes

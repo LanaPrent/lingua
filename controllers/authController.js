@@ -1,7 +1,6 @@
 const conn = require("../config/db");
 const bcrypt = require("bcrypt");
 const logger = require("../config/logger");
-
 exports.register = async (req, res) => {
 
     const { username, email, password, recoveryQuestion, recoveryAnswer } = req.body;
@@ -19,6 +18,14 @@ exports.register = async (req, res) => {
         
         // ===== Hash recovery answer =====
         const recoveryAnswerHash = await bcrypt.hash(recoveryAnswer, 12);
+
+//regex added now
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return res.status(400).json({
+      success: false,
+      message: "ui.registerEmailIncomplete",
+    });
+  }
 
         // ===== Save user =====
         conn.execute(

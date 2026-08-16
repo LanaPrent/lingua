@@ -31,6 +31,7 @@ ui: {
     registerEmailRequired:"Email is required",
     registerUsernameRequired:"Username is required",
     registerPasswordRequired:"Password is required",
+    registerEmailIncomplete:"Email address is inomplete",
     registerRecoveryInfo:"Please enter your own password recovery question and answer:",
     enterRecoveryQuestion:"Please enter password recovery question",
     registerRecoveryQuestionPlaceholder:"Recovery question",
@@ -80,6 +81,7 @@ ui: {
     contactSubmitting:"Submitting...",
     contactDatabaseError: "Database error",
     contactServerError: "Server error",
+
     
 
 
@@ -124,6 +126,7 @@ ui: {
     registerEmailRequired:"Unesite email adresu",
     registerUsernameRequired:"Unesite korisničko ime",
     registerPasswordRequired:"Unesite lozinku",
+    registerEmailIncomplete:"Email adresa je nepotpuna",
     registerRecoveryInfo:"Unesite svoje sigurnosno pitanje i odgovor za slučaj da zaboravite lozinku:",
     enterRecoveryQuestion:"Unesite sigurnosno pitanje",
     registerRecoveryQuestionPlaceholder:"Sigurnosno pitanje",
