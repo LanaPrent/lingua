@@ -31,7 +31,7 @@ ui: {
     registerEmailRequired:"Email is required",
     registerUsernameRequired:"Username is required",
     registerPasswordRequired:"Password is required",
-    registerEmailIncomplete:"Email address is inomplete",
+    registerEmailIncomplete:"Email address is incomplete",
     registerRecoveryInfo:"Please enter your own password recovery question and answer:",
     enterRecoveryQuestion:"Please enter password recovery question",
     registerRecoveryQuestionPlaceholder:"Recovery question",
