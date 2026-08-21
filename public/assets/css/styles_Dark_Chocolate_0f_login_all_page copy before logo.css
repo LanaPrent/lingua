@@ -95,6 +95,12 @@ header p{
     font-size:1.1rem;
 }
 
+header img{
+  width:60px;
+  height:60px;
+  display:block;
+}
+
 h2 {
     color: var(--dark-chocolate);
     margin-top:2rem;
@@ -149,20 +155,6 @@ margin-top:3rem;
 section+section{
   margin-top:3rem;
   margin-bottom:2rem;
-}
-
-.brand-logo {
-background-color: var(--gold);
-padding: 14px ;
-}
-
-.brand-logo img {
-  width: 56px;
-  height: 56px;
-  display: block;
-}
-.site-title{
-  color:darkblue;
 }
 
 /* Style the top navigation bar */
