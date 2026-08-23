@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://linguatrend.com/sitemap.xml
+Sitemap: https://www.linguatrend.com/sitemap.xml
