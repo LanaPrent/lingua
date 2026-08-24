@@ -57,6 +57,9 @@
     --headingtext: #111827;
     --black: black;
 }
+html{
+  scroll-padding-top:80px;
+}
 
 body {
  background-color: var(--page-bg); /*var(--bisque);*/
@@ -375,6 +378,13 @@ footer .b1:disabled {
 .article-width{
     max-width:70ch;
     margin:0 auto;
+}
+
+/*Responsive layout - to show a selected dropdown menu heading below the sticky navbar*/
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 120px;
+  }
 }
 
 
