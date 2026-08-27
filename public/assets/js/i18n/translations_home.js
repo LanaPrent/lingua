@@ -94,7 +94,7 @@ home: {
    exerciseTask2: "Exercise",
    exerciseInstruction2:`Try to put together your own 5–10 sentences using idioms and other idiomatic expressions that you find interesting.  If you would like to get feedback, you can send them through the form: <a data-i18n="home.contactForm" class="contact-link" href="#contact-form">Contact form</a>.`,
    contactForm:"Contact form",
-   exercisesDescription: `Practice vocabulary and comprehension with interactive exercises. 🔒Login or register to start practicing.`,
+   exercisesDescription: `Practice vocabulary and comprehension with interactive exercises. Login or register to start practicing.`,
    anyComment:"Do you have a question, or would you like feedback on your examples?",
    aboutWebsiteAimHeading:"About the website",
    websiteAim:`This website is yet another in a long series of attempts to make sense of English idioms, while also taking a closer look at other idiomatic expressions, collocations, phrases, and phrasal verbs through clear explanations and practical examples.`,
@@ -108,7 +108,7 @@ home: {
    footerAvailableLanguages:"Available in English and Serbian",
    footerLegalProtection:" © 2026 Linguatrend English idioms and phrases",
    exercises:"Exercises",
-   back:"Back to top",
+   back:"Back to top ↑",
    mblTapIdiom:"Tap an idiom to reveal the meaning",
     //Mobile translations 1
    mblLookUpE:`move eyes upwards / to search for data in a book,computer,etc.`,
@@ -283,7 +283,7 @@ home: {
    contact:"",
    submitQuestions: `Svoja pitanja u vezi idioma i drugih idiomatskih izraza, predloge ili urađene zadatke možete da pošaljete koristeći <strong>Kontakt formu</strong>. Ne morate da se registrujete ili da budete ulogovani.`,
    contactForm: "Kontakt forma",
-   exercisesDescription: `Provežbajte idiome, nove reči i izraze i proverite da li ih razumete kroz interaktivna vežbanja. 🔒Prijavite se ili se registrujte da počnete da vežbate.`,
+   exercisesDescription: `Provežbajte idiome, nove reči i izraze i proverite da li ih razumete kroz interaktivna vežbanja. Prijavite se ili se registrujte da počnete da vežbate.`,
 
    exercisesIdioms:"Zadaci sa idiomima",
    back:"Idi na početak",
