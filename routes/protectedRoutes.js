@@ -46,5 +46,33 @@ router.get(
         );
     }
 );
+router.get(
+    "/members/exercises_sr",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "exercises_sr.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/exercises_sr1",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "exercises_sr1.html"
+            )
+        );
+    }
+);
 
 module.exports=router;

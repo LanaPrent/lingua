@@ -94,7 +94,8 @@ p {
 }
 
 .dropbtn {
-    background: transparent;
+    /*background: transparent;*/
+    background-color: var(--gold); /*var(--goldenrod)*/
     color: white;
     border: none;
     font-size: 16px;
@@ -102,14 +103,16 @@ p {
     cursor: pointer;
 }
 
-.dropbtn:hover {
-    background:  #d77907;
+.dropbtn:hover{
+  background-color:#f8f2e8;; /*var(--creamy)*/
+  color:black;
 }
+
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background: #d77907;
+    background: rgb(214, 140, 88);;
     min-width: 240px;
     color:#222 !important; /*I added this now*/
     box-shadow: 0 6px 12px rgba(0,0,0,.2);

@@ -621,13 +621,8 @@ these 3 lines added to .navbar near the top:
     width:100%;
 }
 
-.dropbtn{
-  background-color: var(--gold); /*var(--goldenrod)*/
-}
-.dropbtn:hover{
-  background-color:var(--cream); /*var(--creamy)*/
-  color:black;
-}
+
+
 
 .dropdown-content{
   background-color: var(--gold-light);/*rgb(214, 140, 88) */
