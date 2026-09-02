@@ -1,11 +1,10 @@
 Folder PATH listing for volume EXTERNAL_USB
-Volume serial number is 0000009C 0644:BCB8
+Volume serial number is 000000E1 0644:BCB8
 E:.
 |   .env
 |   .gitignore
 |   database.sql
 |   Debugging-notes.md
-|   index_Idioms.html
 |   package-lock.json
 |   package.json
 |   projectStructure.txt
@@ -14,15 +13,11 @@ E:.
 |   
 +---config
 |       db.js
-|       logger copy.js
 |       logger.js
 |       session.js
 |       
 +---controllers
 |   |   adminController.js
-|   |   authController copy 2.js
-|   |   authController copy before fixing modal translations.js
-|   |   authController copy2 before  adding regex to register email.js
 |   |   authController.js
 |   |   contactController.js
 |   |   
@@ -2823,25 +2818,25 @@ E:.
 |           
 +---protected
 |       chocolate_eating_advice.html
-|       exercises copy before h&f.html
-|       exercises.html
+|       exercises_en.html
+|       exercises_sr.html
 |       why_cocoa_is_dangerous.html
 |       
 +---public
-|   |   about copy before h&f.html
 |   |   about.html
 |   |   contact_info.html
-|   |   exercises1 before h&f..html
-|   |   index copy before ui translations.html
-|   |   index copy pre polja za promenu lozinke.html
-|   |   index copy.html
+|   |   googlec31f03bcecbdbb8e.html
 |   |   index.html
 |   |   index_test.html
+|   |   robots.txt
+|   |   sitemap.xml
 |   |   
 |   \---assets
 |       +---css
 |       |       slideshow_responsiveCarousel.css
+|       |       styles_about_contact.css
 |       |       styles_Dark_Chocolate_0f_login_all_page.css
+|       |       styles_exercises.css
 |       |       styles_Form_0b.css
 |       |       styles_modern_reset_0c.css
 |       |       
@@ -2852,10 +2847,21 @@ E:.
 |       |       dark_chocolate2.jpeg
 |       |       dark_chocolate3.jpeg
 |       |       dark_chocolate4.jpeg
+|       |       favicon.png
+|       |       favicon_FF.png
+|       |       favicon_FFF_vivid.png
+|       |       favicon_FF_5_L_only.png
+|       |       FFF_bold_blue.png
+|       |       FFF_cobalt_blue.png
+|       |       FFF_deep_blue.png
+|       |       FFF_vanilla_circle.png
+|       |       FFF_vivid_blue.png
 |       |       idExp2-MyPleasure_FingersCrossed3.png
 |       |       idExp4-BTW_inFact_forTheTimeBeing_atTheEndOfTheDay2.png
 |       |       idExp4-YouKnow_IMean_OnTheOtherHand_ToBeHonest1.png
 |       |       idiomatic_expressions10-meaning.png
+|       |       LL_5_L_only.png
+|       |       L_circle.png
 |       |       pairs_phrasal_verbs-idioms_turn_up4.png
 |       |       pairs_phrasal_verbs_idioms-look_down2.png
 |       |       pairs_phrasal_verbs_idioms-look_up1 copy.png
@@ -2896,8 +2902,6 @@ E:.
 |                   translations_exercises.js
 |                   translations_home.js
 |                   translations_messages.js
-|                   translations_ui copy before changing authController file.js
-|                   translations_ui copy.js
 |                   translations_ui.js
 |                   translator.js
 |                   

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setLanguage("en");
     await updateAuthButtons();//added for Welcome message
     clearRuntimeMessages();
+    
   });
 
   document.getElementById("srBtn").addEventListener("click", async () => {

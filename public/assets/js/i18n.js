@@ -85,6 +85,16 @@ function setLanguage(lang) {
     }
   });
 
+// Show/hide the Serbian exercises link
+  const serbianExercisesLink = document.getElementById("exercises-sr");
+
+  console.log("Current language:", lang);
+  console.log("Serbian exercises link:", serbianExercisesLink)
+
+  if (serbianExercisesLink) {
+    serbianExercisesLink.style.display = lang === "en" ? "none" : "";
+  }
+
   localStorage.setItem("language", lang);
 }
 

@@ -372,6 +372,7 @@ footer .b1:disabled {
   background-color: var(--footer-disabled);/*#ccc;*/
   cursor: not-allowed;
 }
+
 .footer-text {
   color:var(--white);
 }

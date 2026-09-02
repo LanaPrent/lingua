@@ -61,7 +61,7 @@ router.get(
     }
 );
 router.get(
-    "/members/exercises_sr1",
+    "/members/exercises_en",
     isAuthenticated,
     (req, res) => {
         res.sendFile(
@@ -69,7 +69,7 @@ router.get(
                 __dirname,
                 "..",
                 "protected",
-                "exercises_sr1.html"
+                "exercises_en.html"
             )
         );
     }

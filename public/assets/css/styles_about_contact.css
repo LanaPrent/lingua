@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+   /*padding: 30px 20px;*/
+   /*background: blanchedalmond;*/
+   background-color: #fffdf8;
+    font-family: Inter, system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+.content {
+    max-width: 70ch;
+    margin: 0 auto;
+    text-align: center;
+}
+
+content p{
+       /* margin: 50px;*/
+       max-width: 95%;
+       margin:30px;
+       margin-bottom: 50px; 
+    }
+
+     .page-content{
+        max-width: 70ch;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+        margin-top:4rem;
+    }
+    footer{
+        margin-top: 4rem;
+    }
+    h2{
+    margin-top:5rem;
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        /*padding: 40px 18px;*/
+        font-size: 1.1rem;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+    .content p{
+        max-width: 95%;
+       margin:10px;
+       margin-bottom: 50px;
+    }
+   
+}
