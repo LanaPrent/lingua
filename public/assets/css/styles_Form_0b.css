@@ -9,6 +9,7 @@
   }
 
     #contactForm input, #contactForm textarea{
+    font-family: Arial, Helvetica, sans-serif;
     width: 90%;
     padding: 10px;
     margin-top: 10px;

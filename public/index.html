@@ -245,13 +245,11 @@
         data-i18n-placeholder="ui.contactNamePlaceholder"
         required>
 
-
       <input
         type="email"
         id="email"
         placeholder="Email"
         required>
-
 
       <input
         type="text"
@@ -260,19 +258,15 @@
         tabindex="-1"
         style="display:none">
 
-
       <input
         type="hidden"
         name="formStartTime"
         id="formStartTime">
 
-
       <textarea
         id="comments"
         placeholder="Comments"
-        data-i18n-placeholder="ui.contactCommentsPlaceholder"
-        required></textarea>
-
+        data-i18n-placeholder="ui.contactCommentsPlaceholder" required></textarea>
 
       <button
         id="submitBtn"
@@ -1033,9 +1027,14 @@
         <h3 data-i18n="home.exerciseTask2" class="top-space1">Zadatak</h3>
         <p data-i18n="home.exerciseInstruction2" class="bottom-space1">
           Pokušajte da sastavite svojih 5-10 rečenica sa idiomima i idiomatskim izrazima <br>
-          koji su vam interesantni. Ako želite povratnu informaciju, možete da ih pošaljete preko forme: 
-            <a data-i18n="home.contactForm" class="contact-link"
-            href="#contact-form" >Kontakt forma</a></p> 
+          koji su vam interesantni.</p>
+          
+          <p data-i18n="home.exerciseInstruction3" class="bottom-space1">
+            Urađene zadatke možete da pošaljete preko Kontakt forme na početnoj stranici u polju Komentari, ako biste
+želeli da dobijete povratnu informaciju: <a href="/index.html#contact-form" class="contact-link">Kontakt forma</a>.
+          </p>
+            
+           
 
             <p data-i18n="home.exercisesDescription"></p>
       </section>
@@ -1149,6 +1148,7 @@
                 type="email"
                 id="forgotPasswordEmail"
                 placeholder="Email"
+                data-i18n-placeholder="ui.contactEmailPlaceholder"
                 required>
             <p id="recoveryQuestion"></p>
             <input type="text" id="recoveryAnswer" data-i18n-placeholder="ui.forgotRecoveryAnswerPlaceholder" placeholder="Your answer" required style="display:none;">
