@@ -75,4 +75,144 @@ router.get(
     }
 );
 
+router.get(
+    "/members/idioms_series_sr",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_series_sr.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/idioms_series_en",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_series_en.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/idioms_friends_sr",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_friends_sr.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/idioms_friends_en",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_friends_en.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/idioms_big_bang_theory_sr",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_big_bang_theory_sr.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/idioms_big_bang_theory_en",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_big_bang_theory_en.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/idioms_two_and_a_half_men_sr",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_two_and_a_half_men_sr.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/idioms_two_and_a_half_men_en",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_two_and_a_half_men_en.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/idioms_only_fools_and_horses_sr",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_only_fools_and_horses_sr.html"
+            )
+        );
+    }
+);
+router.get(
+    "/members/idioms_only_fools_and_horses_en",
+    isAuthenticated,
+    (req, res) => {
+        res.sendFile(
+            path.join(
+                __dirname,
+                "..",
+                "protected",
+                "idioms_only_fools_and_horses_en.html"
+            )
+        );
+    }
+);
 module.exports=router;

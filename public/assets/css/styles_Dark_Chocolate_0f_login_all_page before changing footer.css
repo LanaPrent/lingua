@@ -236,9 +236,6 @@ aside {
   padding: 20px;
 }
 
-aside a{
-  text-decoration: none;
-}
 aside p{
   max-width: 100%;
 }
@@ -309,10 +306,10 @@ footer {
       display:flex;
     flex-direction:column;
     align-items:center;
-    /*gap:35px;*/ /*commented out in an attempt to avod space between links*/
+    gap:35px;/**/ /*commented out in an attempt to avod space between links*/
 }
 
-/*.footer-links,*/ /*commented out in an attempt to avod space between links*/
+.footer-links,/**/ /*commented out in an attempt to avod space between links*/
 .footer-info,
 .footer-bottom{
     width:100%;
@@ -322,7 +319,7 @@ footer {
 
 .footer-links{
     display:flex;
-    /*justify-content:space-between;*/ /*commented out in an attempt to avod space between links*/
+    justify-content:space-between;/**/ /*commented out in an attempt to avod space between links*/
     align-items:center;
     flex-wrap:wrap;
    
@@ -456,7 +453,7 @@ footer .b1:disabled {
     flex-direction: column;
     gap:10px;
     padding:40px;
-    /* align-items: stretch;*/ /*commented out in an attempt to avod space between links*/
+    align-items: stretch;/* */ /*commented out in an attempt to avod space between links*/
   }
 /*
   footer a{
