@@ -662,6 +662,11 @@ these 3 lines added to .navbar near the top:
   background-color: var(--gold-light);/*rgb(214, 140, 88) */
 }
 
+.content-menu {
+  max-height: 340px;
+  overflow-y: auto;
+}
+
 #authButtons{
     display:flex;
     align-items:center;
