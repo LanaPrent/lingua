@@ -141,6 +141,10 @@ margin-top:3rem;
 margin-top:5rem;
 }
 
+.top-space10 {
+margin-top:10rem;
+}
+
 .bottom-space1{
   margin-bottom:1rem;
 }
@@ -155,6 +159,10 @@ margin-top:5rem;
 
 .bottom-space5{
   margin-bottom:5rem;
+}
+
+.bottom-space10{
+  margin-bottom:10rem;
 }
 
 .text-center{
@@ -236,6 +244,9 @@ aside {
   padding: 20px;
 }
 
+aside a{
+  text-decoration: none;
+}
 aside p{
   max-width: 100%;
 }
@@ -302,24 +313,24 @@ img{
 /* Footer */
 footer {
   background: var(--dark-chocolate);/*var(--darkchocko);*//* rgb(80, 47, 4);*/
-  padding:40px 20px;
-      display:flex;
+    padding:40px 20px;
+    display:flex;
     flex-direction:column;
     align-items:center;
-    gap:35px;/**/ /*commented out in an attempt to avod space between links*/
+    /*gap:35px;*/ 
 }
 
-.footer-links,/**/ /*commented out in an attempt to avod space between links*/
+.footer-links, 
 .footer-info,
 .footer-bottom{
     width:100%;
-    max-width:1100px;
+    max-width:1100px; /*reduction from 110px to 700px brought links closer but also the line from below*/
 }
 
 
 .footer-links{
     display:flex;
-    justify-content:space-between;/**/ /*commented out in an attempt to avod space between links*/
+    justify-content:space-between; 
     align-items:center;
     flex-wrap:wrap;
    
@@ -453,7 +464,7 @@ footer .b1:disabled {
     flex-direction: column;
     gap:10px;
     padding:40px;
-    align-items: stretch;/* */ /*commented out in an attempt to avod space between links*/
+    /* align-items: stretch;*/ /*commented out in an attempt to avod space between links*/
   }
 /*
   footer a{
@@ -657,6 +668,11 @@ these 3 lines added to .navbar near the top:
 
 .dropdown-content{
   background-color: var(--gold-light);/*rgb(214, 140, 88) */
+}
+
+.content-menu {
+  max-height: 340px;
+  overflow-y: auto;
 }
 
 #authButtons{

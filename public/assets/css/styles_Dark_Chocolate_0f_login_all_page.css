@@ -141,6 +141,10 @@ margin-top:3rem;
 margin-top:5rem;
 }
 
+.top-space10 {
+margin-top:10rem;
+}
+
 .bottom-space1{
   margin-bottom:1rem;
 }
@@ -155,6 +159,10 @@ margin-top:5rem;
 
 .bottom-space5{
   margin-bottom:5rem;
+}
+
+.bottom-space10{
+  margin-bottom:10rem;
 }
 
 .text-center{
@@ -305,24 +313,24 @@ img{
 /* Footer */
 footer {
   background: var(--dark-chocolate);/*var(--darkchocko);*//* rgb(80, 47, 4);*/
-  padding:40px 20px;
-      display:flex;
+    padding:40px 20px;
+    display:flex;
     flex-direction:column;
     align-items:center;
-    /*gap:35px;*/ /*commented out in an attempt to avod space between links*/
+    /*gap:35px;*/ 
 }
 
-/*.footer-links,*/ /*commented out in an attempt to avod space between links*/
+.footer-links, 
 .footer-info,
 .footer-bottom{
     width:100%;
-    max-width:1100px;
+    max-width:700px; 
 }
 
 
 .footer-links{
     display:flex;
-    /*justify-content:space-between;*/ /*commented out in an attempt to avod space between links*/
+    justify-content:space-between; 
     align-items:center;
     flex-wrap:wrap;
    
