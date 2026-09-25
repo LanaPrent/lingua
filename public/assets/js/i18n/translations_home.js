@@ -257,7 +257,7 @@ home: {
    unclear:"rizikujemo da nas sagovornik ili ne razume uopšte ili pogrešno razume.",
    noKnowledge:"šaljemo jasne signale da  tim jezikom ne vladamo u potpunosti.",
    missedMeaning:"sasvim izvesno u velikoj većini slučajeva nećemo biti u stanju da razumemo sagovornika, film, ili pesmu.",
-   bodyLanguage:"verovatno ćemo morati više da se oslanjamo na govor tela, mimiku i slično",
+   bodyLanguage:"verovatno ćemo morati više da se oslanjamo na kontekst, govor tela, mimiku i slično",
    phrasalToIdiomHeading:"Od predloških i frazalnih glagola ka pravim idiomima",
    prefixVsAdverb:`U srpskom jeziku se glagolima dodaju prefiksi koji menjaju osnovno značenje glagola. U engleskom jeziku posle glagola može da se doda prilog ili predlog koji se piše odvojeno ali zajedno predstavljaju celinu i postaju:`, 
    prepositionalVerbs:"predloški glagoli (prepositional verbs)",
