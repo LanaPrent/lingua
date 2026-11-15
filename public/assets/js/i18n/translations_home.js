@@ -119,9 +119,42 @@ home: {
    footerLegalProtection:" © 2026 Linguatrend English Idioms and Phrases",
    exercises:"Exercises",
    back:"Back to top ↑",
+
+   //map1
+   lookUp: "move eyes upwards / search for data in a book,computer,etc.",
+   lookDown: "move eyes downwards / treat with contempt, despise",
+   turnDown: "reduce the volume / reject an offer, etc.",
+   runOut: "leave the room running / finish a supply of something",
+   turnUp: "increase the volume / appear",
+   setUp: "arrange, establish / trick someone, make it seem they have done something wrong",
+
+//map2
+   breakTheIce: "make people feel more relaxed in a new situation.",
+   soFarSoGood: "an activity has gone well until now",
+   pieceOfCake: "something that is very easy to do",
+   spotOn: "Exactly right.",
+   breakALeg: "wishing someone good luck, especially before a performance",
+   noPainNoGain: "There is no success without effort.",
+   lastStraw: "The last of a sequence of unpleasant events that leads to a loss of patience.",
+   notRocketScience: "Something that is not difficult to do or understand.",
+   timeFlies: "Time passes very quickly.",
+   betterLateThanNever: "It's better for someone to arrive or something to happen late than never to arrive or happen at all.",
+
+   //map3
+   byTheWay: "used when adding something not strictly related to the main topic.",
+   forTheTimeBeing: "for a short period, until something else happens",
+   myPleasure: "a polite response to someone saying `Thank you`",
+   inFact: "used when giving more accurate information",
+   IMean: "used when clarifying a thought or continuing a sentence",
+   onTheOtherHand: "used when giving a contrasting opinion",
+   toBeHonest: "used when expressing true feelings or opinion",
+   fingersCrossed: "used when wishing for luck",
+   youKnow: "used when hesitating, or when referring to something the other person knows",
+   atTheEndOfTheDay: "after considering everything",
+
    mblTouchIdiom:"Touch an idiom or phrase to reveal the meaning",
     //Mobile translations 1
-   mblLookUpE:`move eyes upwards / to search for data in a book,computer,etc.`,
+   mblLookUpE:`move eyes upwards / search for data in a book,computer,etc.`,
    mblLookUpS:"",
    mblLookDownE:`move eyes downwards / treat with contempt, despise`,
    mblLookDownS:"",
@@ -137,13 +170,12 @@ home: {
 
 
    //Mobile translations 2
-   mblBreakTheIceE:`To make people feel more relaxed in a new situation.</p>`,
+   mblBreakTheIceE:`make people feel more relaxed in a new situation.`,
    mblBreakTheIceS:"",
    mblSoFarSoGoodE:`an activity has gone well until now`,
    mblSoFarSoGoodS:"",
    mblItsAPieceOfCakeE:`something that is very easy to do`,
    mblItsAPieceOfCakeS:"",
-   mblSpotOnS:"",
    mblSpotOnE:"Exactly right.",
    mblSpotOnS:"",
    mblBreakALegE:"wishing someone good luck, especially before a performance",
@@ -156,7 +188,7 @@ home: {
    mblNotRocketScienceS:"",
    mblTimeFliesE:"Time passes very quickly.",
    mblTimeFliesS:"",
-   mblBetterLateThanNeverE:" It's better for someone to arrive or something to happen late than never to arrive or happen at all.",
+   mblBetterLateThanNeverE:"It's better for someone to arrive or something to happen late than never to arrive or happen at all.",
    mblBetterLateThanNeverS:"",
 
 
@@ -192,7 +224,7 @@ home: {
    siteTitle: "Idiomi i sintagme u srpskom i engleskom|Linguatrend",
    headlineExercises:"Vežbe i zadaci sa idiomima i sintagmama",
    sidebarHeading: "Idiomi vedre i oblače",
-   examplesIdioms: "Primeri idioma i sintagmi u popularnim sitcom serijama: ",
+   examplesIdioms: "Primeri idioma i sintagmi u popularnim sitkom serijama: ",
    linkFriends:'20 idioma i sintagmi u seriji "Prijatelji"',
    linkBigBangTheory: '20 idioma i sintagmi u seriji "Štreberi"',
    linkTwoAndAHalfMen:'20 idioma i sintagmi u seriji "Dva i po muškarca"',
@@ -306,7 +338,38 @@ home: {
      // exercisesDescription: `Practice vocabulary and comprehension with interactive exercises: <a href="index.html#exercises-en" data-i18n="home.exercisesIdiomsEnglish" style="text-decoration: none;">Exercises with idioms</a>. Login or register to start practicing.`,
 
    exercisesIdiomsSerbian:"Zadaci sa idiomima",
-   back:"Idi na početak",
+   back:"Idi na početak",//map1
+   lookUp: "podići pogled/potražiti nepoznatu reč",
+   lookDown: "spustiti pogled/gledati sa visine na nekoga, nipodaštavati",
+   turnDown: "utišati/odbaciti, odbiti",
+   runOut: "istrčati/ostati bez, nemati više nečega",
+   turnUp: "pojačati/doći, pojaviti se",
+   setUp: "organizovati/podmetnuti",
+
+   //map2
+   breakTheIce: "probiti led",
+   soFarSoGood: "Za sad je dobro.",
+   pieceOfCake: "ništa lakše, mačji kašalj",
+   spotOn: "Baš tako. Baš kako treba.",
+   breakALeg: "Srećno!",
+   noPainNoGain: "Bez muke nema nauke.",
+   lastStraw: "Prevršilo je meru.",
+   notRocketScience: "Nije to neka nauka. Nije to tako komplikovano.",
+   timeFlies: "vreme leti.",
+   betterLateThanNever: "bolje ikad nego nikad.",
+
+   //map3
+   byTheWay: "uzgred budi rečeno",
+   forTheTimeBeing: "za sada, privremeno",
+   myPleasure: "nema na čemu, bilo mi je zadovoljstvo",
+   inFact: "ustvari",
+   IMean: "mislim, hoću da kažem",
+   onTheOtherHand: "sa druge strane",
+   toBeHonest: "iskreno, da budem iskrena",
+   fingersCrossed: "držimo palčeve",
+   youKnow: "Znate (kao uvod, podsećanje ili dok smišljamo šta ćemo dalje reći)",
+   atTheEndOfTheDay: "na kraju krajeva",
+
    mblTouchIdiom: "Dodirni izraz da vidiš značenje",
    //Mobile translations 1
    mblLookUpE:"",
@@ -363,7 +426,7 @@ home: {
    mblFingersCrossedE:"",
    mblFingersCrossedS:`držimo palčeve, uz malo sreće`,
    mblYouKnowE:"",
-   mblYouKnowS:`znaš, znate (kao uvod, podsećanje ili dok smišljamo šta ćemo dalje reći)`,
+   mblYouKnowS:`Znate (kao uvod, podsećanje ili dok smišljamo šta ćemo dalje reći)`,
    mblAtTheEndOfTheDayE:"",
    mblAtTheEndOfTheDayS:`na kraju krajeva`,
         },

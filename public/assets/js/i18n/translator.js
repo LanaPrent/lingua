@@ -14,7 +14,7 @@ else{
 el.textContent = value;
 }
   });
-// placeholders
+// Translate placeholders
 document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
   const key = el.getAttribute("data-i18n-placeholder");
   const parts = key.split(".");
@@ -22,6 +22,16 @@ document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
 
   if (value) {
     el.placeholder = value;
+  }
+});
+
+// Translate title attributes
+document.querySelectorAll("[data-i18n-title]").forEach(el=>{
+  const key = el.getAttribute("data-i18n-title");
+  const parts = key.split(".");
+  const value = translations[lang]?.[parts[0]]?.[parts[1]];
+  if(value !=null){
+    el.title=value;
   }
 });
 
